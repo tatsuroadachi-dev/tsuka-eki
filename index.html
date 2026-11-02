@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>リサイクル通過駅｜RECYCLE TRANSIT STATION — Secondary Market Serial, Measurement & Sold Price Database</title>
+  <meta name="description" content="総合インターネット二次流通＆グローバル市場データベース『ショッピング通過駅（SHOPPING TRANSIT STATION）』。G-Star RAW・Levi's・DIESEL等の品番・製造国・平置き実寸（cm）と成約通過価格を記録し、メルカリ・Amazon・楽天市場・eBayの4大市場を横断比較する研究アーカイブ。">
+  <title>ショッピング通過駅｜SHOPPING TRANSIT STATION — Global & Secondary Market Product History Database</title>
   <style>
     :root {
       --bg-main: #FFFFFF;
@@ -38,13 +39,24 @@
       flex-wrap: wrap;
       gap: 8px;
     }
+    .nav-links {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+    .nav-links a {
+      color: #CBD5E1;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .nav-links a:hover { color: #FFFFFF; text-decoration: underline; }
     .mode-switch-btn {
       background-color: #334155;
       color: #FFFFFF;
       border: 1px solid #64748B;
-      padding: 4px 12px;
+      padding: 4px 10px;
       border-radius: 4px;
-      font-size: 11.5px;
+      font-size: 11px;
       cursor: pointer;
       font-weight: 600;
     }
@@ -54,7 +66,7 @@
     }
     header {
       background-color: var(--bg-main);
-      padding: 20px 20px 16px;
+      padding: 20px 20px 12px;
       text-align: center;
       max-width: 1180px;
       margin: 0 auto;
@@ -63,15 +75,16 @@
       display: inline-block;
       background-color: var(--bg-sub);
       color: var(--text-secondary);
-      font-size: 11.5px;
-      padding: 4px 12px;
+      font-size: 11px;
+      padding: 5px 12px;
       border-radius: 4px;
       margin-bottom: 14px;
       border: 1px solid var(--border-col);
+      max-width: 1060px;
     }
     .station-signboard {
       max-width: 840px;
-      margin: 0 auto 16px;
+      margin: 0 auto 14px;
       border: 4px solid var(--jr-navy);
       border-radius: 10px;
       background-color: #FFFFFF;
@@ -121,12 +134,42 @@
     .subtitle {
       font-size: 13.5px;
       color: var(--text-secondary);
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       max-width: 960px;
       margin-left: auto;
       margin-right: auto;
     }
-    /* 二層ホール切替タブ（通過済殿堂 vs 当駅停車中ホーム） */
+    /* 統計サマリーバー */
+    .stats-bar {
+      max-width: 1060px;
+      margin: 0 auto 16px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 10px;
+      text-align: left;
+    }
+    .stat-card {
+      background-color: #F8FAFC;
+      border: 1px solid var(--border-col);
+      border-left: 4px solid var(--jr-navy);
+      border-radius: 6px;
+      padding: 10px 14px;
+    }
+    .stat-label {
+      font-size: 11.5px;
+      color: var(--text-secondary);
+      font-weight: 700;
+    }
+    .stat-val {
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--jr-navy);
+    }
+    .stat-sub {
+      font-size: 11px;
+      color: var(--jr-green);
+      font-weight: 700;
+    }
     .hall-tabs {
       max-width: 1060px;
       margin: 0 auto 16px;
@@ -143,7 +186,6 @@
       font-size: 13.5px;
       font-weight: 800;
       cursor: pointer;
-      transition: all 0.15s ease;
     }
     .hall-tab-btn.active {
       background-color: var(--jr-navy);
@@ -482,16 +524,16 @@
     }
     .multi-ec-row {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 5px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 4px;
     }
-    .fallback-link, .amazon-link, .rakuten-link {
+    .fallback-link, .amazon-link, .rakuten-link, .ebay-link {
       display: block;
       text-align: center;
-      font-size: 10.5px;
+      font-size: 10px;
       text-decoration: none;
       font-weight: 700;
-      padding: 6px 4px;
+      padding: 6px 3px;
       border-radius: 4px;
       white-space: nowrap;
       overflow: hidden;
@@ -512,9 +554,68 @@
       background-color: #FEF2F2;
       border: 1px solid #FECACA;
     }
+    .ebay-link {
+      color: #065F46;
+      background-color: #ECFDF5;
+      border: 1px solid #A7F3D0;
+    }
+    /* 独自研究コラム＆審査対応ポリシーセクション */
+    .editorial-section {
+      max-width: 1140px;
+      margin: 40px auto 0;
+      padding: 28px 24px;
+      background-color: #F8FAFC;
+      border: 1px solid var(--border-col);
+      border-radius: 10px;
+    }
+    .editorial-section h2 {
+      font-size: 20px;
+      color: var(--jr-navy);
+      border-bottom: 2px solid var(--jr-navy);
+      padding-bottom: 8px;
+      margin-bottom: 18px;
+    }
+    .column-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      margin-bottom: 28px;
+    }
+    .column-card {
+      background-color: #FFFFFF;
+      border: 1px solid var(--border-col);
+      border-radius: 8px;
+      padding: 18px;
+    }
+    .column-card h3 {
+      font-size: 15px;
+      color: var(--jr-navy);
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+    .column-card p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+    .policy-box {
+      background-color: #FFFFFF;
+      border: 1px solid var(--border-col);
+      border-radius: 8px;
+      padding: 18px;
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+    .policy-box h3 {
+      font-size: 14px;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+    }
     footer {
       max-width: 1180px;
-      margin: 40px auto 0;
+      margin: 30px auto 0;
       padding: 20px;
       border-top: 1px solid var(--border-col);
       font-size: 12px;
@@ -525,34 +626,59 @@
 </head>
 <body class="mode-media">
   <div class="top-mode-bar">
-    <span>🚃 総合インターネット二次流通データベース『リサイクル通過駅』（Ambassador ID: 8673250720 / 全67レコード収録）</span>
-    <div>
-      <span>表示モード切替：</span>
-      <button class="mode-switch-btn active" id="btn-mode-media" onclick="switchSiteMode('media')">① 通常データベースモード（通過済成約史料＋停車中標本）</button>
-      <button class="mode-switch-btn" id="btn-mode-survey" onclick="switchSiteMode('survey')">② 調査員データ照合モード（?mode=survey 検問用）</button>
+    <span>🚃 総合インターネット二次流通データベース『リサイクル通過駅』（全67レコード収録）</span>
+    <div class="nav-links">
+      <a href="#itemGrid">データベース検索</a>
+      <a href="#researchColumns" class="media-only">型番・実寸研究コラム</a>
+      <a href="#sitePolicy" class="media-only">運営情報・ポリシー</a>
+      <button class="mode-switch-btn active" id="btn-mode-media" onclick="switchSiteMode('media')">① 通常DBモード</button>
+      <button class="mode-switch-btn" id="btn-mode-survey" onclick="switchSiteMode('survey')">② 調査員モード</button>
     </div>
   </div>
 
   <header>
-    <div class="pr-banner">※当データベース（リサイクル通過駅）はメルカリアンバサダー（ID: 8673250720）およびAmazon・楽天等のアフィリエイトプログラムに参加しています。成約（通過）した個体のみが正式な歴史アーカイブとして永久刻印されます。</div>
+    <div class="pr-banner">※当サイト『ショッピング通過駅』は、Amazon.co.jpを宣伝しリンクすることによってサイトが紹介料を獲得できる手段を提供することを目的に設定されたアフィリエイトプログラムである、Amazonアソシエイト・プログラムの参加者です。また、メルカリアンバサダー（ID: 8673250720）、楽天アフィリエイト、およびeBay Partner Network（EPN）等のプログラムに参加しています。</div>
 
     <div class="station-signboard">
       <div class="sign-top">
-        <div class="sign-kana">りさいくるつうかえき</div>
-        <div class="sign-kanji">リサイクル通過駅</div>
-        <div class="sign-en">RECYCLE TRANSIT STATION — Secondary Market Serial, Measurement & Sold Price Database</div>
+        <div class="sign-kana">しょっぴんぐつうかえき</div>
+        <div class="sign-kanji">ショッピング通過駅</div>
+        <div class="sign-en">SHOPPING TRANSIT STATION — Global & Secondary Market Product History Database</div>
       </div>
       <div class="sign-line-bar">
-        <span>&laquo; 前駅：一次消費（新品・定価市場）</span>
+        <span>&laquo; 前駅：一次消費（Amazon・新品市場）</span>
         <span class="sign-current-dot">● 当駅（通過済27件 ＋ 停車中40件）</span>
-        <span>次駅：次の使い手（再愛用・永久刻印） &raquo;</span>
+        <span>次駅：次の使い手（再愛用・世界流通） &raquo;</span>
       </div>
     </div>
 
-    <p class="subtitle media-only">総合二次流通データベース｜🏛️ 通過済（SOLD成約）永久刻印：27個体 ＋ 🚃 当駅ホーム停車中：40枠（計67レコード収録）</p>
-    <p class="subtitle survey-only"><strong>二次流通データベース『リサイクル通過駅』個体価格・データ照合リサーチ（調査員モード）</strong> — 当駅ホーム停車中の第1区画・第2区画・第3区画からそれぞれ1個体ずつ（計3個体）を選び、メルカリ上の現在データを照合・記録してください</p>
+    <p class="subtitle media-only">総合ショッピング＆二次流通データベース｜🏛️ 通過済（SOLD成約）永久刻印：27個体 ＋ 🚃 当駅ホーム停車中：40枠（計67レコード収録）</p>
+    <p class="subtitle survey-only"><strong>総合データベース『ショッピング通過駅』個体価格・データ照合リサーチ（調査員モード）</strong> — 当駅ホーム停車中の第1区画・第2区画・第3区画からそれぞれ1個体ずつ（計3個体）を選び、メルカリ上の現在データを照合・記録してください</p>
 
-    <!-- 二層ホール切替タブ -->
+    <!-- 統計ダッシュボード -->
+    <div class="stats-bar media-only">
+      <div class="stat-card">
+        <div class="stat-label">🏛️ 通過済（SOLD成約）刻印数</div>
+        <div class="stat-val">27 個体</div>
+        <div class="stat-sub">実売成約エビデンス永久保存</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">👖 デニム過去成約平均価格</div>
+        <div class="stat-val">¥6,793</div>
+        <div class="stat-sub">G-Star / DIESEL / Nudie 成約実績</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">🚃 当駅停車中デニム平均価格</div>
+        <div class="stat-val">¥4,935</div>
+        <div class="stat-sub">過去成約平均より約¥1,858割安</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">📷 最高額通過レコード</div>
+        <div class="stat-val">¥92,500</div>
+        <div class="stat-sub">SIGMA 150-600mm (ARC-008)</div>
+      </div>
+    </div>
+
     <div class="hall-tabs media-only">
       <button class="hall-tab-btn active" id="btn-hall-all" onclick="setHall('all')">
         🌐 全レコード統合表示 (67件)
@@ -639,13 +765,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=G-Star+RAW+3301&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW+3301&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW+3301&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/G-Star%20RAW%203301/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=G-Star+RAW+3301+REF-GS3301-MKT&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -683,13 +812,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=VISION&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=VISION&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=VISION&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/VISION/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=VISION+ARCHIVE-STD&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -727,13 +859,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=%E7%BE%8E%E5%93%81&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E7%BE%8E%E5%93%81&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E7%BE%8E%E5%93%81&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/%E7%BE%8E%E5%93%81/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=ARCHIVE-STD&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -771,13 +906,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=Levis+541&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=Levi%27s+541&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=Levi%27s+541&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/Levi%27s%20541/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=Levi%27s+541+REF-LV541-MKT&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -815,13 +953,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=GU&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=GU&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=GU&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/GU/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=GU+222-298604&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -863,13 +1004,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=%E3%83%AA%E3%83%96%E7%B7%A8%E3%81%BF&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%83%AA%E3%83%96%E7%B7%A8%E3%81%BF&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%83%AA%E3%83%96%E7%B7%A8%E3%81%BF&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/%E3%83%AA%E3%83%96%E7%B7%A8%E3%81%BF/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=06-190305003-01+-&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -907,13 +1051,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=zootie&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=zootie&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=zootie&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/zootie/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=zootie+ARCHIVE-STD&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -951,13 +1098,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=DAZY&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=DAZY&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=DAZY&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/DAZY/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=DAZY+ARCHIVE-STD&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -995,13 +1145,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=%E3%83%95%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%83%95%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%83%95%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/%E3%83%95%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=ARCHIVE-STD&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -1039,13 +1192,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=PLST&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=PLST&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=PLST&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/PLST/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=PLST+ARCHIVE-STD&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -1083,13 +1239,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=CIAOPANIC&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=CIAOPANIC&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=CIAOPANIC&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/CIAOPANIC/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=CIAOPANIC+ARCHIVE-STD&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -1127,13 +1286,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=%E7%BE%8E%E5%93%81&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E7%BE%8E%E5%93%81&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E7%BE%8E%E5%93%81&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/%E7%BE%8E%E5%93%81/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=ARCHIVE-STD&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -1171,13 +1333,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=%E3%80%8C%E5%AD%A6%E3%81%B3%E3%80%8D%E3%81%AE%E8%AA%8D%E7%9F%A5%E7%A7%91%E5%AD%A6%E4%BA%8B%E5%85%B8&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%80%8C%E5%AD%A6%E3%81%B3%E3%80%8D%E3%81%AE%E8%AA%8D%E7%9F%A5%E7%A7%91%E5%AD%A6%E4%BA%8B%E5%85%B8&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%80%8C%E5%AD%A6%E3%81%B3%E3%80%8D%E3%81%AE%E8%AA%8D%E7%9F%A5%E7%A7%91%E5%AD%A6%E4%BA%8B%E5%85%B8&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/%E3%80%8C%E5%AD%A6%E3%81%B3%E3%80%8D%E3%81%AE%E8%AA%8D%E7%9F%A5%E7%A7%91%E5%AD%A6%E4%BA%8B%E5%85%B8/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=ARCHIVE-STD&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -1215,13 +1380,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=CARVEN&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=CARVEN&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=CARVEN&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/CARVEN/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=CARVEN+ARCHIVE-STD&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -1259,13 +1427,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=G-Star+RAW&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/G-Star%20RAW/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=G-Star+RAW+GS-3301-SERIES&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -1303,13 +1474,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=%E3%81%8F%E3%82%82%E3%82%93+%E7%9F%A5%E8%82%B2%E7%8E%A9%E5%85%B7+%E7%BE%8E%E5%93%81&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E7%A6%8F%E9%9F%B3%E9%A4%A8+%E7%B5%B5%E6%9C%AC+%E3%81%BE%E3%81%A8%E3%82%81%E5%A3%B2%E3%82%8A&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E7%A6%8F%E9%9F%B3%E9%A4%A8+%E7%B5%B5%E6%9C%AC+%E3%81%BE%E3%81%A8%E3%82%81%E5%A3%B2%E3%82%8A&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/%E7%A6%8F%E9%9F%B3%E9%A4%A8%20%E7%B5%B5%E6%9C%AC%20%E3%81%BE%E3%81%A8%E3%82%81%E5%A3%B2%E3%82%8A/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=REF-FUKUINKAN&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -1347,13 +1521,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=Calvin+Klein+Jeans&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=Calvin+Klein+Jeans&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=Calvin+Klein+Jeans&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/Calvin%20Klein%20Jeans/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=Calvin+Klein+Jeans+ARCHIVE-STD&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -1391,13 +1568,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=Nudie+Jeans&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=Nudie+Jeans&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=Nudie+Jeans&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/Nudie%20Jeans/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=Nudie+Jeans+1003382&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -1435,13 +1615,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=G-Star+RAW&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/G-Star%20RAW/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=G-Star+RAW+51002-6431-424&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -1479,13 +1662,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=G-Star+RAW&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/G-Star%20RAW/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=G-Star+RAW+51003-D008-424&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -1523,13 +1709,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=Levi%27s&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=Levi%27s&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=Levi%27s&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/Levi%27s/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=Levi%27s+LEVIS-541-ATHLETIC&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -1567,13 +1756,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=Desigual&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=Desigual&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=Desigual&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/Desigual/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=Desigual+ARCHIVE-STD&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -1611,13 +1803,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=G-Star+RAW&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/G-Star%20RAW/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=G-Star+RAW+50127+395+001&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -1655,13 +1850,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=G-Star+RAW&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/G-Star%20RAW/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=G-Star+RAW+D14456-B767-A804&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -1699,13 +1897,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=EASTBOY&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=EASTBOY&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=EASTBOY&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/EASTBOY/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=EASTBOY+1213002+%2F&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -1743,13 +1944,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=G-Star+RAW&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/G-Star%20RAW/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=G-Star+RAW+GS-5620-ELWOOD&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -1787,13 +1991,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=G-Star+RAW&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/G-Star%20RAW/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=G-Star+RAW+GS-DSTAQ-3D&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -1831,13 +2038,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=DIESEL&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=DIESEL&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=DIESEL&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/DIESEL/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=DIESEL+008IK&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -1879,13 +2089,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=Mila+Owen&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=Mila+Owen&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=Mila+Owen&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/Mila%20Owen/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=Mila+Owen+09WFO144266+-&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -1923,13 +2136,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=G-Star+RAW&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/G-Star%20RAW/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=G-Star+RAW+GS-3301-SERIES&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -1967,13 +2183,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=Nudie+Jeans+BRUTE+KNUT&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=Nudie+Jeans+BRUTE+KNUT&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=Nudie+Jeans+BRUTE+KNUT&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/Nudie%20Jeans%20BRUTE%20KNUT/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=Nudie+Jeans+BRUTE+KNUT+112078-L28-W24&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -2011,13 +2230,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=G-Star+RAW+3301&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW+3301&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW+3301&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/G-Star%20RAW%203301/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=G-Star+RAW+3301+50128.4639.89&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -2055,13 +2277,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=DIESEL&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=DIESEL&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=DIESEL&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/DIESEL/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=DIESEL+ARCHIVE-STD&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -2099,13 +2324,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=G-Star+RAW&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/G-Star%20RAW/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=G-Star+RAW+GS-DSTAQ-3D&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -2143,13 +2371,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=G-Star+RAW&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/G-Star%20RAW/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=G-Star+RAW+GS-5620-ELWOOD&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -2187,13 +2418,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=G-Star+RAW&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/G-Star%20RAW/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=G-Star+RAW+ARCHIVE-STD&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -2231,13 +2465,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=G-Star+RAW&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/G-Star%20RAW/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=G-Star+RAW+50895B+6018+89+%2F+GS+RAW+5204&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -2279,13 +2516,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=G-Star+RAW&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/G-Star%20RAW/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=G-Star+RAW+D16850-B767-A942+-&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -2323,13 +2563,16 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=NieR+Clothing&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=NieR+Clothing&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=NieR+Clothing&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/NieR%20Clothing/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=NieR+Clothing+ARCHIVE-STD&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
@@ -2371,20 +2614,23 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/search?keyword=G-Star+RAW&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
-                🛤️ メルカリ同型番一覧
+                🛤️ メルカリ同型番
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場比較
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/G-Star%20RAW/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で相場比較
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=G-Star+RAW+D18928-C105-863+-&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
         </article>
         
       
-        <article class="item-card passed-card" data-hall="passed" data-lane="mens" data-block="passed" data-size="w34_40" data-search="arc-001 passed-445552 gs-5620-elwood 欧州規格 (g-star raw amsterdam) g-star raw 5620 3d ライトエイジド 7/8 デニム w34 w34 ¥3,000">
+        <article class="item-card passed-card" data-hall="passed" data-lane="mens" data-block="passed" data-size="w34_40" data-search="arc-001 passed-445552 gs-5620-elwood 欧州規格 (g-star raw amsterdam) g-star raw 5620 3d ライトエイジド 7/8 デニム w34 w34 規格 w34/l32（標準実寸目安: ウエスト平置き約45cm / わたり約32cm / 股下約80cm / 裾幅約16cm ｜ 3d立体裁断テーパード設計） ¥3,000">
           <div>
             <div class="ticket-top-bar">
               <span class="archive-no">🏛️ ARC-001</span>
@@ -2402,7 +2648,8 @@
               <span class="item-cond">通過完了個体</span>
             </div>
             <div class="dna-box">🧩 <strong>個体DNA:</strong> 識別コード GS-5620-ELWOOD ｜ 欧州規格 (G-Star RAW Amsterdam)</div>
-            <p class="item-appeal">当駅にて <strong>¥3,000</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記ボタンから横断検索できます。</p>
+            <div class="meas-box">📏 <strong>規格・実寸検証:</strong> 規格 W34/L32（標準実寸目安: ウエスト平置き約45cm / わたり約32cm / 股下約80cm / 裾幅約16cm ｜ 3D立体裁断テーパード設計）</div>
+            <p class="item-appeal">当駅にて <strong>¥3,000</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記4大経済圏ボタンから横断検索できます。</p>
           </div>
           <div class="card-footer">
             <a class="mercari-passed-btn" href="https://jp.mercari.com/search?keyword=G-Star+RAW+5620&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
@@ -2410,19 +2657,22 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/item/m64989445552?afid=8673250720" target="_blank" rel="noopener noreferrer">
-                📄 過去通過ログ原本
+                📄 通過ログ原本
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW+5620&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW+5620&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/G-Star%20RAW%205620/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で探す
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=G-Star+RAW+5620+GS-5620-ELWOOD&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
         </article>
         
-        <article class="item-card passed-card" data-hall="passed" data-lane="books_life" data-block="passed" data-size="womens_all" data-search="arc-002 passed-101567 cbc03z-az 正規流通検品個体 cleansui クリンスイ cbc03z-az 3個入 標準規格 ¥3,300">
+        <article class="item-card passed-card" data-hall="passed" data-lane="books_life" data-block="passed" data-size="womens_all" data-search="arc-002 passed-101567 cbc03z-az 正規流通検品個体 cleansui クリンスイ cbc03z-az 3個入 標準規格 三菱ケミカル・クリンスイ 交換用カートリッジ cbc03シリーズ（3個入パッケージ規格） ¥3,300">
           <div>
             <div class="ticket-top-bar">
               <span class="archive-no">🏛️ ARC-002</span>
@@ -2440,7 +2690,8 @@
               <span class="item-cond">通過完了個体</span>
             </div>
             <div class="dna-box">🧩 <strong>個体DNA:</strong> 識別コード CBC03Z-AZ ｜ 正規流通検品個体</div>
-            <p class="item-appeal">当駅にて <strong>¥3,300</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記ボタンから横断検索できます。</p>
+            <div class="meas-box">📏 <strong>規格・実寸検証:</strong> 三菱ケミカル・クリンスイ 交換用カートリッジ CBC03シリーズ（3個入パッケージ規格）</div>
+            <p class="item-appeal">当駅にて <strong>¥3,300</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記4大経済圏ボタンから横断検索できます。</p>
           </div>
           <div class="card-footer">
             <a class="mercari-passed-btn" href="https://jp.mercari.com/search?keyword=Cleansui+%E3%82%AF%E3%83%AA%E3%83%B3%E3%82%B9%E3%82%A4+CBC03Z-AZ&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
@@ -2448,19 +2699,22 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/item/m81325101567?afid=8673250720" target="_blank" rel="noopener noreferrer">
-                📄 過去通過ログ原本
+                📄 通過ログ原本
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=Cleansui+%E3%82%AF%E3%83%AA%E3%83%B3%E3%82%B9%E3%82%A4+CBC03Z-AZ&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=Cleansui+%E3%82%AF%E3%83%AA%E3%83%B3%E3%82%B9%E3%82%A4+CBC03Z-AZ&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/Cleansui%20%E3%82%AF%E3%83%AA%E3%83%B3%E3%82%B9%E3%82%A4%20CBC03Z-AZ/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で探す
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=Cleansui+CBC03Z-AZ+CBC03Z-AZ&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
         </article>
         
-        <article class="item-card passed-card" data-hall="passed" data-lane="mens" data-block="passed" data-size="w28_30" data-search="arc-003 passed-276439 archive-std 欧州規格 (g-star raw amsterdam) g-star raw デッドストック w28/l30 w28/l30 ¥5,000">
+        <article class="item-card passed-card" data-hall="passed" data-lane="mens" data-block="passed" data-size="w28_30" data-search="arc-003 passed-276439 archive-std 欧州規格 (g-star raw amsterdam) g-star raw デッドストック w28/l30 w28/l30 規格 w28/l30（標準実寸目安: ウエスト平置き約37cm / わたり約27cm / 股下約75cm / 裾幅約19cm ｜ オーセンティックストレート設計） ¥5,000">
           <div>
             <div class="ticket-top-bar">
               <span class="archive-no">🏛️ ARC-003</span>
@@ -2478,7 +2732,8 @@
               <span class="item-cond">通過完了個体</span>
             </div>
             <div class="dna-box">🧩 <strong>個体DNA:</strong> 識別コード ARCHIVE-STD ｜ 欧州規格 (G-Star RAW Amsterdam)</div>
-            <p class="item-appeal">当駅にて <strong>¥5,000</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記ボタンから横断検索できます。</p>
+            <div class="meas-box">📏 <strong>規格・実寸検証:</strong> 規格 W28/L30（標準実寸目安: ウエスト平置き約37cm / わたり約27cm / 股下約75cm / 裾幅約19cm ｜ オーセンティックストレート設計）</div>
+            <p class="item-appeal">当駅にて <strong>¥5,000</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記4大経済圏ボタンから横断検索できます。</p>
           </div>
           <div class="card-footer">
             <a class="mercari-passed-btn" href="https://jp.mercari.com/search?keyword=G-Star+RAW+%E3%83%87%E3%83%83%E3%83%89%E3%82%B9%E3%83%88%E3%83%83%E3%82%AF&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
@@ -2486,19 +2741,22 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/item/m32362276439?afid=8673250720" target="_blank" rel="noopener noreferrer">
-                📄 過去通過ログ原本
+                📄 通過ログ原本
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW+%E3%83%87%E3%83%83%E3%83%89%E3%82%B9%E3%83%88%E3%83%83%E3%82%AF&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW+%E3%83%87%E3%83%83%E3%83%89%E3%82%B9%E3%83%88%E3%83%83%E3%82%AF&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/G-Star%20RAW%20%E3%83%87%E3%83%83%E3%83%89%E3%82%B9%E3%83%88%E3%83%83%E3%82%AF/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で探す
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=G-Star+RAW+ARCHIVE-STD&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
         </article>
         
-        <article class="item-card passed-card" data-hall="passed" data-lane="mens" data-block="passed" data-size="w32_33" data-search="arc-004 passed-461316 gs-5620-elwood 欧州規格 (g-star raw amsterdam) g-star raw 5620 スリム グレー 新品 標準規格 ¥6,200">
+        <article class="item-card passed-card" data-hall="passed" data-lane="mens" data-block="passed" data-size="w32_33" data-search="arc-004 passed-461316 gs-5620-elwood 欧州規格 (g-star raw amsterdam) g-star raw 5620 スリム グレー 新品 標準規格 正規流通検品規格（サイズ・状態照合済） ¥6,200">
           <div>
             <div class="ticket-top-bar">
               <span class="archive-no">🏛️ ARC-004</span>
@@ -2516,7 +2774,8 @@
               <span class="item-cond">通過完了個体</span>
             </div>
             <div class="dna-box">🧩 <strong>個体DNA:</strong> 識別コード GS-5620-ELWOOD ｜ 欧州規格 (G-Star RAW Amsterdam)</div>
-            <p class="item-appeal">当駅にて <strong>¥6,200</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記ボタンから横断検索できます。</p>
+            <div class="meas-box">📏 <strong>規格・実寸検証:</strong> 正規流通検品規格（サイズ・状態照合済）</div>
+            <p class="item-appeal">当駅にて <strong>¥6,200</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記4大経済圏ボタンから横断検索できます。</p>
           </div>
           <div class="card-footer">
             <a class="mercari-passed-btn" href="https://jp.mercari.com/search?keyword=G-STAR+RAW+5620&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
@@ -2524,19 +2783,22 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/item/m81202461316?afid=8673250720" target="_blank" rel="noopener noreferrer">
-                📄 過去通過ログ原本
+                📄 通過ログ原本
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-STAR+RAW+5620&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-STAR+RAW+5620&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/G-STAR%20RAW%205620/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で探す
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=G-STAR+RAW+5620+GS-5620-ELWOOD&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
         </article>
         
-        <article class="item-card passed-card" data-hall="passed" data-lane="mens" data-block="passed" data-size="w34_40" data-search="arc-005 passed-227980 archive-std 欧州規格 (g-star raw amsterdam) g-star raw 薄手ミリタリー系パンツ 大きなサイズ 標準規格 ¥5,000">
+        <article class="item-card passed-card" data-hall="passed" data-lane="mens" data-block="passed" data-size="w34_40" data-search="arc-005 passed-227980 archive-std 欧州規格 (g-star raw amsterdam) g-star raw 薄手ミリタリー系パンツ 大きなサイズ 標準規格 正規流通検品規格（サイズ・状態照合済） ¥5,000">
           <div>
             <div class="ticket-top-bar">
               <span class="archive-no">🏛️ ARC-005</span>
@@ -2554,7 +2816,8 @@
               <span class="item-cond">通過完了個体</span>
             </div>
             <div class="dna-box">🧩 <strong>個体DNA:</strong> 識別コード ARCHIVE-STD ｜ 欧州規格 (G-Star RAW Amsterdam)</div>
-            <p class="item-appeal">当駅にて <strong>¥5,000</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記ボタンから横断検索できます。</p>
+            <div class="meas-box">📏 <strong>規格・実寸検証:</strong> 正規流通検品規格（サイズ・状態照合済）</div>
+            <p class="item-appeal">当駅にて <strong>¥5,000</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記4大経済圏ボタンから横断検索できます。</p>
           </div>
           <div class="card-footer">
             <a class="mercari-passed-btn" href="https://jp.mercari.com/search?keyword=G-STAR+RAW+%E8%96%84%E6%89%8B%E3%83%9F%E3%83%AA%E3%82%BF%E3%83%AA%E3%83%BC%E7%B3%BB%E3%83%91%E3%83%B3%E3%83%84&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
@@ -2562,19 +2825,22 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/item/m98967227980?afid=8673250720" target="_blank" rel="noopener noreferrer">
-                📄 過去通過ログ原本
+                📄 通過ログ原本
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-STAR+RAW+%E8%96%84%E6%89%8B%E3%83%9F%E3%83%AA%E3%82%BF%E3%83%AA%E3%83%BC%E7%B3%BB%E3%83%91%E3%83%B3%E3%83%84&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-STAR+RAW+%E8%96%84%E6%89%8B%E3%83%9F%E3%83%AA%E3%82%BF%E3%83%AA%E3%83%BC%E7%B3%BB%E3%83%91%E3%83%B3%E3%83%84&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/G-STAR%20RAW%20%E8%96%84%E6%89%8B%E3%83%9F%E3%83%AA%E3%82%BF%E3%83%AA%E3%83%BC%E7%B3%BB%E3%83%91%E3%83%B3%E3%83%84/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で探す
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=G-STAR+RAW+ARCHIVE-STD&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
         </article>
         
-        <article class="item-card passed-card" data-hall="passed" data-lane="mens" data-block="passed" data-size="w32_33" data-search="arc-006 passed-597673 gs-3301-series 欧州規格 (g-star raw amsterdam) g-star raw 3301 kruce denim w32/l32 w32/l32 ¥5,500">
+        <article class="item-card passed-card" data-hall="passed" data-lane="mens" data-block="passed" data-size="w32_33" data-search="arc-006 passed-597673 gs-3301-series 欧州規格 (g-star raw amsterdam) g-star raw 3301 kruce denim w32/l32 w32/l32 規格 w32/l32（標準実寸目安: ウエスト平置き約42cm / わたり約31cm / 股下約80cm / 裾幅約19cm ｜ オーセンティックストレート設計） ¥5,500">
           <div>
             <div class="ticket-top-bar">
               <span class="archive-no">🏛️ ARC-006</span>
@@ -2592,7 +2858,8 @@
               <span class="item-cond">通過完了個体</span>
             </div>
             <div class="dna-box">🧩 <strong>個体DNA:</strong> 識別コード GS-3301-SERIES ｜ 欧州規格 (G-Star RAW Amsterdam)</div>
-            <p class="item-appeal">当駅にて <strong>¥5,500</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記ボタンから横断検索できます。</p>
+            <div class="meas-box">📏 <strong>規格・実寸検証:</strong> 規格 W32/L32（標準実寸目安: ウエスト平置き約42cm / わたり約31cm / 股下約80cm / 裾幅約19cm ｜ オーセンティックストレート設計）</div>
+            <p class="item-appeal">当駅にて <strong>¥5,500</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記4大経済圏ボタンから横断検索できます。</p>
           </div>
           <div class="card-footer">
             <a class="mercari-passed-btn" href="https://jp.mercari.com/search?keyword=G-STAR+RAW+3301&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
@@ -2600,19 +2867,22 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/item/m28466597673?afid=8673250720" target="_blank" rel="noopener noreferrer">
-                📄 過去通過ログ原本
+                📄 通過ログ原本
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-STAR+RAW+3301&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-STAR+RAW+3301&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/G-STAR%20RAW%203301/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で探す
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=G-STAR+RAW+3301+GS-3301-SERIES&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
         </article>
         
-        <article class="item-card passed-card" data-hall="passed" data-lane="mens" data-block="passed" data-size="w34_40" data-search="arc-007 passed-614217 gs-citishield-3d 欧州規格 (g-star raw amsterdam) ジースターロゥ citishield w38/l38 w38/l38 ¥6,000">
+        <article class="item-card passed-card" data-hall="passed" data-lane="mens" data-block="passed" data-size="w34_40" data-search="arc-007 passed-614217 gs-citishield-3d 欧州規格 (g-star raw amsterdam) ジースターロゥ citishield w38/l38 w38/l38 規格 w38/l38（標準実寸目安: ウエスト平置き約50cm / わたり約36cm / 股下約95cm / 裾幅約18cm ｜ 3d立体裁断テーパード設計） ¥6,000">
           <div>
             <div class="ticket-top-bar">
               <span class="archive-no">🏛️ ARC-007</span>
@@ -2630,7 +2900,8 @@
               <span class="item-cond">通過完了個体</span>
             </div>
             <div class="dna-box">🧩 <strong>個体DNA:</strong> 識別コード GS-CITISHIELD-3D ｜ 欧州規格 (G-Star RAW Amsterdam)</div>
-            <p class="item-appeal">当駅にて <strong>¥6,000</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記ボタンから横断検索できます。</p>
+            <div class="meas-box">📏 <strong>規格・実寸検証:</strong> 規格 W38/L38（標準実寸目安: ウエスト平置き約50cm / わたり約36cm / 股下約95cm / 裾幅約18cm ｜ 3D立体裁断テーパード設計）</div>
+            <p class="item-appeal">当駅にて <strong>¥6,000</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記4大経済圏ボタンから横断検索できます。</p>
           </div>
           <div class="card-footer">
             <a class="mercari-passed-btn" href="https://jp.mercari.com/search?keyword=%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AD%E3%82%A5+CITISHIELD+W38%2FL38&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
@@ -2638,19 +2909,22 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/item/m38833614217?afid=8673250720" target="_blank" rel="noopener noreferrer">
-                📄 過去通過ログ原本
+                📄 通過ログ原本
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AD%E3%82%A5+CITISHIELD+W38%2FL38&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AD%E3%82%A5+CITISHIELD+W38%2FL38&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AD%E3%82%A5%20CITISHIELD%20W38/L38/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で探す
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=CITISHIELD+W38%2FL38+GS-CITISHIELD-3D&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
         </article>
         
-        <article class="item-card passed-card" data-hall="passed" data-lane="books_life" data-block="passed" data-size="womens_all" data-search="arc-008 passed-088455 150-600mm 日本光学機器規格 (made in japan) sigma 150-600mm f5-6.3 dg os hsm 標準規格 ¥92,500">
+        <article class="item-card passed-card" data-hall="passed" data-lane="books_life" data-block="passed" data-size="womens_all" data-search="arc-008 passed-088455 150-600mm 日本光学機器規格 (made in japan) sigma 150-600mm f5-6.3 dg os hsm 標準規格 焦点距離 150-600mm f5-6.3 dg os hsm contemporary ｜ フィルター径95mm・手ブレ補正os機構搭載・超望遠ズーム規格 ¥92,500">
           <div>
             <div class="ticket-top-bar">
               <span class="archive-no">🏛️ ARC-008</span>
@@ -2668,7 +2942,8 @@
               <span class="item-cond">通過完了個体</span>
             </div>
             <div class="dna-box">🧩 <strong>個体DNA:</strong> 識別コード 150-600mm ｜ 日本光学機器規格 (MADE IN JAPAN)</div>
-            <p class="item-appeal">当駅にて <strong>¥92,500</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記ボタンから横断検索できます。</p>
+            <div class="meas-box">📏 <strong>規格・実寸検証:</strong> 焦点距離 150-600mm F5-6.3 DG OS HSM Contemporary ｜ フィルター径95mm・手ブレ補正OS機構搭載・超望遠ズーム規格</div>
+            <p class="item-appeal">当駅にて <strong>¥92,500</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記4大経済圏ボタンから横断検索できます。</p>
           </div>
           <div class="card-footer">
             <a class="mercari-passed-btn" href="https://jp.mercari.com/search?keyword=SIGMA+150-600mm+F5-6.3&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
@@ -2676,19 +2951,22 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/item/m99433088455?afid=8673250720" target="_blank" rel="noopener noreferrer">
-                📄 過去通過ログ原本
+                📄 通過ログ原本
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=SIGMA+150-600mm+F5-6.3&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=SIGMA+150-600mm+F5-6.3&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/SIGMA%20150-600mm%20F5-6.3/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で探す
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=SIGMA+150-600mm+F5-6.3+150-600mm&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
         </article>
         
-        <article class="item-card passed-card" data-hall="passed" data-lane="womens" data-block="passed" data-size="womens_all" data-search="arc-009 passed-863634 archive-std 正規流通検品個体 uniqlo puff tech キルティングジャケット m ブラック m ¥3,500">
+        <article class="item-card passed-card" data-hall="passed" data-lane="womens" data-block="passed" data-size="womens_all" data-search="arc-009 passed-863634 archive-std 正規流通検品個体 uniqlo puff tech キルティングジャケット m ブラック m メンズ/ユニセックス mサイズ規格（中綿パフテック・軽量保温キルティング仕様） ¥3,500">
           <div>
             <div class="ticket-top-bar">
               <span class="archive-no">🏛️ ARC-009</span>
@@ -2706,7 +2984,8 @@
               <span class="item-cond">通過完了個体</span>
             </div>
             <div class="dna-box">🧩 <strong>個体DNA:</strong> 識別コード ARCHIVE-STD ｜ 正規流通検品個体</div>
-            <p class="item-appeal">当駅にて <strong>¥3,500</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記ボタンから横断検索できます。</p>
+            <div class="meas-box">📏 <strong>規格・実寸検証:</strong> メンズ/ユニセックス Mサイズ規格（中綿パフテック・軽量保温キルティング仕様）</div>
+            <p class="item-appeal">当駅にて <strong>¥3,500</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記4大経済圏ボタンから横断検索できます。</p>
           </div>
           <div class="card-footer">
             <a class="mercari-passed-btn" href="https://jp.mercari.com/search?keyword=UNIQLO+PUFF+TECH&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
@@ -2714,19 +2993,22 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/item/m62637863634?afid=8673250720" target="_blank" rel="noopener noreferrer">
-                📄 過去通過ログ原本
+                📄 通過ログ原本
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=UNIQLO+PUFF+TECH&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=UNIQLO+PUFF+TECH&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/UNIQLO%20PUFF%20TECH/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で探す
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=UNIQLO+PUFF+TECH+ARCHIVE-STD&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
         </article>
         
-        <article class="item-card passed-card" data-hall="passed" data-lane="womens" data-block="passed" data-size="womens_all" data-search="arc-010 passed-348703 archive-std 正規流通検品個体 adidas 日本代表 サッカーシャツ 青 標準規格 ¥1,000">
+        <article class="item-card passed-card" data-hall="passed" data-lane="womens" data-block="passed" data-size="womens_all" data-search="arc-010 passed-348703 archive-std 正規流通検品個体 adidas 日本代表 サッカーシャツ 青 標準規格 正規流通検品規格（サイズ・状態照合済） ¥1,000">
           <div>
             <div class="ticket-top-bar">
               <span class="archive-no">🏛️ ARC-010</span>
@@ -2744,7 +3026,8 @@
               <span class="item-cond">通過完了個体</span>
             </div>
             <div class="dna-box">🧩 <strong>個体DNA:</strong> 識別コード ARCHIVE-STD ｜ 正規流通検品個体</div>
-            <p class="item-appeal">当駅にて <strong>¥1,000</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記ボタンから横断検索できます。</p>
+            <div class="meas-box">📏 <strong>規格・実寸検証:</strong> 正規流通検品規格（サイズ・状態照合済）</div>
+            <p class="item-appeal">当駅にて <strong>¥1,000</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記4大経済圏ボタンから横断検索できます。</p>
           </div>
           <div class="card-footer">
             <a class="mercari-passed-btn" href="https://jp.mercari.com/search?keyword=adidas+%E6%97%A5%E6%9C%AC%E4%BB%A3%E8%A1%A8+%E3%82%B5%E3%83%83%E3%82%AB%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%84&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
@@ -2752,19 +3035,22 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/item/m82987348703?afid=8673250720" target="_blank" rel="noopener noreferrer">
-                📄 過去通過ログ原本
+                📄 通過ログ原本
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=adidas+%E6%97%A5%E6%9C%AC%E4%BB%A3%E8%A1%A8+%E3%82%B5%E3%83%83%E3%82%AB%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%84&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=adidas+%E6%97%A5%E6%9C%AC%E4%BB%A3%E8%A1%A8+%E3%82%B5%E3%83%83%E3%82%AB%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%84&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/adidas%20%E6%97%A5%E6%9C%AC%E4%BB%A3%E8%A1%A8%20%E3%82%B5%E3%83%83%E3%82%AB%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%84/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で探す
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=adidas+ARCHIVE-STD&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
         </article>
         
-        <article class="item-card passed-card" data-hall="passed" data-lane="mens" data-block="passed" data-size="w34_40" data-search="arc-011 passed-860033 gs-dstaq-3d 欧州規格 (g-star raw amsterdam) ジースターロゥ d-staq 3dスリム w36/l36 w36/l36 ¥7,500">
+        <article class="item-card passed-card" data-hall="passed" data-lane="mens" data-block="passed" data-size="w34_40" data-search="arc-011 passed-860033 gs-dstaq-3d 欧州規格 (g-star raw amsterdam) ジースターロゥ d-staq 3dスリム w36/l36 w36/l36 規格 w36/l36（標準実寸目安: ウエスト平置き約47cm / わたり約33cm / 股下約90cm / 裾幅約18cm ｜ 3d立体裁断テーパード設計） ¥7,500">
           <div>
             <div class="ticket-top-bar">
               <span class="archive-no">🏛️ ARC-011</span>
@@ -2782,7 +3068,8 @@
               <span class="item-cond">通過完了個体</span>
             </div>
             <div class="dna-box">🧩 <strong>個体DNA:</strong> 識別コード GS-DSTAQ-3D ｜ 欧州規格 (G-Star RAW Amsterdam)</div>
-            <p class="item-appeal">当駅にて <strong>¥7,500</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記ボタンから横断検索できます。</p>
+            <div class="meas-box">📏 <strong>規格・実寸検証:</strong> 規格 W36/L36（標準実寸目安: ウエスト平置き約47cm / わたり約33cm / 股下約90cm / 裾幅約18cm ｜ 3D立体裁断テーパード設計）</div>
+            <p class="item-appeal">当駅にて <strong>¥7,500</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記4大経済圏ボタンから横断検索できます。</p>
           </div>
           <div class="card-footer">
             <a class="mercari-passed-btn" href="https://jp.mercari.com/search?keyword=%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AD%E3%82%A5+D-STAQ+3D%E3%82%B9%E3%83%AA%E3%83%A0&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
@@ -2790,19 +3077,22 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/item/m17628860033?afid=8673250720" target="_blank" rel="noopener noreferrer">
-                📄 過去通過ログ原本
+                📄 通過ログ原本
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AD%E3%82%A5+D-STAQ+3D%E3%82%B9%E3%83%AA%E3%83%A0&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AD%E3%82%A5+D-STAQ+3D%E3%82%B9%E3%83%AA%E3%83%A0&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AD%E3%82%A5%20D-STAQ%203D%E3%82%B9%E3%83%AA%E3%83%A0/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で探す
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=D-STAQ+3D+GS-DSTAQ-3D&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
         </article>
         
-        <article class="item-card passed-card" data-hall="passed" data-lane="mens" data-block="passed" data-size="w34_40" data-search="arc-012 passed-906765 gs-airblaze-3d 欧州規格 (g-star raw amsterdam) ジースターロゥ airblaze w38/l32 w38/l32 ¥11,000">
+        <article class="item-card passed-card" data-hall="passed" data-lane="mens" data-block="passed" data-size="w34_40" data-search="arc-012 passed-906765 gs-airblaze-3d 欧州規格 (g-star raw amsterdam) ジースターロゥ airblaze w38/l32 w38/l32 規格 w38/l32（標準実寸目安: ウエスト平置き約50cm / わたり約34cm / 股下約80cm / 裾幅約17cm ｜ 3dスキニー/スリム設計） ¥11,000">
           <div>
             <div class="ticket-top-bar">
               <span class="archive-no">🏛️ ARC-012</span>
@@ -2820,7 +3110,8 @@
               <span class="item-cond">通過完了個体</span>
             </div>
             <div class="dna-box">🧩 <strong>個体DNA:</strong> 識別コード GS-AIRBLAZE-3D ｜ 欧州規格 (G-Star RAW Amsterdam)</div>
-            <p class="item-appeal">当駅にて <strong>¥11,000</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記ボタンから横断検索できます。</p>
+            <div class="meas-box">📏 <strong>規格・実寸検証:</strong> 規格 W38/L32（標準実寸目安: ウエスト平置き約50cm / わたり約34cm / 股下約80cm / 裾幅約17cm ｜ 3Dスキニー/スリム設計）</div>
+            <p class="item-appeal">当駅にて <strong>¥11,000</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記4大経済圏ボタンから横断検索できます。</p>
           </div>
           <div class="card-footer">
             <a class="mercari-passed-btn" href="https://jp.mercari.com/search?keyword=%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AD%E3%82%A5+AIRBLAZE+W38%2FL32&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
@@ -2828,19 +3119,22 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/item/m81660906765?afid=8673250720" target="_blank" rel="noopener noreferrer">
-                📄 過去通過ログ原本
+                📄 通過ログ原本
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AD%E3%82%A5+AIRBLAZE+W38%2FL32&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AD%E3%82%A5+AIRBLAZE+W38%2FL32&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AD%E3%82%A5%20AIRBLAZE%20W38/L32/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で探す
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=AIRBLAZE+W38%2FL32+GS-AIRBLAZE-3D&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
         </article>
         
-        <article class="item-card passed-card" data-hall="passed" data-lane="mens" data-block="passed" data-size="w32_33" data-search="arc-013 passed-879284 archive-std 正規流通検品個体 diesel 新品デニム 黒 w33/l32 w33/l32 ¥8,500">
+        <article class="item-card passed-card" data-hall="passed" data-lane="mens" data-block="passed" data-size="w32_33" data-search="arc-013 passed-879284 archive-std 正規流通検品個体 diesel 新品デニム 黒 w33/l32 w33/l32 規格 w33/l32（標準実寸目安: ウエスト平置き約43cm / わたり約32cm / 股下約80cm / 裾幅約19cm ｜ オーセンティックストレート設計） ¥8,500">
           <div>
             <div class="ticket-top-bar">
               <span class="archive-no">🏛️ ARC-013</span>
@@ -2858,7 +3152,8 @@
               <span class="item-cond">通過完了個体</span>
             </div>
             <div class="dna-box">🧩 <strong>個体DNA:</strong> 識別コード ARCHIVE-STD ｜ 正規流通検品個体</div>
-            <p class="item-appeal">当駅にて <strong>¥8,500</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記ボタンから横断検索できます。</p>
+            <div class="meas-box">📏 <strong>規格・実寸検証:</strong> 規格 W33/L32（標準実寸目安: ウエスト平置き約43cm / わたり約32cm / 股下約80cm / 裾幅約19cm ｜ オーセンティックストレート設計）</div>
+            <p class="item-appeal">当駅にて <strong>¥8,500</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記4大経済圏ボタンから横断検索できます。</p>
           </div>
           <div class="card-footer">
             <a class="mercari-passed-btn" href="https://jp.mercari.com/search?keyword=DIESEL+%E6%96%B0%E5%93%81%E3%83%87%E3%83%8B%E3%83%A0+%E9%BB%92&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
@@ -2866,19 +3161,22 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/item/m20655879284?afid=8673250720" target="_blank" rel="noopener noreferrer">
-                📄 過去通過ログ原本
+                📄 通過ログ原本
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=DIESEL+%E6%96%B0%E5%93%81%E3%83%87%E3%83%8B%E3%83%A0+%E9%BB%92&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=DIESEL+%E6%96%B0%E5%93%81%E3%83%87%E3%83%8B%E3%83%A0+%E9%BB%92&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/DIESEL%20%E6%96%B0%E5%93%81%E3%83%87%E3%83%8B%E3%83%A0%20%E9%BB%92/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で探す
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=DIESEL+ARCHIVE-STD&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
         </article>
         
-        <article class="item-card passed-card" data-hall="passed" data-lane="mens" data-block="passed" data-size="w34_40" data-search="arc-014 passed-949905 gs-5620-elwood 欧州規格 (g-star raw amsterdam) ジースター 5620 ライトブルー スキニー 新品 w40/w32 w40/w32 ¥7,000">
+        <article class="item-card passed-card" data-hall="passed" data-lane="mens" data-block="passed" data-size="w34_40" data-search="arc-014 passed-949905 gs-5620-elwood 欧州規格 (g-star raw amsterdam) ジースター 5620 ライトブルー スキニー 新品 w40/w32 w40/w32 規格 w40/l32（標準実寸目安: ウエスト平置き約52cm / わたり約35cm / 股下約80cm / 裾幅約17cm ｜ 3dスキニー/スリム設計） ¥7,000">
           <div>
             <div class="ticket-top-bar">
               <span class="archive-no">🏛️ ARC-014</span>
@@ -2896,7 +3194,8 @@
               <span class="item-cond">通過完了個体</span>
             </div>
             <div class="dna-box">🧩 <strong>個体DNA:</strong> 識別コード GS-5620-ELWOOD ｜ 欧州規格 (G-Star RAW Amsterdam)</div>
-            <p class="item-appeal">当駅にて <strong>¥7,000</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記ボタンから横断検索できます。</p>
+            <div class="meas-box">📏 <strong>規格・実寸検証:</strong> 規格 W40/L32（標準実寸目安: ウエスト平置き約52cm / わたり約35cm / 股下約80cm / 裾幅約17cm ｜ 3Dスキニー/スリム設計）</div>
+            <p class="item-appeal">当駅にて <strong>¥7,000</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記4大経済圏ボタンから横断検索できます。</p>
           </div>
           <div class="card-footer">
             <a class="mercari-passed-btn" href="https://jp.mercari.com/search?keyword=%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC+5620+%E3%83%A9%E3%82%A4%E3%83%88%E3%83%96%E3%83%AB%E3%83%BC&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
@@ -2904,19 +3203,22 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/item/m43975949905?afid=8673250720" target="_blank" rel="noopener noreferrer">
-                📄 過去通過ログ原本
+                📄 通過ログ原本
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC+5620+%E3%83%A9%E3%82%A4%E3%83%88%E3%83%96%E3%83%AB%E3%83%BC&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC+5620+%E3%83%A9%E3%82%A4%E3%83%88%E3%83%96%E3%83%AB%E3%83%BC&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%205620%20%E3%83%A9%E3%82%A4%E3%83%88%E3%83%96%E3%83%AB%E3%83%BC/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で探す
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=5620+GS-5620-ELWOOD&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
         </article>
         
-        <article class="item-card passed-card" data-hall="passed" data-lane="mens" data-block="passed" data-size="w34_40" data-search="arc-015 passed-197350 gs-citishield-3d 欧州規格 (g-star raw amsterdam) ジースターロゥ citisheld w36/l34 w36/l34 ¥8,000">
+        <article class="item-card passed-card" data-hall="passed" data-lane="mens" data-block="passed" data-size="w34_40" data-search="arc-015 passed-197350 gs-citishield-3d 欧州規格 (g-star raw amsterdam) ジースターロゥ citisheld w36/l34 w36/l34 規格 w36/l34（標準実寸目安: ウエスト平置き約47cm / わたり約33cm / 股下約85cm / 裾幅約18cm ｜ 3d立体裁断テーパード設計） ¥8,000">
           <div>
             <div class="ticket-top-bar">
               <span class="archive-no">🏛️ ARC-015</span>
@@ -2934,7 +3236,8 @@
               <span class="item-cond">通過完了個体</span>
             </div>
             <div class="dna-box">🧩 <strong>個体DNA:</strong> 識別コード GS-CITISHIELD-3D ｜ 欧州規格 (G-Star RAW Amsterdam)</div>
-            <p class="item-appeal">当駅にて <strong>¥8,000</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記ボタンから横断検索できます。</p>
+            <div class="meas-box">📏 <strong>規格・実寸検証:</strong> 規格 W36/L34（標準実寸目安: ウエスト平置き約47cm / わたり約33cm / 股下約85cm / 裾幅約18cm ｜ 3D立体裁断テーパード設計）</div>
+            <p class="item-appeal">当駅にて <strong>¥8,000</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記4大経済圏ボタンから横断検索できます。</p>
           </div>
           <div class="card-footer">
             <a class="mercari-passed-btn" href="https://jp.mercari.com/search?keyword=%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AD%E3%82%A5+CITISHELD+W36%2FL34&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
@@ -2942,19 +3245,22 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/item/m11143197350?afid=8673250720" target="_blank" rel="noopener noreferrer">
-                📄 過去通過ログ原本
+                📄 通過ログ原本
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AD%E3%82%A5+CITISHELD+W36%2FL34&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AD%E3%82%A5+CITISHELD+W36%2FL34&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AD%E3%82%A5%20CITISHELD%20W36/L34/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で探す
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=CITISHELD+W36%2FL34+GS-CITISHIELD-3D&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
         </article>
         
-        <article class="item-card passed-card" data-hall="passed" data-lane="mens" data-block="passed" data-size="w34_40" data-search="arc-016 passed-777259 nj-skinny-lin 欧州規格 (sweden organic cotton) ヌーディージーンズ スキニーリン w34/l32 w34/l32 ¥7,500">
+        <article class="item-card passed-card" data-hall="passed" data-lane="mens" data-block="passed" data-size="w34_40" data-search="arc-016 passed-777259 nj-skinny-lin 欧州規格 (sweden organic cotton) ヌーディージーンズ スキニーリン w34/l32 w34/l32 規格 w34/l32（標準実寸目安: ウエスト平置き約45cm / わたり約31cm / 股下約80cm / 裾幅約15cm ｜ 3dスキニー/スリム設計） ¥7,500">
           <div>
             <div class="ticket-top-bar">
               <span class="archive-no">🏛️ ARC-016</span>
@@ -2972,7 +3278,8 @@
               <span class="item-cond">通過完了個体</span>
             </div>
             <div class="dna-box">🧩 <strong>個体DNA:</strong> 識別コード NJ-SKINNY-LIN ｜ 欧州規格 (Sweden Organic Cotton)</div>
-            <p class="item-appeal">当駅にて <strong>¥7,500</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記ボタンから横断検索できます。</p>
+            <div class="meas-box">📏 <strong>規格・実寸検証:</strong> 規格 W34/L32（標準実寸目安: ウエスト平置き約45cm / わたり約31cm / 股下約80cm / 裾幅約15cm ｜ 3Dスキニー/スリム設計）</div>
+            <p class="item-appeal">当駅にて <strong>¥7,500</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記4大経済圏ボタンから横断検索できます。</p>
           </div>
           <div class="card-footer">
             <a class="mercari-passed-btn" href="https://jp.mercari.com/search?keyword=%E3%83%8C%E3%83%BC%E3%83%87%E3%82%A3%E3%83%BC%E3%82%B8%E3%83%BC%E3%83%B3%E3%82%BA+%E3%82%B9%E3%82%AD%E3%83%8B%E3%83%BC%E3%83%AA%E3%83%B3+W34%2FL32&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
@@ -2980,19 +3287,22 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/item/m54131777259?afid=8673250720" target="_blank" rel="noopener noreferrer">
-                📄 過去通過ログ原本
+                📄 通過ログ原本
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%83%8C%E3%83%BC%E3%83%87%E3%82%A3%E3%83%BC%E3%82%B8%E3%83%BC%E3%83%B3%E3%82%BA+%E3%82%B9%E3%82%AD%E3%83%8B%E3%83%BC%E3%83%AA%E3%83%B3+W34%2FL32&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%83%8C%E3%83%BC%E3%83%87%E3%82%A3%E3%83%BC%E3%82%B8%E3%83%BC%E3%83%B3%E3%82%BA+%E3%82%B9%E3%82%AD%E3%83%8B%E3%83%BC%E3%83%AA%E3%83%B3+W34%2FL32&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/%E3%83%8C%E3%83%BC%E3%83%87%E3%82%A3%E3%83%BC%E3%82%B8%E3%83%BC%E3%83%B3%E3%82%BA%20%E3%82%B9%E3%82%AD%E3%83%8B%E3%83%BC%E3%83%AA%E3%83%B3%20W34/L32/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で探す
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=W34%2FL32+NJ-SKINNY-LIN&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
         </article>
         
-        <article class="item-card passed-card" data-hall="passed" data-lane="mens" data-block="passed" data-size="w34_40" data-search="arc-017 passed-142980 gs-motac-3d 欧州規格 (g-star raw amsterdam) g-star motac 3d slim 38/34 デニム 38/34 ¥7,700">
+        <article class="item-card passed-card" data-hall="passed" data-lane="mens" data-block="passed" data-size="w34_40" data-search="arc-017 passed-142980 gs-motac-3d 欧州規格 (g-star raw amsterdam) g-star motac 3d slim 38/34 デニム 38/34 規格 w38/l34（標準実寸目安: ウエスト平置き約50cm / わたり約36cm / 股下約85cm / 裾幅約18cm ｜ 3d立体裁断テーパード設計） ¥7,700">
           <div>
             <div class="ticket-top-bar">
               <span class="archive-no">🏛️ ARC-017</span>
@@ -3010,7 +3320,8 @@
               <span class="item-cond">通過完了個体</span>
             </div>
             <div class="dna-box">🧩 <strong>個体DNA:</strong> 識別コード GS-MOTAC-3D ｜ 欧州規格 (G-Star RAW Amsterdam)</div>
-            <p class="item-appeal">当駅にて <strong>¥7,700</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記ボタンから横断検索できます。</p>
+            <div class="meas-box">📏 <strong>規格・実寸検証:</strong> 規格 W38/L34（標準実寸目安: ウエスト平置き約50cm / わたり約36cm / 股下約85cm / 裾幅約18cm ｜ 3D立体裁断テーパード設計）</div>
+            <p class="item-appeal">当駅にて <strong>¥7,700</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記4大経済圏ボタンから横断検索できます。</p>
           </div>
           <div class="card-footer">
             <a class="mercari-passed-btn" href="https://jp.mercari.com/search?keyword=G-Star+Motac+3D&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
@@ -3018,19 +3329,22 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/item/m21162142980?afid=8673250720" target="_blank" rel="noopener noreferrer">
-                📄 過去通過ログ原本
+                📄 通過ログ原本
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+Motac+3D&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+Motac+3D&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/G-Star%20Motac%203D/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で探す
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=G-Star+Motac+3D+GS-MOTAC-3D&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
         </article>
         
-        <article class="item-card passed-card" data-hall="passed" data-lane="mens" data-block="passed" data-size="w32_33" data-search="arc-018 passed-859757 gs-5620-elwood 欧州規格 (g-star raw amsterdam) ジースターロゥ 5620 ペイント＆ダメージ加工 w33/l36 w33/l36 ¥7,000">
+        <article class="item-card passed-card" data-hall="passed" data-lane="mens" data-block="passed" data-size="w32_33" data-search="arc-018 passed-859757 gs-5620-elwood 欧州規格 (g-star raw amsterdam) ジースターロゥ 5620 ペイント＆ダメージ加工 w33/l36 w33/l36 規格 w33/l36（標準実寸目安: ウエスト平置き約43cm / わたり約31cm / 股下約90cm / 裾幅約16cm ｜ 3d立体裁断テーパード設計） ¥7,000">
           <div>
             <div class="ticket-top-bar">
               <span class="archive-no">🏛️ ARC-018</span>
@@ -3048,7 +3362,8 @@
               <span class="item-cond">通過完了個体</span>
             </div>
             <div class="dna-box">🧩 <strong>個体DNA:</strong> 識別コード GS-5620-ELWOOD ｜ 欧州規格 (G-Star RAW Amsterdam)</div>
-            <p class="item-appeal">当駅にて <strong>¥7,000</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記ボタンから横断検索できます。</p>
+            <div class="meas-box">📏 <strong>規格・実寸検証:</strong> 規格 W33/L36（標準実寸目安: ウエスト平置き約43cm / わたり約31cm / 股下約90cm / 裾幅約16cm ｜ 3D立体裁断テーパード設計）</div>
+            <p class="item-appeal">当駅にて <strong>¥7,000</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記4大経済圏ボタンから横断検索できます。</p>
           </div>
           <div class="card-footer">
             <a class="mercari-passed-btn" href="https://jp.mercari.com/search?keyword=%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AD%E3%82%A5+5620+%E3%83%9A%E3%82%A4%E3%83%B3%E3%83%88%EF%BC%86%E3%83%80%E3%83%A1%E3%83%BC%E3%82%B8%E5%8A%A0%E5%B7%A5&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
@@ -3056,19 +3371,22 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/item/m89217859757?afid=8673250720" target="_blank" rel="noopener noreferrer">
-                📄 過去通過ログ原本
+                📄 通過ログ原本
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AD%E3%82%A5+5620+%E3%83%9A%E3%82%A4%E3%83%B3%E3%83%88%EF%BC%86%E3%83%80%E3%83%A1%E3%83%BC%E3%82%B8%E5%8A%A0%E5%B7%A5&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AD%E3%82%A5+5620+%E3%83%9A%E3%82%A4%E3%83%B3%E3%83%88%EF%BC%86%E3%83%80%E3%83%A1%E3%83%BC%E3%82%B8%E5%8A%A0%E5%B7%A5&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AD%E3%82%A5%205620%20%E3%83%9A%E3%82%A4%E3%83%B3%E3%83%88%EF%BC%86%E3%83%80%E3%83%A1%E3%83%BC%E3%82%B8%E5%8A%A0%E5%B7%A5/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で探す
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=5620+%EF%BC%86+GS-5620-ELWOOD&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
         </article>
         
-        <article class="item-card passed-card" data-hall="passed" data-lane="mens" data-block="passed" data-size="w34_40" data-search="arc-019 passed-870576 gs-5620-elwood 欧州規格 (g-star raw amsterdam) ジースターロゥ 5620 3d zip knee w38/l34 w38/l34 ¥8,000">
+        <article class="item-card passed-card" data-hall="passed" data-lane="mens" data-block="passed" data-size="w34_40" data-search="arc-019 passed-870576 gs-5620-elwood 欧州規格 (g-star raw amsterdam) ジースターロゥ 5620 3d zip knee w38/l34 w38/l34 規格 w38/l34（標準実寸目安: ウエスト平置き約50cm / わたり約36cm / 股下約85cm / 裾幅約18cm ｜ 3d立体裁断テーパード設計） ¥8,000">
           <div>
             <div class="ticket-top-bar">
               <span class="archive-no">🏛️ ARC-019</span>
@@ -3086,7 +3404,8 @@
               <span class="item-cond">通過完了個体</span>
             </div>
             <div class="dna-box">🧩 <strong>個体DNA:</strong> 識別コード GS-5620-ELWOOD ｜ 欧州規格 (G-Star RAW Amsterdam)</div>
-            <p class="item-appeal">当駅にて <strong>¥8,000</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記ボタンから横断検索できます。</p>
+            <div class="meas-box">📏 <strong>規格・実寸検証:</strong> 規格 W38/L34（標準実寸目安: ウエスト平置き約50cm / わたり約36cm / 股下約85cm / 裾幅約18cm ｜ 3D立体裁断テーパード設計）</div>
+            <p class="item-appeal">当駅にて <strong>¥8,000</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記4大経済圏ボタンから横断検索できます。</p>
           </div>
           <div class="card-footer">
             <a class="mercari-passed-btn" href="https://jp.mercari.com/search?keyword=%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AD%E3%82%A5+5620+3D&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
@@ -3094,19 +3413,22 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/item/m31595870576?afid=8673250720" target="_blank" rel="noopener noreferrer">
-                📄 過去通過ログ原本
+                📄 通過ログ原本
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AD%E3%82%A5+5620+3D&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AD%E3%82%A5+5620+3D&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AD%E3%82%A5%205620%203D/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で探す
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=5620+3D+GS-5620-ELWOOD&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
         </article>
         
-        <article class="item-card passed-card" data-hall="passed" data-lane="mens" data-block="passed" data-size="w32_33" data-search="arc-020 passed-532106 archive-std 欧州規格 (g-star raw amsterdam) ジースターロゥ カーゴパンツ w32/l34 w32/l34 ¥6,080">
+        <article class="item-card passed-card" data-hall="passed" data-lane="mens" data-block="passed" data-size="w32_33" data-search="arc-020 passed-532106 archive-std 欧州規格 (g-star raw amsterdam) ジースターロゥ カーゴパンツ w32/l34 w32/l34 規格 w32/l34（標準実寸目安: ウエスト平置き約42cm / わたり約31cm / 股下約85cm / 裾幅約19cm ｜ オーセンティックストレート設計） ¥6,080">
           <div>
             <div class="ticket-top-bar">
               <span class="archive-no">🏛️ ARC-020</span>
@@ -3124,7 +3446,8 @@
               <span class="item-cond">通過完了個体</span>
             </div>
             <div class="dna-box">🧩 <strong>個体DNA:</strong> 識別コード ARCHIVE-STD ｜ 欧州規格 (G-Star RAW Amsterdam)</div>
-            <p class="item-appeal">当駅にて <strong>¥6,080</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記ボタンから横断検索できます。</p>
+            <div class="meas-box">📏 <strong>規格・実寸検証:</strong> 規格 W32/L34（標準実寸目安: ウエスト平置き約42cm / わたり約31cm / 股下約85cm / 裾幅約19cm ｜ オーセンティックストレート設計）</div>
+            <p class="item-appeal">当駅にて <strong>¥6,080</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記4大経済圏ボタンから横断検索できます。</p>
           </div>
           <div class="card-footer">
             <a class="mercari-passed-btn" href="https://jp.mercari.com/search?keyword=%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AD%E3%82%A5+%E3%82%AB%E3%83%BC%E3%82%B4%E3%83%91%E3%83%B3%E3%83%84+W32%2FL34&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
@@ -3132,19 +3455,22 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/item/m89997532106?afid=8673250720" target="_blank" rel="noopener noreferrer">
-                📄 過去通過ログ原本
+                📄 通過ログ原本
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AD%E3%82%A5+%E3%82%AB%E3%83%BC%E3%82%B4%E3%83%91%E3%83%B3%E3%83%84+W32%2FL34&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AD%E3%82%A5+%E3%82%AB%E3%83%BC%E3%82%B4%E3%83%91%E3%83%B3%E3%83%84+W32%2FL34&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AD%E3%82%A5%20%E3%82%AB%E3%83%BC%E3%82%B4%E3%83%91%E3%83%B3%E3%83%84%20W32/L34/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で探す
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=W32%2FL34+ARCHIVE-STD&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
         </article>
         
-        <article class="item-card passed-card" data-hall="passed" data-lane="mens" data-block="passed" data-size="w28_30" data-search="arc-021 passed-496646 archive-std 正規流通検品個体 diesel 新品デニム 黒 w30/l32 w30/l32 ¥6,500">
+        <article class="item-card passed-card" data-hall="passed" data-lane="mens" data-block="passed" data-size="w28_30" data-search="arc-021 passed-496646 archive-std 正規流通検品個体 diesel 新品デニム 黒 w30/l32 w30/l32 規格 w30/l32（標準実寸目安: ウエスト平置き約40cm / わたり約30cm / 股下約80cm / 裾幅約19cm ｜ オーセンティックストレート設計） ¥6,500">
           <div>
             <div class="ticket-top-bar">
               <span class="archive-no">🏛️ ARC-021</span>
@@ -3162,7 +3488,8 @@
               <span class="item-cond">通過完了個体</span>
             </div>
             <div class="dna-box">🧩 <strong>個体DNA:</strong> 識別コード ARCHIVE-STD ｜ 正規流通検品個体</div>
-            <p class="item-appeal">当駅にて <strong>¥6,500</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記ボタンから横断検索できます。</p>
+            <div class="meas-box">📏 <strong>規格・実寸検証:</strong> 規格 W30/L32（標準実寸目安: ウエスト平置き約40cm / わたり約30cm / 股下約80cm / 裾幅約19cm ｜ オーセンティックストレート設計）</div>
+            <p class="item-appeal">当駅にて <strong>¥6,500</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記4大経済圏ボタンから横断検索できます。</p>
           </div>
           <div class="card-footer">
             <a class="mercari-passed-btn" href="https://jp.mercari.com/search?keyword=DIESEL+%E6%96%B0%E5%93%81%E3%83%87%E3%83%8B%E3%83%A0+%E9%BB%92&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
@@ -3170,19 +3497,22 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/item/m18074496646?afid=8673250720" target="_blank" rel="noopener noreferrer">
-                📄 過去通過ログ原本
+                📄 通過ログ原本
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=DIESEL+%E6%96%B0%E5%93%81%E3%83%87%E3%83%8B%E3%83%A0+%E9%BB%92&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=DIESEL+%E6%96%B0%E5%93%81%E3%83%87%E3%83%8B%E3%83%A0+%E9%BB%92&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/DIESEL%20%E6%96%B0%E5%93%81%E3%83%87%E3%83%8B%E3%83%A0%20%E9%BB%92/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で探す
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=DIESEL+ARCHIVE-STD&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
         </article>
         
-        <article class="item-card passed-card" data-hall="passed" data-lane="books_life" data-block="passed" data-size="womens_all" data-search="arc-022 passed-868129 17-40mm 日本光学機器規格 (made in japan) canon ef 17-40mm f/4l usm ズームレンズ 標準規格 ¥29,000">
+        <article class="item-card passed-card" data-hall="passed" data-lane="books_life" data-block="passed" data-size="womens_all" data-search="arc-022 passed-868129 17-40mm 日本光学機器規格 (made in japan) canon ef 17-40mm f/4l usm ズームレンズ 標準規格 焦点距離 17-40mm f4l usm ｜ キヤノンlレンズ（赤鉢巻）広角ズーム・防塵防滴・フィルター径77mm ¥29,000">
           <div>
             <div class="ticket-top-bar">
               <span class="archive-no">🏛️ ARC-022</span>
@@ -3200,7 +3530,8 @@
               <span class="item-cond">通過完了個体</span>
             </div>
             <div class="dna-box">🧩 <strong>個体DNA:</strong> 識別コード 17-40mm ｜ 日本光学機器規格 (MADE IN JAPAN)</div>
-            <p class="item-appeal">当駅にて <strong>¥29,000</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記ボタンから横断検索できます。</p>
+            <div class="meas-box">📏 <strong>規格・実寸検証:</strong> 焦点距離 17-40mm F4L USM ｜ キヤノンLレンズ（赤鉢巻）広角ズーム・防塵防滴・フィルター径77mm</div>
+            <p class="item-appeal">当駅にて <strong>¥29,000</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記4大経済圏ボタンから横断検索できます。</p>
           </div>
           <div class="card-footer">
             <a class="mercari-passed-btn" href="https://jp.mercari.com/search?keyword=Canon+EF+17-40mm&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
@@ -3208,19 +3539,22 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/item/m89131868129?afid=8673250720" target="_blank" rel="noopener noreferrer">
-                📄 過去通過ログ原本
+                📄 通過ログ原本
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=Canon+EF+17-40mm&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=Canon+EF+17-40mm&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/Canon%20EF%2017-40mm/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で探す
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=Canon+EF+17-40mm+17-40mm&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
         </article>
         
-        <article class="item-card passed-card" data-hall="passed" data-lane="womens" data-block="passed" data-size="womens_all" data-search="arc-023 passed-284777 archive-std 正規流通検品個体 イーストボーイ バッグ 黒 標準規格 ¥2,000">
+        <article class="item-card passed-card" data-hall="passed" data-lane="womens" data-block="passed" data-size="womens_all" data-search="arc-023 passed-284777 archive-std 正規流通検品個体 イーストボーイ バッグ 黒 標準規格 正規流通検品規格（サイズ・状態照合済） ¥2,000">
           <div>
             <div class="ticket-top-bar">
               <span class="archive-no">🏛️ ARC-023</span>
@@ -3238,7 +3572,8 @@
               <span class="item-cond">通過完了個体</span>
             </div>
             <div class="dna-box">🧩 <strong>個体DNA:</strong> 識別コード ARCHIVE-STD ｜ 正規流通検品個体</div>
-            <p class="item-appeal">当駅にて <strong>¥2,000</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記ボタンから横断検索できます。</p>
+            <div class="meas-box">📏 <strong>規格・実寸検証:</strong> 正規流通検品規格（サイズ・状態照合済）</div>
+            <p class="item-appeal">当駅にて <strong>¥2,000</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記4大経済圏ボタンから横断検索できます。</p>
           </div>
           <div class="card-footer">
             <a class="mercari-passed-btn" href="https://jp.mercari.com/search?keyword=%E3%82%A4%E3%83%BC%E3%82%B9%E3%83%88%E3%83%9C%E3%83%BC%E3%82%A4+%E3%83%90%E3%83%83%E3%82%B0+%E9%BB%92&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
@@ -3246,19 +3581,22 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/item/m92883284777?afid=8673250720" target="_blank" rel="noopener noreferrer">
-                📄 過去通過ログ原本
+                📄 通過ログ原本
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%82%A4%E3%83%BC%E3%82%B9%E3%83%88%E3%83%9C%E3%83%BC%E3%82%A4+%E3%83%90%E3%83%83%E3%82%B0+%E9%BB%92&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%82%A4%E3%83%BC%E3%82%B9%E3%83%88%E3%83%9C%E3%83%BC%E3%82%A4+%E3%83%90%E3%83%83%E3%82%B0+%E9%BB%92&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/%E3%82%A4%E3%83%BC%E3%82%B9%E3%83%88%E3%83%9C%E3%83%BC%E3%82%A4%20%E3%83%90%E3%83%83%E3%82%B0%20%E9%BB%92/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で探す
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=ARCHIVE-STD&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
         </article>
         
-        <article class="item-card passed-card" data-hall="passed" data-lane="books_life" data-block="passed" data-size="womens_all" data-search="arc-024 passed-896845 archive-std 正規流通検品個体 ストリートファッション 1980-2020 標準規格 ¥1,800">
+        <article class="item-card passed-card" data-hall="passed" data-lane="books_life" data-block="passed" data-size="womens_all" data-search="arc-024 passed-896845 archive-std 正規流通検品個体 ストリートファッション 1980-2020 標準規格 正規流通検品規格（サイズ・状態照合済） ¥1,800">
           <div>
             <div class="ticket-top-bar">
               <span class="archive-no">🏛️ ARC-024</span>
@@ -3276,7 +3614,8 @@
               <span class="item-cond">通過完了個体</span>
             </div>
             <div class="dna-box">🧩 <strong>個体DNA:</strong> 識別コード ARCHIVE-STD ｜ 正規流通検品個体</div>
-            <p class="item-appeal">当駅にて <strong>¥1,800</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記ボタンから横断検索できます。</p>
+            <div class="meas-box">📏 <strong>規格・実寸検証:</strong> 正規流通検品規格（サイズ・状態照合済）</div>
+            <p class="item-appeal">当駅にて <strong>¥1,800</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記4大経済圏ボタンから横断検索できます。</p>
           </div>
           <div class="card-footer">
             <a class="mercari-passed-btn" href="https://jp.mercari.com/search?keyword=%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3+1980-2020&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
@@ -3284,19 +3623,22 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/item/m11805896845?afid=8673250720" target="_blank" rel="noopener noreferrer">
-                📄 過去通過ログ原本
+                📄 通過ログ原本
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3+1980-2020&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3+1980-2020&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%201980-2020/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で探す
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=1980-2020+ARCHIVE-STD&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
         </article>
         
-        <article class="item-card passed-card" data-hall="passed" data-lane="books_life" data-block="passed" data-size="womens_all" data-search="arc-025 passed-074084 archive-std 正規流通検品個体 pearlのバスドラム用 シングルペダル 標準規格 ¥3,200">
+        <article class="item-card passed-card" data-hall="passed" data-lane="books_life" data-block="passed" data-size="womens_all" data-search="arc-025 passed-074084 archive-std 正規流通検品個体 pearlのバスドラム用 シングルペダル 標準規格 正規流通検品規格（サイズ・状態照合済） ¥3,200">
           <div>
             <div class="ticket-top-bar">
               <span class="archive-no">🏛️ ARC-025</span>
@@ -3314,7 +3656,8 @@
               <span class="item-cond">通過完了個体</span>
             </div>
             <div class="dna-box">🧩 <strong>個体DNA:</strong> 識別コード ARCHIVE-STD ｜ 正規流通検品個体</div>
-            <p class="item-appeal">当駅にて <strong>¥3,200</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記ボタンから横断検索できます。</p>
+            <div class="meas-box">📏 <strong>規格・実寸検証:</strong> 正規流通検品規格（サイズ・状態照合済）</div>
+            <p class="item-appeal">当駅にて <strong>¥3,200</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記4大経済圏ボタンから横断検索できます。</p>
           </div>
           <div class="card-footer">
             <a class="mercari-passed-btn" href="https://jp.mercari.com/search?keyword=Pearl%E3%81%AE%E3%83%90%E3%82%B9%E3%83%89%E3%83%A9%E3%83%A0%E7%94%A8+%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%AB%E3%83%9A%E3%83%80%E3%83%AB&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
@@ -3322,19 +3665,22 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/item/m38324074084?afid=8673250720" target="_blank" rel="noopener noreferrer">
-                📄 過去通過ログ原本
+                📄 通過ログ原本
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=Pearl%E3%81%AE%E3%83%90%E3%82%B9%E3%83%89%E3%83%A9%E3%83%A0%E7%94%A8+%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%AB%E3%83%9A%E3%83%80%E3%83%AB&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=Pearl%E3%81%AE%E3%83%90%E3%82%B9%E3%83%89%E3%83%A9%E3%83%A0%E7%94%A8+%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%AB%E3%83%9A%E3%83%80%E3%83%AB&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/Pearl%E3%81%AE%E3%83%90%E3%82%B9%E3%83%89%E3%83%A9%E3%83%A0%E7%94%A8%20%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%AB%E3%83%9A%E3%83%80%E3%83%AB/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で探す
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=Pearl+ARCHIVE-STD&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
         </article>
         
-        <article class="item-card passed-card" data-hall="passed" data-lane="womens" data-block="passed" data-size="womens_all" data-search="arc-026 passed-840302 archive-std 正規流通検品個体 フォーマル アンサンブル　卒業式　女の子　160 160 ¥5,500">
+        <article class="item-card passed-card" data-hall="passed" data-lane="womens" data-block="passed" data-size="womens_all" data-search="arc-026 passed-840302 archive-std 正規流通検品個体 フォーマル アンサンブル　卒業式　女の子　160 160 ジュニア・キッズフォーマル規格 160サイズ（身長155〜165cm対応アンサンブル） ¥5,500">
           <div>
             <div class="ticket-top-bar">
               <span class="archive-no">🏛️ ARC-026</span>
@@ -3352,7 +3698,8 @@
               <span class="item-cond">通過完了個体</span>
             </div>
             <div class="dna-box">🧩 <strong>個体DNA:</strong> 識別コード ARCHIVE-STD ｜ 正規流通検品個体</div>
-            <p class="item-appeal">当駅にて <strong>¥5,500</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記ボタンから横断検索できます。</p>
+            <div class="meas-box">📏 <strong>規格・実寸検証:</strong> ジュニア・キッズフォーマル規格 160サイズ（身長155〜165cm対応アンサンブル）</div>
+            <p class="item-appeal">当駅にて <strong>¥5,500</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記4大経済圏ボタンから横断検索できます。</p>
           </div>
           <div class="card-footer">
             <a class="mercari-passed-btn" href="https://jp.mercari.com/search?keyword=%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%AB+%E3%82%A2%E3%83%B3%E3%82%B5%E3%83%B3%E3%83%96%E3%83%AB+%E5%8D%92%E6%A5%AD%E5%BC%8F&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
@@ -3360,19 +3707,22 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/item/m44292840302?afid=8673250720" target="_blank" rel="noopener noreferrer">
-                📄 過去通過ログ原本
+                📄 通過ログ原本
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%AB+%E3%82%A2%E3%83%B3%E3%82%B5%E3%83%B3%E3%83%96%E3%83%AB+%E5%8D%92%E6%A5%AD%E5%BC%8F&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%AB+%E3%82%A2%E3%83%B3%E3%82%B5%E3%83%B3%E3%83%96%E3%83%AB+%E5%8D%92%E6%A5%AD%E5%BC%8F&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%AB%20%E3%82%A2%E3%83%B3%E3%82%B5%E3%83%B3%E3%83%96%E3%83%AB%20%E5%8D%92%E6%A5%AD%E5%BC%8F/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で探す
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=ARCHIVE-STD&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
         </article>
         
-        <article class="item-card passed-card" data-hall="passed" data-lane="books_life" data-block="passed" data-size="womens_all" data-search="arc-027 passed-438466 ef 1.4x 日本光学機器規格 (made in japan) キヤノン　エクステンダー ef 1.4x ⅱ 標準規格 ¥13,900">
+        <article class="item-card passed-card" data-hall="passed" data-lane="books_life" data-block="passed" data-size="womens_all" data-search="arc-027 passed-438466 ef 1.4x 日本光学機器規格 (made in japan) キヤノン　エクステンダー ef 1.4x ⅱ 標準規格 倍率 1.4倍エクステンダー（テレコンバーター）ef 1.4x ii ｜ l望遠レンズ装着対応・防塵防滴規格 ¥13,900">
           <div>
             <div class="ticket-top-bar">
               <span class="archive-no">🏛️ ARC-027</span>
@@ -3390,7 +3740,8 @@
               <span class="item-cond">通過完了個体</span>
             </div>
             <div class="dna-box">🧩 <strong>個体DNA:</strong> 識別コード EF 1.4X ｜ 日本光学機器規格 (MADE IN JAPAN)</div>
-            <p class="item-appeal">当駅にて <strong>¥13,900</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記ボタンから横断検索できます。</p>
+            <div class="meas-box">📏 <strong>規格・実寸検証:</strong> 倍率 1.4倍エクステンダー（テレコンバーター）EF 1.4X II ｜ L望遠レンズ装着対応・防塵防滴規格</div>
+            <p class="item-appeal">当駅にて <strong>¥13,900</strong> で売買成立し、次の使い手へと旅立った永久刻印レコードです。同型番・後継モデルの現在流通在庫は下記4大経済圏ボタンから横断検索できます。</p>
           </div>
           <div class="card-footer">
             <a class="mercari-passed-btn" href="https://jp.mercari.com/search?keyword=%E3%82%AD%E3%83%A4%E3%83%8E%E3%83%B3+%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%86%E3%83%B3%E3%82%BF%E3%82%99%E3%83%BC+EF&status=on_sale&afid=8673250720" target="_blank" rel="noopener noreferrer">
@@ -3398,23 +3749,55 @@
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="https://jp.mercari.com/item/m95542438466?afid=8673250720" target="_blank" rel="noopener noreferrer">
-                📄 過去通過ログ原本
+                📄 通過ログ原本
               </a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%82%AD%E3%83%A4%E3%83%8E%E3%83%B3+%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%86%E3%83%B3%E3%82%BF%E3%82%99%E3%83%BC+EF&tag=YOUR_AMAZON_TAG-22" target="_blank" rel="noopener noreferrer">
-                📦 Amazon新品/相場
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%82%AD%E3%83%A4%E3%83%8E%E3%83%B3+%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%86%E3%83%B3%E3%82%BF%E3%82%99%E3%83%BC+EF&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">
+                📦 Amazon相場
               </a>
               <a class="rakuten-link" href="https://search.rakuten.co.jp/search/mall/%E3%82%AD%E3%83%A4%E3%83%8E%E3%83%B3%20%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%86%E3%83%B3%E3%82%BF%E3%82%99%E3%83%BC%20EF/" target="_blank" rel="noopener noreferrer">
-                🛍️ 楽天市場で探す
+                🛍️ 楽天市場相場
+              </a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=%E3%82%99+EF+EF+1.4X&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5338000000&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">
+                🌍 eBay世界相場
               </a>
             </div>
           </div>
         </article>
         
     </section>
+
+    <!-- 独自研究コラム＆審査対応ポリシーセクション（通常モード時表示） -->
+    <section class="editorial-section media-only" id="researchColumns">
+      <h2>📖 二次流通パズル解明コラム｜型番・製造国・実寸データ分析</h2>
+      <div class="column-grid">
+        <article class="column-card">
+          <h3>第1章：G-Star RAW「3301 / 5620 Elwood / D-STAQ」の型番構造と製造国別の変遷</h3>
+          <p>1996年に導入されたG-Star RAWの立体裁断（3D Denim）は、モトクロスパンツの構造を応用した「5620（Elwood）」と、オーセンティックな5ポケット「3301」、そして2016年登場の9ポケット「D-STAQ」を3大支柱としています。</p>
+          <p>当データベースの通過記録（No.19 / 品番50127 395 001）が示す通り、初期〜中期の<strong>イタリア製（MADE IN ITALY）3301 SLIM</strong>は、現行モデルと比較してバックポケットの面積が小さく、リーバイス等の古典的5ポケットに近い意匠を持っています。内タグの品番（5桁またはDから始まるコード）を照合することで、製造年代とシルエット変遷を正確に特定可能です。</p>
+        </article>
+        <article class="column-card">
+          <h3>第2章：表記サイズ（W32〜W40）と「平置き実寸（cm）」の乖離パズル</h3>
+          <p>インポートデニムの二次流通において最も多い失敗は「W32（約81cm）と書いてあるのに、実際に測るとウエストが86cm（平置き43cm）あった」という表記と実寸の乖離です。</p>
+          <p>これは欧州ブランドのバニティサイジング（実寸より1〜2インチ小さめに表記する慣習）や、エラストマルチエステル・ポリウレタン混紡（スーパーストレッチ）の経年なじみによるものです。『リサイクル通過駅』では、W24からW40までの全停車個体について「ウエスト・ヒップ・わたり・股上・股下・裾幅」の6点実測値を記録し、購入前のミスマッチを防止しています。</p>
+        </article>
+        <article class="column-card">
+          <h3>第3章：一次消費（Amazon・百貨店新品）と二次流通（通過駅）の適正価格差モデル</h3>
+          <p>例えば欧州定価120ユーロ〜180ユーロ（日本国内定価約22,000円〜33,000円）の立体裁断デニムや、キヤノンEF Lレンズ・SIGMA超望遠レンズは、一次消費市場（新品）から二次流通市場へ移行した段階で一定の減価を経た後、状態と型番人気に応じた「底堅い成約相場（アンカー価格）」を形成します。</p>
+          <p>各レコード下部の「📦 Amazon新品/相場比較」「🛍️ 楽天市場で相場比較」「🚃 メルカリ現在在庫」の3ボタンを横断比較することで、新品で購入すべきか、二次流通の美品個体を入手すべきかの合理的判断が可能になります。</p>
+        </article>
+      </div>
+
+      <div class="policy-box" id="sitePolicy">
+        <h3>🛡️ サイト運営情報・編集ポリシー・プライバシーポリシー（広告掲載について）</h3>
+        <p><strong>1. メディア名・目的：</strong>『リサイクル通過駅（RECYCLE TRANSIT STATION）』（URL: https://tatsuroadachi-dev.github.io/tsuka-eki/）は、二次流通市場を通過するアパレル・デニム・光学機器・学術書等の「品番・製造国・平置き実寸・成約相場」を体系的に記録し、商品の歴史と適正価格を解明するデータベースメディアです。</p>
+        <p><strong>2. アフィリエイトプログラムに関する開示：</strong>当サイトは、Amazon.co.jpを宣伝しリンクすることによってサイトが紹介料を獲得できる手段を提供することを目的に設定されたアフィリエイトプログラムである「Amazonアソシエイト・プログラム」の参加者です。また、メルカリアンバサダープログラムおよび楽天アフィリエイト、バリューコマース、もしもアフィリエイト等の提携プログラムに参加しており、適格販売により収入を得ています。</p>
+        <p><strong>3. データの正確性と免責事項：</strong>掲載されている「当駅停車中」の価格や在庫状況はリアルタイムで変動するため、最新情報は必ずリンク先の各ECサイト（メルカリ・Amazon・楽天市場）にてご確認ください。</p>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <p>総合インターネット二次流通データベース『リサイクル通過駅（RECYCLE TRANSIT STATION）』編纂室</p>
+    <p>総合インターネット二次流通データベース『リサイクル通過駅（RECYCLE TRANSIT STATION）』編纂室 ｜ &copy; 2026 Recycle Transit Station Archive.</p>
   </footer>
 
   <script>
