@@ -93,6 +93,7 @@
     .sign-brand {
       display: flex;
       flex-direction: column;
+      padding-left: 8px;
     }
     .sign-kana {
       font-size: 10px;
@@ -106,14 +107,23 @@
       color: var(--jr-navy);
       letter-spacing: 0.04em;
       line-height: 1.15;
-      padding-top: 2px;
+      padding-top: 12px;
     }
-    .sign-kanji ruby rt {
-      font-size: 10px;
+    .name-ruby {
+      position: relative;
+      display: inline-block;
+    }
+    .name-rt {
+      position: absolute;
+      left: 50%;
+      top: -12px;
+      transform: translateX(-50%);
+      font-size: 9.5px;
       font-weight: 800;
       color: var(--text-secondary);
-      letter-spacing: 0.06em;
-      ruby-align: center;
+      letter-spacing: 0;
+      white-space: nowrap;
+      line-height: 1;
     }
     .sign-en {
       font-size: 10px;
@@ -630,7 +640,7 @@
     <div class="header-top-row">
       <div class="station-signboard">
         <div class="sign-brand">
-          <span class="sign-kanji"><ruby>商品<rt>マーチャンダイズ</rt></ruby>通過駅</span>
+          <span class="sign-kanji" aria-label="商品（マーチャンダイズ）通過駅"><span class="name-ruby">商品<span class="name-rt" aria-hidden="true">マーチャンダイズ</span></span>通過駅</span>
           <span class="sign-en">MERCHANDISE TRANSIT STATION — Secondary Market Visual Archive</span>
         </div>
         <span class="sign-badge-pill">📸 実物写真＆実寸アーカイブ (65点)</span>
