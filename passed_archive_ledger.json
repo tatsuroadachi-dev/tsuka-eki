@@ -1,6 +1,6 @@
 {
   "schema_version": "3.0-enriched-passed-only",
-  "description": "マーチャンダイズ通過駅・通過完了（SOLD成約済）永久刻印データベース",
+  "description": "買い物通過駅・通過完了（SOLD成約済）永久刻印データベース",
   "total_passed_count": 27,
   "passed_records": [
     {
