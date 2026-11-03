@@ -1,6 +1,6 @@
 {
-  "schema_version": "3.0-enriched-passed-only",
-  "description": "買い物通過駅・通過完了（SOLD成約済）永久刻印データベース",
+  "schema_version": "4.0-bargain-transit-station",
+  "description": "お買い得通過駅・通過完了（SOLD成約済）永久刻印データベース",
   "total_passed_count": 27,
   "passed_records": [
     {
@@ -23,6 +23,7 @@
         "裾幅（目安）": "約16cm"
       },
       "target_lane": "mens",
+      "cluster_key": "01_gstar_5620",
       "size_group": "w34_40",
       "search_kw": "G-Star RAW 5620",
       "mercari_item_url": "https://jp.mercari.com/item/m64989445552",
@@ -42,6 +43,7 @@
       "spec_detail": "クリンスイ 交換用カートリッジ CBC03Z (3個入)",
       "estimated_meas": {},
       "target_lane": "books_life",
+      "cluster_key": "06_camera_watch_life",
       "size_group": "womens_all",
       "search_kw": "Cleansui クリンスイ CBC03Z-AZ",
       "mercari_item_url": "https://jp.mercari.com/item/m81325101567",
@@ -67,6 +69,7 @@
         "裾幅（目安）": "約19cm"
       },
       "target_lane": "mens",
+      "cluster_key": "03_gstar_3301",
       "size_group": "w28_30",
       "search_kw": "G-Star RAW デッドストック",
       "mercari_item_url": "https://jp.mercari.com/item/m32362276439",
@@ -86,6 +89,7 @@
       "spec_detail": "正規流通・検品済個体",
       "estimated_meas": {},
       "target_lane": "mens",
+      "cluster_key": "01_gstar_5620",
       "size_group": "w32_33",
       "search_kw": "G-STAR RAW 5620",
       "mercari_item_url": "https://jp.mercari.com/item/m81202461316",
@@ -105,6 +109,7 @@
       "spec_detail": "正規流通・検品済個体",
       "estimated_meas": {},
       "target_lane": "mens",
+      "cluster_key": "01_gstar_5620",
       "size_group": "w34_40",
       "search_kw": "G-STAR RAW 薄手ミリタリー系パンツ",
       "mercari_item_url": "https://jp.mercari.com/item/m98967227980",
@@ -130,6 +135,7 @@
         "裾幅（目安）": "約19cm"
       },
       "target_lane": "mens",
+      "cluster_key": "03_gstar_3301",
       "size_group": "w32_33",
       "search_kw": "G-STAR RAW 3301",
       "mercari_item_url": "https://jp.mercari.com/item/m28466597673",
@@ -155,6 +161,7 @@
         "裾幅（目安）": "約18cm"
       },
       "target_lane": "mens",
+      "cluster_key": "02_gstar_dstaq",
       "size_group": "w34_40",
       "search_kw": "ジースターロゥ CITISHIELD W38/L38",
       "mercari_item_url": "https://jp.mercari.com/item/m38833614217",
@@ -174,6 +181,7 @@
       "spec_detail": "150-600mm F5-6.3 DG OS HSM ｜ 径95mm・手ブレ補正OS",
       "estimated_meas": {},
       "target_lane": "books_life",
+      "cluster_key": "06_camera_watch_life",
       "size_group": "womens_all",
       "search_kw": "SIGMA 150-600mm F5-6.3",
       "mercari_item_url": "https://jp.mercari.com/item/m99433088455",
@@ -193,6 +201,7 @@
       "spec_detail": "メンズ/ユニセックス Mサイズ (軽量中綿仕様)",
       "estimated_meas": {},
       "target_lane": "womens",
+      "cluster_key": "07_womens_apparel",
       "size_group": "womens_all",
       "search_kw": "UNIQLO PUFF TECH",
       "mercari_item_url": "https://jp.mercari.com/item/m62637863634",
@@ -212,6 +221,7 @@
       "spec_detail": "正規流通・検品済個体",
       "estimated_meas": {},
       "target_lane": "womens",
+      "cluster_key": "07_womens_apparel",
       "size_group": "womens_all",
       "search_kw": "adidas 日本代表 サッカーシャツ",
       "mercari_item_url": "https://jp.mercari.com/item/m82987348703",
@@ -237,6 +247,7 @@
         "裾幅（目安）": "約18cm"
       },
       "target_lane": "mens",
+      "cluster_key": "02_gstar_dstaq",
       "size_group": "w34_40",
       "search_kw": "ジースターロゥ D-STAQ 3Dスリム",
       "mercari_item_url": "https://jp.mercari.com/item/m17628860033",
@@ -262,6 +273,7 @@
         "裾幅（目安）": "約17cm"
       },
       "target_lane": "mens",
+      "cluster_key": "01_gstar_5620",
       "size_group": "w34_40",
       "search_kw": "ジースターロゥ AIRBLAZE W38/L32",
       "mercari_item_url": "https://jp.mercari.com/item/m81660906765",
@@ -287,6 +299,7 @@
         "裾幅（目安）": "約19cm"
       },
       "target_lane": "mens",
+      "cluster_key": "04_diesel_nudie",
       "size_group": "w32_33",
       "search_kw": "DIESEL 新品デニム 黒",
       "mercari_item_url": "https://jp.mercari.com/item/m20655879284",
@@ -312,6 +325,7 @@
         "裾幅（目安）": "約17cm"
       },
       "target_lane": "mens",
+      "cluster_key": "01_gstar_5620",
       "size_group": "w34_40",
       "search_kw": "ジースター 5620 ライトブルー",
       "mercari_item_url": "https://jp.mercari.com/item/m43975949905",
@@ -337,6 +351,7 @@
         "裾幅（目安）": "約18cm"
       },
       "target_lane": "mens",
+      "cluster_key": "02_gstar_dstaq",
       "size_group": "w34_40",
       "search_kw": "ジースターロゥ CITISHELD W36/L34",
       "mercari_item_url": "https://jp.mercari.com/item/m11143197350",
@@ -362,6 +377,7 @@
         "裾幅（目安）": "約15cm"
       },
       "target_lane": "mens",
+      "cluster_key": "04_diesel_nudie",
       "size_group": "w34_40",
       "search_kw": "ヌーディージーンズ スキニーリン W34/L32",
       "mercari_item_url": "https://jp.mercari.com/item/m54131777259",
@@ -387,6 +403,7 @@
         "裾幅（目安）": "約18cm"
       },
       "target_lane": "mens",
+      "cluster_key": "01_gstar_5620",
       "size_group": "w34_40",
       "search_kw": "G-Star Motac 3D",
       "mercari_item_url": "https://jp.mercari.com/item/m21162142980",
@@ -412,6 +429,7 @@
         "裾幅（目安）": "約16cm"
       },
       "target_lane": "mens",
+      "cluster_key": "01_gstar_5620",
       "size_group": "w32_33",
       "search_kw": "ジースターロゥ 5620 ペイント＆ダメージ加工",
       "mercari_item_url": "https://jp.mercari.com/item/m89217859757",
@@ -437,6 +455,7 @@
         "裾幅（目安）": "約18cm"
       },
       "target_lane": "mens",
+      "cluster_key": "01_gstar_5620",
       "size_group": "w34_40",
       "search_kw": "ジースターロゥ 5620 3D",
       "mercari_item_url": "https://jp.mercari.com/item/m31595870576",
@@ -462,6 +481,7 @@
         "裾幅（目安）": "約19cm"
       },
       "target_lane": "mens",
+      "cluster_key": "01_gstar_5620",
       "size_group": "w32_33",
       "search_kw": "ジースターロゥ カーゴパンツ W32/L34",
       "mercari_item_url": "https://jp.mercari.com/item/m89997532106",
@@ -487,6 +507,7 @@
         "裾幅（目安）": "約19cm"
       },
       "target_lane": "mens",
+      "cluster_key": "04_diesel_nudie",
       "size_group": "w28_30",
       "search_kw": "DIESEL 新品デニム 黒",
       "mercari_item_url": "https://jp.mercari.com/item/m18074496646",
@@ -506,6 +527,7 @@
       "spec_detail": "EF 17-40mm F4L USM ｜ 赤鉢巻L広角ズーム・径77mm",
       "estimated_meas": {},
       "target_lane": "books_life",
+      "cluster_key": "06_camera_watch_life",
       "size_group": "womens_all",
       "search_kw": "Canon EF 17-40mm",
       "mercari_item_url": "https://jp.mercari.com/item/m89131868129",
@@ -525,6 +547,7 @@
       "spec_detail": "正規流通・検品済個体",
       "estimated_meas": {},
       "target_lane": "womens",
+      "cluster_key": "07_womens_apparel",
       "size_group": "womens_all",
       "search_kw": "イーストボーイ バッグ 黒",
       "mercari_item_url": "https://jp.mercari.com/item/m92883284777",
@@ -544,6 +567,7 @@
       "spec_detail": "正規流通・検品済個体",
       "estimated_meas": {},
       "target_lane": "books_life",
+      "cluster_key": "06_camera_watch_life",
       "size_group": "womens_all",
       "search_kw": "ストリートファッション 1980-2020",
       "mercari_item_url": "https://jp.mercari.com/item/m11805896845",
@@ -563,6 +587,7 @@
       "spec_detail": "正規流通・検品済個体",
       "estimated_meas": {},
       "target_lane": "books_life",
+      "cluster_key": "06_camera_watch_life",
       "size_group": "womens_all",
       "search_kw": "Pearlのバスドラム用 シングルペダル",
       "mercari_item_url": "https://jp.mercari.com/item/m38324074084",
@@ -582,6 +607,7 @@
       "spec_detail": "キッズフォーマル 160サイズ (155〜165cm)",
       "estimated_meas": {},
       "target_lane": "womens",
+      "cluster_key": "07_womens_apparel",
       "size_group": "womens_all",
       "search_kw": "フォーマル アンサンブル 卒業式",
       "mercari_item_url": "https://jp.mercari.com/item/m44292840302",
@@ -601,6 +627,7 @@
       "spec_detail": "EF 1.4X II エクステンダー ｜ L望遠レンズ用1.4倍",
       "estimated_meas": {},
       "target_lane": "books_life",
+      "cluster_key": "06_camera_watch_life",
       "size_group": "womens_all",
       "search_kw": "キヤノン エクステンダー EF",
       "mercari_item_url": "https://jp.mercari.com/item/m95542438466",
