@@ -619,7 +619,27 @@
       color: var(--text-secondary);
       line-height: 1.6;
     }
-    .policy-box h3 { font-size: 13px; color: var(--text-primary); margin-bottom: 4px; }
+    .policy-box h3 { font-size: 13px; color: var(--text-primary); margin-bottom: 6px; }
+    .tokushoho-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      margin-bottom: 14px;
+      font-size: 11.5px;
+      background-color: #FFFFFF;
+    }
+    .tokushoho-table th, .tokushoho-table td {
+      border: 1px solid var(--border-col);
+      padding: 6px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    .tokushoho-table th {
+      width: 28%;
+      background-color: #F3F4F6;
+      color: var(--text-primary);
+      font-weight: 700;
+    }
     footer {
       max-width: 1320px;
       margin: 20px auto 0;
@@ -4575,7 +4595,7 @@
     </section>
 
     <details class="editorial-details" id="researchColumns">
-      <summary>マーケット統計・運営ポリシー・免責事項（クリックで展開）</summary>
+      <summary>特定商取引法に基づく表記・マーケット統計・免責事項（クリックで展開）</summary>
       <div class="editorial-body">
         <div class="stats-bar">
           <div class="stat-card">
@@ -4600,10 +4620,26 @@
           </div>
         </div>
 
-        <div class="policy-box" id="sitePolicy">
+        <div class="policy-box" id="tokushoho">
+          <h3>特定商取引法に基づく表記（当サイト専売・直販商品に関する表記）</h3>
+          <table class="tokushoho-table">
+            <tbody>
+              <tr><th>販売事業者（屋号）</th><td>通過駅（TSUKA-EKI）</td></tr>
+              <tr><th>運営統括責任者</th><td>足立 辰郎</td></tr>
+              <tr><th>所在地</th><td>請求があったら遅滞なく開示します</td></tr>
+              <tr><th>電話番号</th><td>請求があったら遅滞なく開示します</td></tr>
+              <tr><th>メールアドレス</th><td>tatsuroadachi@gmail.com</td></tr>
+              <tr><th>販売価格</th><td>各商品カードおよび決済画面に表示された価格（表示価格は消費税・送料込みの総額表示です）</td></tr>
+              <tr><th>商品代金以外の必要料金</th><td>なし（送料・決済手数料は販売価格に含まれています）</td></tr>
+              <tr><th>お支払方法・お支払時期</th><td>クレジットカード決済・Apple Pay・Google Pay（Stripe決済システムを利用。ご注文確定時に決済が完了します）</td></tr>
+              <tr><th>商品の引渡時期</th><td>決済完了確認後、原則として1〜3営業日以内に発送いたします（追跡番号付き配送）</td></tr>
+              <tr><th>返品・交換・キャンセル</th><td>1点モノの商品特性上、お客様都合による発送後の返品・交換はお受けできません。万が一、商品説明と著しく異なる不良・誤配送があった場合は、商品到着後7日以内にメールにてご連絡いただければ送料当方負担にて返金対応いたします。</td></tr>
+            </tbody>
+          </table>
+
           <h3>サイト運営情報・免責事項</h3>
-          <p><strong>1. 目的：</strong>『通過駅』（https://tsuka-eki.com/）は、二次流通・Amazon整備済み品・海外市場の商品を、カテゴリーごとに価格の安い順で比較・購入できるセレクトカタログです。</p>
-          <p><strong>2. 価格の表示について：</strong>価格は11月4日 00:20時点の値です。最新の価格・在庫はリンク先の各市場でご確認ください。</p>
+          <p><strong>1. 目的：</strong>『通過駅』（https://tsuka-eki.com/）は、二次流通・Amazon整備済み品・海外市場の商品および当サイト専売品を、カテゴリーごとに価格の安い順で比較・購入できるセレクトカタログです。</p>
+          <p><strong>2. 価格の表示について：</strong>外部市場の価格は11月4日 00:20時点の値です。最新の価格・在庫はリンク先の各市場でご確認ください。</p>
           <p><strong>3. プログラム参加表記：</strong>Amazonのアソシエイトとして、通過駅は適格販売により収入を得ています。また、メルカリアンバサダー・楽天アフィリエイト・eBay Partner Networkを利用しています。</p>
         </div>
       </div>
@@ -4611,7 +4647,7 @@
   </main>
 
   <footer>
-    <p>『通過駅（TSUKA-EKI）』 ｜ &copy; 2026 Tsuka-Eki Catalog Archive.</p>
+    <p>『通過駅（TSUKA-EKI）』 ｜ <a href="#tokushoho" onclick="document.getElementById('researchColumns').open=true;" style="color:inherit;text-decoration:underline;">特定商取引法に基づく表記</a> ｜ &copy; 2026 Tsuka-Eki Catalog Archive.</p>
   </footer>
 
   <script>
