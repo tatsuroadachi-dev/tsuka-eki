@@ -559,6 +559,169 @@
       border: 1px solid #D1D5DB;
     }
 
+    /* ARCHIVE TECH & B2B STUDIO セクション */
+    .b2b-studio-section {
+      max-width: 1320px;
+      margin: 28px auto 0;
+      background-color: #FFFFFF;
+      border: 1px solid var(--border-col);
+      border-top: 3px solid var(--brand-dark);
+      border-radius: 8px;
+      padding: 20px 20px 18px;
+    }
+    .b2b-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-col);
+    }
+    .b2b-kicker {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 800;
+      color: var(--exclusive-gold);
+      background-color: #FFFBEB;
+      border: 1px solid #FDE68A;
+      padding: 2px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.06em;
+      margin-bottom: 6px;
+    }
+    .b2b-title {
+      font-size: 16px;
+      font-weight: 900;
+      color: var(--brand-dark);
+      letter-spacing: 0.02em;
+    }
+    .b2b-lead {
+      font-size: 12px;
+      color: var(--text-secondary);
+      margin-top: 4px;
+    }
+    .b2b-header-badge {
+      font-size: 11px;
+      font-weight: 800;
+      color: #FFFFFF;
+      background-color: var(--brand-dark);
+      padding: 5px 11px;
+      border-radius: 5px;
+      white-space: nowrap;
+      align-self: center;
+    }
+    .b2b-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    @media (max-width: 1024px) {
+      .b2b-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .b2b-grid { grid-template-columns: 1fr; }
+    }
+    .b2b-card {
+      background-color: #F9FAFB;
+      border: 1px solid var(--border-col);
+      border-radius: 7px;
+      padding: 14px 14px 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .b2b-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+      background-color: #FFFFFF;
+    }
+    .b2b-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .b2b-code {
+      font-size: 10.5px;
+      font-weight: 800;
+      color: #374151;
+      background-color: #E5E7EB;
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+    .b2b-price {
+      font-size: 14px;
+      font-weight: 900;
+      color: var(--brand-dark);
+    }
+    .b2b-card-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--text-primary);
+      line-height: 1.4;
+      margin-bottom: 6px;
+    }
+    .b2b-card-desc {
+      font-size: 11.5px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+    .b2b-card-cta {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #FFFFFF;
+      background-color: var(--brand-dark);
+      padding: 8px 10px;
+      border-radius: 5px;
+      transition: opacity 0.15s;
+    }
+    .b2b-card-cta:hover {
+      opacity: 0.88;
+    }
+    .b2b-footer-bar {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border-col);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 11.5px;
+      color: var(--text-secondary);
+    }
+    .b2b-footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .b2b-outline-btn {
+      text-decoration: none;
+      font-size: 11.5px;
+      font-weight: 800;
+      color: var(--brand-dark);
+      background-color: #F3F4F6;
+      border: 1px solid #D1D5DB;
+      padding: 6px 12px;
+      border-radius: 5px;
+      transition: background-color 0.12s;
+    }
+    .b2b-outline-btn:hover {
+      background-color: #E5E7EB;
+    }
+    .b2b-outline-btn.gold-accent {
+      color: #92400E;
+      background-color: #FFFBEB;
+      border-color: #F59E0B;
+    }
+
     /* 下部折りたたみポリシー */
     .editorial-details {
       max-width: 1320px;
@@ -679,7 +842,7 @@
         </div>
         <input type="text" id="dbSearchInput" class="db-search-input" placeholder="型番・ブランド・実寸で検索（例: 3301, 5620, D-STAQ, SIGMA, W42cm）..." oninput="applyFilters()">
         <span class="count-pill" id="countBanner">95件（安い順）</span>
-        <span class="asof-pill">価格更新: 11月14日 21:21</span>
+        <span class="asof-pill">価格更新: 11月15日 21:42</span>
       </div>
       <div class="control-row-pills">
         <button class="diag-btn active" id="btn-lane-all" onclick="setLane('all')">全カテゴリー</button>
@@ -758,7 +921,7 @@
           <span class="badge-status status-active">美品</span>
         </div>
         <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥3,280<small class="price-asof">11月14日時点</small></span>
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥3,280<small class="price-asof">11月15日時点</small></span>
         </div>
       </a>
       <div class="thumb-strip">
@@ -788,17 +951,17 @@
           </div>
         </article>
     
-        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="3980" data-size="w28_30" data-role="station_stopping" data-search="no.16  d14456-b767-a804 g-star欧州規格 ジースターロゥ citishield 3dスリムデニム w28/l32 w37cm / h47cm / 渡28cm / 股上24cm">
+        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="3980" data-size="w28_30" data-role="station_stopping" data-search="no.17  d14456-b767-a804 g-star欧州規格 ジースターロゥ citishield 3dスリムデニム w28/l32 w37cm / h47cm / 渡28cm / 股上24cm">
           
     <div class="photo-gallery-block">
       <a class="card-photo-link" href="https://jp.mercari.com/item/m40219814481?afid=8673250720" target="_blank" rel="noopener noreferrer" title="ジースターロゥ CITISHIELD 3Dスリムデニム W28/L32">
         <img class="card-main-photo" src="photos/m40219814481_1.jpg" alt="ジースターロゥ CITISHIELD 3Dスリムデニム W28/L32" loading="lazy">
         <div class="photo-overlay-top">
-          <span class="badge-no">No.16 <small>D14456-B767-A804</small></span>
+          <span class="badge-no">No.17 <small>D14456-B767-A804</small></span>
           <span class="badge-status status-active">美品</span>
         </div>
         <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥3,980<small class="price-asof">11月14日時点</small></span>
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥3,980<small class="price-asof">11月15日時点</small></span>
         </div>
       </a>
       <div class="thumb-strip">
@@ -828,17 +991,17 @@
           </div>
         </article>
     
-        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="3980" data-size="w32_33" data-role="station_stopping" data-search="no.17  50127 395 001 イタリア製 ジースターロゥ 3301 slim イタリア製 濃紺デニム w33/l32 w42cm / h51cm / 渡32cm / 股上25cm">
+        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="3980" data-size="w32_33" data-role="station_stopping" data-search="no.18  50127 395 001 イタリア製 ジースターロゥ 3301 slim イタリア製 濃紺デニム w33/l32 w42cm / h51cm / 渡32cm / 股上25cm">
           
     <div class="photo-gallery-block">
       <a class="card-photo-link" href="https://jp.mercari.com/item/m57483525697?afid=8673250720" target="_blank" rel="noopener noreferrer" title="ジースターロゥ 3301 SLIM イタリア製 濃紺デニム W33/L32">
         <img class="card-main-photo" src="photos/m57483525697_1.jpg" alt="ジースターロゥ 3301 SLIM イタリア製 濃紺デニム W33/L32" loading="lazy">
         <div class="photo-overlay-top">
-          <span class="badge-no">No.17 <small>50127 395 001</small></span>
+          <span class="badge-no">No.18 <small>50127 395 001</small></span>
           <span class="badge-status status-active">美品</span>
         </div>
         <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥3,980<small class="price-asof">11月14日時点</small></span>
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥3,980<small class="price-asof">11月15日時点</small></span>
         </div>
       </a>
       <div class="thumb-strip">
@@ -868,17 +1031,57 @@
           </div>
         </article>
     
-        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="4980" data-size="w28_30" data-role="station_stopping" data-search="no.19  1003382 nudie欧州規格 ヌーディージーンズ thin finn 濃紺デニム w26/l30 w34cm / h42cm / 渡23cm / 股上24cm">
+        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="4580" data-size="w34_40" data-role="station_stopping" data-search="no.19  std-item モーリシャス製 calvin klein jeans ストレート デニム w34/l34 美品 w44cm / h53cm / 渡33cm / 股上27cm">
+          
+    <div class="photo-gallery-block">
+      <a class="card-photo-link" href="https://jp.mercari.com/item/m54768811194?afid=8673250720" target="_blank" rel="noopener noreferrer" title="Calvin Klein Jeans ストレート デニム W34/L34 美品">
+        <img class="card-main-photo" src="photos/m54768811194_1.jpg" alt="Calvin Klein Jeans ストレート デニム W34/L34 美品" loading="lazy">
+        <div class="photo-overlay-top">
+          <span class="badge-no">No.19 <small>STD-ITEM</small></span>
+          <span class="badge-status status-active">美品</span>
+        </div>
+        <div class="photo-overlay-bottom">
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥4,580<small class="price-asof">11月15日時点</small></span>
+        </div>
+      </a>
+      <div class="thumb-strip">
+        <img class="thumb-img active" src="photos/m54768811194_1.jpg" alt="Calvin Klein Jeans ストレート デニム W34/L34 美品 (1)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m54768811194_1.jpg')" onclick="switchCardPhoto(this, 'photos/m54768811194_1.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m54768811194_2.jpg" alt="Calvin Klein Jeans ストレート デニム W34/L34 美品 (2)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m54768811194_2.jpg')" onclick="switchCardPhoto(this, 'photos/m54768811194_2.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m54768811194_3.jpg" alt="Calvin Klein Jeans ストレート デニム W34/L34 美品 (3)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m54768811194_3.jpg')" onclick="switchCardPhoto(this, 'photos/m54768811194_3.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m54768811194_4.jpg" alt="Calvin Klein Jeans ストレート デニム W34/L34 美品 (4)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m54768811194_4.jpg')" onclick="switchCardPhoto(this, 'photos/m54768811194_4.jpg')" onerror="this.style.display='none'">
+      </div>
+    </div>
+    
+          <div class="card-body">
+            <h2 class="item-title" title="Calvin Klein Jeans ストレート デニム W34/L34 美品"><a class="title-link" href="https://jp.mercari.com/item/m54768811194?afid=8673250720" target="_blank" rel="noopener noreferrer">Calvin Klein Jeans ストレート デニム W34/L34 美品</a></h2>
+            <div class="spec-pills">
+              
+              <span class="spec-pill origin-pill">モーリシャス製</span>
+              <span class="spec-pill meas-pill">W44cm / H53cm / 渡33cm / 股上27cm</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a class="mercari-btn" href="https://jp.mercari.com/item/m54768811194?afid=8673250720" target="_blank" rel="noopener noreferrer">
+              商品ページを見る（¥4,580） &rarr;
+            </a>
+            <div class="multi-ec-row">
+              <a class="fallback-link" href="item/m54768811194/index.html" title="平置き実寸・4枚写真ページ">実寸詳細</a>
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=Calvin+Klein+Jeans&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">Amazon</a>
+              <a class="rakuten-link" href="https://hb.afl.rakuten.co.jp/hgc/5911c092.7baab367.5911c093.8b9d5488/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FCalvin%2520Klein%2520Jeans%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="noopener noreferrer">楽天市場</a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=Calvin+Klein+Jeans+STD-ITEM&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339238012&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">eBay世界</a>
+            </div>
+            
+          </div>
+        </article>
+    
+        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="4980" data-size="w28_30" data-role="station_stopping" data-search="no.20  1003382 nudie欧州規格 ヌーディージーンズ thin finn 濃紺デニム w26/l30 w34cm / h42cm / 渡23cm / 股上24cm">
           
     <div class="photo-gallery-block">
       <a class="card-photo-link" href="https://jp.mercari.com/item/m24913423372?afid=8673250720" target="_blank" rel="noopener noreferrer" title="ヌーディージーンズ THIN FINN 濃紺デニム W26/L30">
         <img class="card-main-photo" src="photos/m24913423372_1.jpg" alt="ヌーディージーンズ THIN FINN 濃紺デニム W26/L30" loading="lazy">
         <div class="photo-overlay-top">
-          <span class="badge-no">No.19 <small>1003382</small></span>
+          <span class="badge-no">No.20 <small>1003382</small></span>
           <span class="badge-status status-active">美品</span>
         </div>
         <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥4,980<small class="price-asof">11月14日時点</small></span>
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥4,980<small class="price-asof">11月15日時点</small></span>
         </div>
       </a>
       <div class="thumb-strip">
@@ -903,46 +1106,6 @@
               <a class="amazon-link" href="https://www.amazon.co.jp/s?k=Nudie+Jeans&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">Amazon</a>
               <a class="rakuten-link" href="https://hb.afl.rakuten.co.jp/hgc/5911c092.7baab367.5911c093.8b9d5488/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FNudie%2520Jeans%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="noopener noreferrer">楽天市場</a>
               <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=Nudie+Jeans+1003382&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339238012&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">eBay世界</a>
-            </div>
-            
-          </div>
-        </article>
-    
-        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="4980" data-size="w34_40" data-role="station_stopping" data-search="no.20  std-item モーリシャス製 calvin klein jeans ストレート デニム w34/l34 美品 w44cm / h53cm / 渡33cm / 股上27cm">
-          
-    <div class="photo-gallery-block">
-      <a class="card-photo-link" href="https://jp.mercari.com/item/m54768811194?afid=8673250720" target="_blank" rel="noopener noreferrer" title="Calvin Klein Jeans ストレート デニム W34/L34 美品">
-        <img class="card-main-photo" src="photos/m54768811194_1.jpg" alt="Calvin Klein Jeans ストレート デニム W34/L34 美品" loading="lazy">
-        <div class="photo-overlay-top">
-          <span class="badge-no">No.20 <small>STD-ITEM</small></span>
-          <span class="badge-status status-active">美品</span>
-        </div>
-        <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥4,980<small class="price-asof">11月14日時点</small></span>
-        </div>
-      </a>
-      <div class="thumb-strip">
-        <img class="thumb-img active" src="photos/m54768811194_1.jpg" alt="Calvin Klein Jeans ストレート デニム W34/L34 美品 (1)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m54768811194_1.jpg')" onclick="switchCardPhoto(this, 'photos/m54768811194_1.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m54768811194_2.jpg" alt="Calvin Klein Jeans ストレート デニム W34/L34 美品 (2)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m54768811194_2.jpg')" onclick="switchCardPhoto(this, 'photos/m54768811194_2.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m54768811194_3.jpg" alt="Calvin Klein Jeans ストレート デニム W34/L34 美品 (3)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m54768811194_3.jpg')" onclick="switchCardPhoto(this, 'photos/m54768811194_3.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m54768811194_4.jpg" alt="Calvin Klein Jeans ストレート デニム W34/L34 美品 (4)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m54768811194_4.jpg')" onclick="switchCardPhoto(this, 'photos/m54768811194_4.jpg')" onerror="this.style.display='none'">
-      </div>
-    </div>
-    
-          <div class="card-body">
-            <h2 class="item-title" title="Calvin Klein Jeans ストレート デニム W34/L34 美品"><a class="title-link" href="https://jp.mercari.com/item/m54768811194?afid=8673250720" target="_blank" rel="noopener noreferrer">Calvin Klein Jeans ストレート デニム W34/L34 美品</a></h2>
-            <div class="spec-pills">
-              
-              <span class="spec-pill origin-pill">モーリシャス製</span>
-              <span class="spec-pill meas-pill">W44cm / H53cm / 渡33cm / 股上27cm</span>
-            </div>
-          </div>
-          <div class="card-footer">
-            <a class="mercari-btn" href="https://jp.mercari.com/item/m54768811194?afid=8673250720" target="_blank" rel="noopener noreferrer">
-              商品ページを見る（¥4,980） &rarr;
-            </a>
-            <div class="multi-ec-row">
-              <a class="fallback-link" href="item/m54768811194/index.html" title="平置き実寸・4枚写真ページ">実寸詳細</a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=Calvin+Klein+Jeans&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">Amazon</a>
-              <a class="rakuten-link" href="https://hb.afl.rakuten.co.jp/hgc/5911c092.7baab367.5911c093.8b9d5488/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FCalvin%2520Klein%2520Jeans%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="noopener noreferrer">楽天市場</a>
-              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=Calvin+Klein+Jeans+STD-ITEM&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339238012&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">eBay世界</a>
             </div>
             
           </div>
@@ -1026,6 +1189,86 @@
           </div>
         </article>
     
+        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="5280" data-size="w32_33" data-role="station_stopping" data-search="no.22  levis-541 エジプト製 levi&#x27;s リーバイス 541 アスレチックテーパー デニム w33/l32 w43cm / h53cm / 渡31cm / 股上29cm">
+          
+    <div class="photo-gallery-block">
+      <a class="card-photo-link" href="https://jp.mercari.com/item/m99148100099?afid=8673250720" target="_blank" rel="noopener noreferrer" title="Levi's リーバイス 541 アスレチックテーパー デニム W33/L32">
+        <img class="card-main-photo" src="photos/m99148100099_1.jpg" alt="Levi's リーバイス 541 アスレチックテーパー デニム W33/L32" loading="lazy">
+        <div class="photo-overlay-top">
+          <span class="badge-no">No.22 <small>LEVIS-541</small></span>
+          <span class="badge-status status-active">美品</span>
+        </div>
+        <div class="photo-overlay-bottom">
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥5,280<small class="price-asof">11月15日時点</small></span>
+        </div>
+      </a>
+      <div class="thumb-strip">
+        <img class="thumb-img active" src="photos/m99148100099_1.jpg" alt="Levi's リーバイス 541 アスレチックテーパー デニム W33/L32 (1)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m99148100099_1.jpg')" onclick="switchCardPhoto(this, 'photos/m99148100099_1.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m99148100099_2.jpg" alt="Levi's リーバイス 541 アスレチックテーパー デニム W33/L32 (2)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m99148100099_2.jpg')" onclick="switchCardPhoto(this, 'photos/m99148100099_2.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m99148100099_3.jpg" alt="Levi's リーバイス 541 アスレチックテーパー デニム W33/L32 (3)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m99148100099_3.jpg')" onclick="switchCardPhoto(this, 'photos/m99148100099_3.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m99148100099_4.jpg" alt="Levi's リーバイス 541 アスレチックテーパー デニム W33/L32 (4)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m99148100099_4.jpg')" onclick="switchCardPhoto(this, 'photos/m99148100099_4.jpg')" onerror="this.style.display='none'">
+      </div>
+    </div>
+    
+          <div class="card-body">
+            <h2 class="item-title" title="Levi&#x27;s リーバイス 541 アスレチックテーパー デニム W33/L32"><a class="title-link" href="https://jp.mercari.com/item/m99148100099?afid=8673250720" target="_blank" rel="noopener noreferrer">Levi&#x27;s リーバイス 541 アスレチックテーパー デニム W33/L32</a></h2>
+            <div class="spec-pills">
+              
+              <span class="spec-pill origin-pill">エジプト製</span>
+              <span class="spec-pill meas-pill">W43cm / H53cm / 渡31cm / 股上29cm</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a class="mercari-btn" href="https://jp.mercari.com/item/m99148100099?afid=8673250720" target="_blank" rel="noopener noreferrer">
+              商品ページを見る（¥5,280） &rarr;
+            </a>
+            <div class="multi-ec-row">
+              <a class="fallback-link" href="item/m99148100099/index.html" title="平置き実寸・4枚写真ページ">実寸詳細</a>
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=Levi%27s&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">Amazon</a>
+              <a class="rakuten-link" href="https://hb.afl.rakuten.co.jp/hgc/5911c092.7baab367.5911c093.8b9d5488/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FLevi%2527s%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="noopener noreferrer">楽天市場</a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=Levi%27s+LEVIS-541&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339238012&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">eBay世界</a>
+            </div>
+            
+          </div>
+        </article>
+    
+        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="5380" data-size="w34_40" data-role="station_stopping" data-search="no.23  std-item 検品済個体 desigual デシグアル パッチワーク 刺繍 デニム w34 美品 w44cm / h53cm / 渡32cm / 股上27cm">
+          
+    <div class="photo-gallery-block">
+      <a class="card-photo-link" href="https://jp.mercari.com/item/m67074812438?afid=8673250720" target="_blank" rel="noopener noreferrer" title="Desigual デシグアル パッチワーク 刺繍 デニム W34 美品">
+        <img class="card-main-photo" src="photos/m67074812438_1.jpg" alt="Desigual デシグアル パッチワーク 刺繍 デニム W34 美品" loading="lazy">
+        <div class="photo-overlay-top">
+          <span class="badge-no">No.23 <small>STD-ITEM</small></span>
+          <span class="badge-status status-active">美品</span>
+        </div>
+        <div class="photo-overlay-bottom">
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥5,380<small class="price-asof">11月15日時点</small></span>
+        </div>
+      </a>
+      <div class="thumb-strip">
+        <img class="thumb-img active" src="photos/m67074812438_1.jpg" alt="Desigual デシグアル パッチワーク 刺繍 デニム W34 美品 (1)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m67074812438_1.jpg')" onclick="switchCardPhoto(this, 'photos/m67074812438_1.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m67074812438_2.jpg" alt="Desigual デシグアル パッチワーク 刺繍 デニム W34 美品 (2)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m67074812438_2.jpg')" onclick="switchCardPhoto(this, 'photos/m67074812438_2.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m67074812438_3.jpg" alt="Desigual デシグアル パッチワーク 刺繍 デニム W34 美品 (3)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m67074812438_3.jpg')" onclick="switchCardPhoto(this, 'photos/m67074812438_3.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m67074812438_4.jpg" alt="Desigual デシグアル パッチワーク 刺繍 デニム W34 美品 (4)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m67074812438_4.jpg')" onclick="switchCardPhoto(this, 'photos/m67074812438_4.jpg')" onerror="this.style.display='none'">
+      </div>
+    </div>
+    
+          <div class="card-body">
+            <h2 class="item-title" title="Desigual デシグアル パッチワーク 刺繍 デニム W34 美品"><a class="title-link" href="https://jp.mercari.com/item/m67074812438?afid=8673250720" target="_blank" rel="noopener noreferrer">Desigual デシグアル パッチワーク 刺繍 デニム W34 美品</a></h2>
+            <div class="spec-pills">
+              
+              <span class="spec-pill origin-pill">検品済個体</span>
+              <span class="spec-pill meas-pill">W44cm / H53cm / 渡32cm / 股上27cm</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a class="mercari-btn" href="https://jp.mercari.com/item/m67074812438?afid=8673250720" target="_blank" rel="noopener noreferrer">
+              商品ページを見る（¥5,380） &rarr;
+            </a>
+            <div class="multi-ec-row">
+              <a class="fallback-link" href="item/m67074812438/index.html" title="平置き実寸・4枚写真ページ">実寸詳細</a>
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=Desigual&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">Amazon</a>
+              <a class="rakuten-link" href="https://hb.afl.rakuten.co.jp/hgc/5911c092.7baab367.5911c093.8b9d5488/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FDesigual%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="noopener noreferrer">楽天市場</a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=Desigual+STD-ITEM&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339238012&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">eBay世界</a>
+            </div>
+            
+          </div>
+        </article>
+    
         <article class="item-card passed-card" data-hall="passed" data-exclusive="0" data-lane="mens" data-price="5500" data-size="w32_33" data-role="passed_archive" data-search="arc-06 gs-3301 g-star欧州規格 g-star raw 3301 kruce denim w32/l32 w32/l32 w32/l32 (平置w42 / 渡31 / 股下80 / 裾19cm) ¥5,500">
           
     <div class="photo-gallery-block">
@@ -1065,97 +1308,57 @@
           </div>
         </article>
     
-        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="5680" data-size="w32_33" data-role="station_stopping" data-search="no.22  levis-541 エジプト製 levi&#x27;s リーバイス 541 アスレチックテーパー デニム w33/l32 w43cm / h53cm / 渡31cm / 股上29cm">
+        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="5980" data-size="w28_30" data-role="station_stopping" data-search="no.24  gs-3301 g-star欧州規格 ジースターロゥ 3301 ストレートデニム 新品 s w28相当 実寸検品済">
           
     <div class="photo-gallery-block">
-      <a class="card-photo-link" href="https://jp.mercari.com/item/m99148100099?afid=8673250720" target="_blank" rel="noopener noreferrer" title="Levi's リーバイス 541 アスレチックテーパー デニム W33/L32">
-        <img class="card-main-photo" src="photos/m99148100099_1.jpg" alt="Levi's リーバイス 541 アスレチックテーパー デニム W33/L32" loading="lazy">
+      <a class="card-photo-link" href="https://jp.mercari.com/item/m33336722052?afid=8673250720" target="_blank" rel="noopener noreferrer" title="ジースターロゥ 3301 ストレートデニム 新品 S W28相当">
+        <img class="card-main-photo" src="photos/m33336722052_1.jpg" alt="ジースターロゥ 3301 ストレートデニム 新品 S W28相当" loading="lazy">
         <div class="photo-overlay-top">
-          <span class="badge-no">No.22 <small>LEVIS-541</small></span>
-          <span class="badge-status status-active">美品</span>
+          <span class="badge-no">No.24 <small>GS-3301</small></span>
+          <span class="badge-status status-new">新品・未使用</span>
         </div>
         <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥5,680<small class="price-asof">11月14日時点</small></span>
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥5,980<small class="price-asof">11月15日時点</small></span>
         </div>
       </a>
       <div class="thumb-strip">
-        <img class="thumb-img active" src="photos/m99148100099_1.jpg" alt="Levi's リーバイス 541 アスレチックテーパー デニム W33/L32 (1)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m99148100099_1.jpg')" onclick="switchCardPhoto(this, 'photos/m99148100099_1.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m99148100099_2.jpg" alt="Levi's リーバイス 541 アスレチックテーパー デニム W33/L32 (2)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m99148100099_2.jpg')" onclick="switchCardPhoto(this, 'photos/m99148100099_2.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m99148100099_3.jpg" alt="Levi's リーバイス 541 アスレチックテーパー デニム W33/L32 (3)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m99148100099_3.jpg')" onclick="switchCardPhoto(this, 'photos/m99148100099_3.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m99148100099_4.jpg" alt="Levi's リーバイス 541 アスレチックテーパー デニム W33/L32 (4)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m99148100099_4.jpg')" onclick="switchCardPhoto(this, 'photos/m99148100099_4.jpg')" onerror="this.style.display='none'">
+        <img class="thumb-img active" src="photos/m33336722052_1.jpg" alt="ジースターロゥ 3301 ストレートデニム 新品 S W28相当 (1)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m33336722052_1.jpg')" onclick="switchCardPhoto(this, 'photos/m33336722052_1.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m33336722052_2.jpg" alt="ジースターロゥ 3301 ストレートデニム 新品 S W28相当 (2)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m33336722052_2.jpg')" onclick="switchCardPhoto(this, 'photos/m33336722052_2.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m33336722052_3.jpg" alt="ジースターロゥ 3301 ストレートデニム 新品 S W28相当 (3)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m33336722052_3.jpg')" onclick="switchCardPhoto(this, 'photos/m33336722052_3.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m33336722052_4.jpg" alt="ジースターロゥ 3301 ストレートデニム 新品 S W28相当 (4)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m33336722052_4.jpg')" onclick="switchCardPhoto(this, 'photos/m33336722052_4.jpg')" onerror="this.style.display='none'">
       </div>
     </div>
     
           <div class="card-body">
-            <h2 class="item-title" title="Levi&#x27;s リーバイス 541 アスレチックテーパー デニム W33/L32"><a class="title-link" href="https://jp.mercari.com/item/m99148100099?afid=8673250720" target="_blank" rel="noopener noreferrer">Levi&#x27;s リーバイス 541 アスレチックテーパー デニム W33/L32</a></h2>
+            <h2 class="item-title" title="ジースターロゥ 3301 ストレートデニム 新品 S W28相当"><a class="title-link" href="https://jp.mercari.com/item/m33336722052?afid=8673250720" target="_blank" rel="noopener noreferrer">ジースターロゥ 3301 ストレートデニム 新品 S W28相当</a></h2>
             <div class="spec-pills">
               
-              <span class="spec-pill origin-pill">エジプト製</span>
-              <span class="spec-pill meas-pill">W43cm / H53cm / 渡31cm / 股上29cm</span>
+              <span class="spec-pill origin-pill">G-Star欧州規格</span>
+              <span class="spec-pill meas-pill">実寸検品済</span>
             </div>
           </div>
           <div class="card-footer">
-            <a class="mercari-btn" href="https://jp.mercari.com/item/m99148100099?afid=8673250720" target="_blank" rel="noopener noreferrer">
-              商品ページを見る（¥5,680） &rarr;
+            <a class="mercari-btn" href="https://jp.mercari.com/item/m33336722052?afid=8673250720" target="_blank" rel="noopener noreferrer">
+              商品ページを見る（¥5,980） &rarr;
             </a>
             <div class="multi-ec-row">
-              <a class="fallback-link" href="item/m99148100099/index.html" title="平置き実寸・4枚写真ページ">実寸詳細</a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=Levi%27s&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">Amazon</a>
-              <a class="rakuten-link" href="https://hb.afl.rakuten.co.jp/hgc/5911c092.7baab367.5911c093.8b9d5488/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FLevi%2527s%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="noopener noreferrer">楽天市場</a>
-              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=Levi%27s+LEVIS-541&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339238012&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">eBay世界</a>
+              <a class="fallback-link" href="item/m33336722052/index.html" title="平置き実寸・4枚写真ページ">実寸詳細</a>
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">Amazon</a>
+              <a class="rakuten-link" href="https://hb.afl.rakuten.co.jp/hgc/5911c092.7baab367.5911c093.8b9d5488/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FG-Star%2520RAW%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="noopener noreferrer">楽天市場</a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=G-Star+RAW+GS-3301&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339238012&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">eBay世界</a>
             </div>
             
           </div>
         </article>
     
-        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="5780" data-size="w34_40" data-role="station_stopping" data-search="no.23  std-item 検品済個体 desigual デシグアル パッチワーク 刺繍 デニム w34 美品 w44cm / h53cm / 渡32cm / 股上27cm">
-          
-    <div class="photo-gallery-block">
-      <a class="card-photo-link" href="https://jp.mercari.com/item/m67074812438?afid=8673250720" target="_blank" rel="noopener noreferrer" title="Desigual デシグアル パッチワーク 刺繍 デニム W34 美品">
-        <img class="card-main-photo" src="photos/m67074812438_1.jpg" alt="Desigual デシグアル パッチワーク 刺繍 デニム W34 美品" loading="lazy">
-        <div class="photo-overlay-top">
-          <span class="badge-no">No.23 <small>STD-ITEM</small></span>
-          <span class="badge-status status-active">美品</span>
-        </div>
-        <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥5,780<small class="price-asof">11月14日時点</small></span>
-        </div>
-      </a>
-      <div class="thumb-strip">
-        <img class="thumb-img active" src="photos/m67074812438_1.jpg" alt="Desigual デシグアル パッチワーク 刺繍 デニム W34 美品 (1)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m67074812438_1.jpg')" onclick="switchCardPhoto(this, 'photos/m67074812438_1.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m67074812438_2.jpg" alt="Desigual デシグアル パッチワーク 刺繍 デニム W34 美品 (2)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m67074812438_2.jpg')" onclick="switchCardPhoto(this, 'photos/m67074812438_2.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m67074812438_3.jpg" alt="Desigual デシグアル パッチワーク 刺繍 デニム W34 美品 (3)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m67074812438_3.jpg')" onclick="switchCardPhoto(this, 'photos/m67074812438_3.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m67074812438_4.jpg" alt="Desigual デシグアル パッチワーク 刺繍 デニム W34 美品 (4)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m67074812438_4.jpg')" onclick="switchCardPhoto(this, 'photos/m67074812438_4.jpg')" onerror="this.style.display='none'">
-      </div>
-    </div>
-    
-          <div class="card-body">
-            <h2 class="item-title" title="Desigual デシグアル パッチワーク 刺繍 デニム W34 美品"><a class="title-link" href="https://jp.mercari.com/item/m67074812438?afid=8673250720" target="_blank" rel="noopener noreferrer">Desigual デシグアル パッチワーク 刺繍 デニム W34 美品</a></h2>
-            <div class="spec-pills">
-              
-              <span class="spec-pill origin-pill">検品済個体</span>
-              <span class="spec-pill meas-pill">W44cm / H53cm / 渡32cm / 股上27cm</span>
-            </div>
-          </div>
-          <div class="card-footer">
-            <a class="mercari-btn" href="https://jp.mercari.com/item/m67074812438?afid=8673250720" target="_blank" rel="noopener noreferrer">
-              商品ページを見る（¥5,780） &rarr;
-            </a>
-            <div class="multi-ec-row">
-              <a class="fallback-link" href="item/m67074812438/index.html" title="平置き実寸・4枚写真ページ">実寸詳細</a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=Desigual&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">Amazon</a>
-              <a class="rakuten-link" href="https://hb.afl.rakuten.co.jp/hgc/5911c092.7baab367.5911c093.8b9d5488/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FDesigual%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="noopener noreferrer">楽天市場</a>
-              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=Desigual+STD-ITEM&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339238012&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">eBay世界</a>
-            </div>
-            
-          </div>
-        </article>
-    
-        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="5980" data-size="w32_33" data-role="station_stopping" data-search="no.24  008ik イタリア製 希少コラボ 伊製 diesel×adidas adi-viker w32/l30 w43cm / h52cm / 渡32cm / 股上26cm">
+        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="5980" data-size="w32_33" data-role="station_stopping" data-search="no.25  008ik イタリア製 希少コラボ 伊製 diesel×adidas adi-viker w32/l30 w43cm / h52cm / 渡32cm / 股上26cm">
           
     <div class="photo-gallery-block">
       <a class="card-photo-link" href="https://jp.mercari.com/item/m53145807798?afid=8673250720" target="_blank" rel="noopener noreferrer" title="希少コラボ 伊製 DIESEL×adidas ADI-VIKER W32/L30">
         <img class="card-main-photo" src="photos/m53145807798_1.jpg" alt="希少コラボ 伊製 DIESEL×adidas ADI-VIKER W32/L30" loading="lazy">
         <div class="photo-overlay-top">
-          <span class="badge-no">No.24 <small>008IK</small></span>
+          <span class="badge-no">No.25 <small>008IK</small></span>
           <span class="badge-status status-active">美品</span>
         </div>
         <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥5,980<small class="price-asof">11月14日時点</small></span>
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥5,980<small class="price-asof">11月15日時点</small></span>
         </div>
       </a>
       <div class="thumb-strip">
@@ -1185,17 +1388,17 @@
           </div>
         </article>
     
-        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="5980" data-size="w32_33" data-role="station_stopping" data-search="no.25  gs-5620 g-star欧州規格 ジースターロゥ 5620 3dテーパード 立体裁断 デニム w32 w42cm / h52cm / 渡30cm / 股上28cm">
+        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="5980" data-size="w32_33" data-role="station_stopping" data-search="no.26  gs-5620 g-star欧州規格 ジースターロゥ 5620 3dテーパード 立体裁断 デニム w32 w42cm / h52cm / 渡30cm / 股上28cm">
           
     <div class="photo-gallery-block">
       <a class="card-photo-link" href="https://jp.mercari.com/item/m25206600849?afid=8673250720" target="_blank" rel="noopener noreferrer" title="ジースターロゥ 5620 3Dテーパード 立体裁断 デニム W32">
         <img class="card-main-photo" src="photos/m25206600849_1.jpg" alt="ジースターロゥ 5620 3Dテーパード 立体裁断 デニム W32" loading="lazy">
         <div class="photo-overlay-top">
-          <span class="badge-no">No.25 <small>GS-5620</small></span>
+          <span class="badge-no">No.26 <small>GS-5620</small></span>
           <span class="badge-status status-active">美品</span>
         </div>
         <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥5,980<small class="price-asof">11月14日時点</small></span>
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥5,980<small class="price-asof">11月15日時点</small></span>
         </div>
       </a>
       <div class="thumb-strip">
@@ -1225,17 +1428,17 @@
           </div>
         </article>
     
-        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="5980" data-size="w32_33" data-role="station_stopping" data-search="no.26  gs-dstaq g-star欧州規格 ジースターロゥ d-staq 3dスーパースリム デニム w33 w42cm / h52cm / 渡30cm / 股上27cm">
+        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="5980" data-size="w32_33" data-role="station_stopping" data-search="no.27  gs-dstaq g-star欧州規格 ジースターロゥ d-staq 3dスーパースリム デニム w33 w42cm / h52cm / 渡30cm / 股上27cm">
           
     <div class="photo-gallery-block">
       <a class="card-photo-link" href="https://jp.mercari.com/item/m45898408756?afid=8673250720" target="_blank" rel="noopener noreferrer" title="ジースターロゥ D-STAQ 3Dスーパースリム デニム W33">
         <img class="card-main-photo" src="photos/m45898408756_1.jpg" alt="ジースターロゥ D-STAQ 3Dスーパースリム デニム W33" loading="lazy">
         <div class="photo-overlay-top">
-          <span class="badge-no">No.26 <small>GS-DSTAQ</small></span>
+          <span class="badge-no">No.27 <small>GS-DSTAQ</small></span>
           <span class="badge-status status-active">美品</span>
         </div>
         <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥5,980<small class="price-asof">11月14日時点</small></span>
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥5,980<small class="price-asof">11月15日時点</small></span>
         </div>
       </a>
       <div class="thumb-strip">
@@ -1382,17 +1585,57 @@
           </div>
         </article>
     
-        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="6280" data-size="w28_30" data-role="station_stopping" data-search="no.27  std-item g-star欧州規格 ジースターロゥ scutar 3dスリム 立体 デニム 新品 w29/l32 実寸検品済">
+        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="6280" data-size="w28_30" data-role="station_stopping" data-search="no.28  std-item g-star欧州規格 ジースターロゥ raw essentials 立体 綿麻 デニム 新品 w28 実寸検品済">
+          
+    <div class="photo-gallery-block">
+      <a class="card-photo-link" href="https://jp.mercari.com/item/m90949666897?afid=8673250720" target="_blank" rel="noopener noreferrer" title="ジースターロゥ RAW ESSENTIALS 立体 綿麻 デニム 新品 W28">
+        <img class="card-main-photo" src="photos/m90949666897_1.jpg" alt="ジースターロゥ RAW ESSENTIALS 立体 綿麻 デニム 新品 W28" loading="lazy">
+        <div class="photo-overlay-top">
+          <span class="badge-no">No.28 <small>STD-ITEM</small></span>
+          <span class="badge-status status-new">新品・未使用</span>
+        </div>
+        <div class="photo-overlay-bottom">
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥6,280<small class="price-asof">11月15日時点</small></span>
+        </div>
+      </a>
+      <div class="thumb-strip">
+        <img class="thumb-img active" src="photos/m90949666897_1.jpg" alt="ジースターロゥ RAW ESSENTIALS 立体 綿麻 デニム 新品 W28 (1)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m90949666897_1.jpg')" onclick="switchCardPhoto(this, 'photos/m90949666897_1.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m90949666897_2.jpg" alt="ジースターロゥ RAW ESSENTIALS 立体 綿麻 デニム 新品 W28 (2)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m90949666897_2.jpg')" onclick="switchCardPhoto(this, 'photos/m90949666897_2.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m90949666897_3.jpg" alt="ジースターロゥ RAW ESSENTIALS 立体 綿麻 デニム 新品 W28 (3)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m90949666897_3.jpg')" onclick="switchCardPhoto(this, 'photos/m90949666897_3.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m90949666897_4.jpg" alt="ジースターロゥ RAW ESSENTIALS 立体 綿麻 デニム 新品 W28 (4)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m90949666897_4.jpg')" onclick="switchCardPhoto(this, 'photos/m90949666897_4.jpg')" onerror="this.style.display='none'">
+      </div>
+    </div>
+    
+          <div class="card-body">
+            <h2 class="item-title" title="ジースターロゥ RAW ESSENTIALS 立体 綿麻 デニム 新品 W28"><a class="title-link" href="https://jp.mercari.com/item/m90949666897?afid=8673250720" target="_blank" rel="noopener noreferrer">ジースターロゥ RAW ESSENTIALS 立体 綿麻 デニム 新品 W28</a></h2>
+            <div class="spec-pills">
+              
+              <span class="spec-pill origin-pill">G-Star欧州規格</span>
+              <span class="spec-pill meas-pill">実寸検品済</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a class="mercari-btn" href="https://jp.mercari.com/item/m90949666897?afid=8673250720" target="_blank" rel="noopener noreferrer">
+              商品ページを見る（¥6,280） &rarr;
+            </a>
+            <div class="multi-ec-row">
+              <a class="fallback-link" href="item/m90949666897/index.html" title="平置き実寸・4枚写真ページ">実寸詳細</a>
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AD%E3%82%A5&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">Amazon</a>
+              <a class="rakuten-link" href="https://hb.afl.rakuten.co.jp/hgc/5911c092.7baab367.5911c093.8b9d5488/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2582%25B8%25E3%2583%25BC%25E3%2582%25B9%25E3%2582%25BF%25E3%2583%25BC%25E3%2583%25AD%25E3%2582%25A5%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="noopener noreferrer">楽天市場</a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=STD-ITEM&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339238012&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">eBay世界</a>
+            </div>
+            
+          </div>
+        </article>
+    
+        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="6280" data-size="w28_30" data-role="station_stopping" data-search="no.29  std-item g-star欧州規格 ジースターロゥ scutar 3dスリム 立体 デニム 新品 w29/l32 実寸検品済">
           
     <div class="photo-gallery-block">
       <a class="card-photo-link" href="https://jp.mercari.com/item/m82302604042?afid=8673250720" target="_blank" rel="noopener noreferrer" title="ジースターロゥ SCUTAR 3Dスリム 立体 デニム 新品 W29/L32">
         <img class="card-main-photo" src="photos/m82302604042_1.jpg" alt="ジースターロゥ SCUTAR 3Dスリム 立体 デニム 新品 W29/L32" loading="lazy">
         <div class="photo-overlay-top">
-          <span class="badge-no">No.27 <small>STD-ITEM</small></span>
+          <span class="badge-no">No.29 <small>STD-ITEM</small></span>
           <span class="badge-status status-new">新品・未使用</span>
         </div>
         <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥6,280<small class="price-asof">11月14日時点</small></span>
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥6,280<small class="price-asof">11月15日時点</small></span>
         </div>
       </a>
       <div class="thumb-strip">
@@ -1422,17 +1665,17 @@
           </div>
         </article>
     
-        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="6280" data-size="w32_33" data-role="station_stopping" data-search="no.28  std-item g-star欧州規格 ジースターロゥ roxic 立体カーゴパンツ 迷彩 ストレッチ 新品 w27 実寸検品済">
+        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="6280" data-size="w32_33" data-role="station_stopping" data-search="no.30  std-item g-star欧州規格 ジースターロゥ roxic 立体カーゴパンツ 迷彩 ストレッチ 新品 w27 実寸検品済">
           
     <div class="photo-gallery-block">
       <a class="card-photo-link" href="https://jp.mercari.com/item/m35156848516?afid=8673250720" target="_blank" rel="noopener noreferrer" title="ジースターロゥ ROXIC 立体カーゴパンツ 迷彩 ストレッチ 新品 W27">
         <img class="card-main-photo" src="photos/m35156848516_1.jpg" alt="ジースターロゥ ROXIC 立体カーゴパンツ 迷彩 ストレッチ 新品 W27" loading="lazy">
         <div class="photo-overlay-top">
-          <span class="badge-no">No.28 <small>STD-ITEM</small></span>
+          <span class="badge-no">No.30 <small>STD-ITEM</small></span>
           <span class="badge-status status-new">新品・未使用</span>
         </div>
         <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥6,280<small class="price-asof">11月14日時点</small></span>
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥6,280<small class="price-asof">11月15日時点</small></span>
         </div>
       </a>
       <div class="thumb-strip">
@@ -1462,97 +1705,57 @@
           </div>
         </article>
     
-        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="6380" data-size="w28_30" data-role="station_stopping" data-search="no.29  gs-3301 g-star欧州規格 ジースターロゥ 3301 ストレートデニム 新品 s w28相当 実寸検品済">
+        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="6480" data-size="w28_30" data-role="station_stopping" data-search="no.31  112078-l28-w24 nudie欧州規格 ヌーディージーンズ brute knut 濃紺 新品 w24/l28 w33cm / h44cm / 渡25cm / 股上27cm">
           
     <div class="photo-gallery-block">
-      <a class="card-photo-link" href="https://jp.mercari.com/item/m33336722052?afid=8673250720" target="_blank" rel="noopener noreferrer" title="ジースターロゥ 3301 ストレートデニム 新品 S W28相当">
-        <img class="card-main-photo" src="photos/m33336722052_1.jpg" alt="ジースターロゥ 3301 ストレートデニム 新品 S W28相当" loading="lazy">
+      <a class="card-photo-link" href="https://jp.mercari.com/item/m39955993821?afid=8673250720" target="_blank" rel="noopener noreferrer" title="ヌーディージーンズ BRUTE KNUT 濃紺 新品 W24/L28">
+        <img class="card-main-photo" src="photos/m39955993821_1.jpg" alt="ヌーディージーンズ BRUTE KNUT 濃紺 新品 W24/L28" loading="lazy">
         <div class="photo-overlay-top">
-          <span class="badge-no">No.29 <small>GS-3301</small></span>
+          <span class="badge-no">No.31 <small>112078-L28-W24</small></span>
           <span class="badge-status status-new">新品・未使用</span>
         </div>
         <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥6,380<small class="price-asof">11月14日時点</small></span>
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥6,480<small class="price-asof">11月15日時点</small></span>
         </div>
       </a>
       <div class="thumb-strip">
-        <img class="thumb-img active" src="photos/m33336722052_1.jpg" alt="ジースターロゥ 3301 ストレートデニム 新品 S W28相当 (1)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m33336722052_1.jpg')" onclick="switchCardPhoto(this, 'photos/m33336722052_1.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m33336722052_2.jpg" alt="ジースターロゥ 3301 ストレートデニム 新品 S W28相当 (2)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m33336722052_2.jpg')" onclick="switchCardPhoto(this, 'photos/m33336722052_2.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m33336722052_3.jpg" alt="ジースターロゥ 3301 ストレートデニム 新品 S W28相当 (3)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m33336722052_3.jpg')" onclick="switchCardPhoto(this, 'photos/m33336722052_3.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m33336722052_4.jpg" alt="ジースターロゥ 3301 ストレートデニム 新品 S W28相当 (4)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m33336722052_4.jpg')" onclick="switchCardPhoto(this, 'photos/m33336722052_4.jpg')" onerror="this.style.display='none'">
+        <img class="thumb-img active" src="photos/m39955993821_1.jpg" alt="ヌーディージーンズ BRUTE KNUT 濃紺 新品 W24/L28 (1)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m39955993821_1.jpg')" onclick="switchCardPhoto(this, 'photos/m39955993821_1.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m39955993821_2.jpg" alt="ヌーディージーンズ BRUTE KNUT 濃紺 新品 W24/L28 (2)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m39955993821_2.jpg')" onclick="switchCardPhoto(this, 'photos/m39955993821_2.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m39955993821_3.jpg" alt="ヌーディージーンズ BRUTE KNUT 濃紺 新品 W24/L28 (3)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m39955993821_3.jpg')" onclick="switchCardPhoto(this, 'photos/m39955993821_3.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m39955993821_4.jpg" alt="ヌーディージーンズ BRUTE KNUT 濃紺 新品 W24/L28 (4)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m39955993821_4.jpg')" onclick="switchCardPhoto(this, 'photos/m39955993821_4.jpg')" onerror="this.style.display='none'">
       </div>
     </div>
     
           <div class="card-body">
-            <h2 class="item-title" title="ジースターロゥ 3301 ストレートデニム 新品 S W28相当"><a class="title-link" href="https://jp.mercari.com/item/m33336722052?afid=8673250720" target="_blank" rel="noopener noreferrer">ジースターロゥ 3301 ストレートデニム 新品 S W28相当</a></h2>
+            <h2 class="item-title" title="ヌーディージーンズ BRUTE KNUT 濃紺 新品 W24/L28"><a class="title-link" href="https://jp.mercari.com/item/m39955993821?afid=8673250720" target="_blank" rel="noopener noreferrer">ヌーディージーンズ BRUTE KNUT 濃紺 新品 W24/L28</a></h2>
             <div class="spec-pills">
               
-              <span class="spec-pill origin-pill">G-Star欧州規格</span>
-              <span class="spec-pill meas-pill">実寸検品済</span>
+              <span class="spec-pill origin-pill">Nudie欧州規格</span>
+              <span class="spec-pill meas-pill">W33cm / H44cm / 渡25cm / 股上27cm</span>
             </div>
           </div>
           <div class="card-footer">
-            <a class="mercari-btn" href="https://jp.mercari.com/item/m33336722052?afid=8673250720" target="_blank" rel="noopener noreferrer">
-              商品ページを見る（¥6,380） &rarr;
+            <a class="mercari-btn" href="https://jp.mercari.com/item/m39955993821?afid=8673250720" target="_blank" rel="noopener noreferrer">
+              商品ページを見る（¥6,480） &rarr;
             </a>
             <div class="multi-ec-row">
-              <a class="fallback-link" href="item/m33336722052/index.html" title="平置き実寸・4枚写真ページ">実寸詳細</a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">Amazon</a>
-              <a class="rakuten-link" href="https://hb.afl.rakuten.co.jp/hgc/5911c092.7baab367.5911c093.8b9d5488/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FG-Star%2520RAW%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="noopener noreferrer">楽天市場</a>
-              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=G-Star+RAW+GS-3301&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339238012&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">eBay世界</a>
+              <a class="fallback-link" href="item/m39955993821/index.html" title="平置き実寸・4枚写真ページ">実寸詳細</a>
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=Nudie+Jeans+BRUTE+KNUT&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">Amazon</a>
+              <a class="rakuten-link" href="https://hb.afl.rakuten.co.jp/hgc/5911c092.7baab367.5911c093.8b9d5488/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FNudie%2520Jeans%2520BRUTE%2520KNUT%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="noopener noreferrer">楽天市場</a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=Nudie+Jeans+BRUTE+KNUT+112078-L28-W24&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339238012&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">eBay世界</a>
             </div>
             
           </div>
         </article>
     
-        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="6380" data-size="w28_30" data-role="station_stopping" data-search="no.30  std-item g-star欧州規格 ジースターロゥ raw essentials 立体 綿麻 デニム 新品 w28 実寸検品済">
-          
-    <div class="photo-gallery-block">
-      <a class="card-photo-link" href="https://jp.mercari.com/item/m90949666897?afid=8673250720" target="_blank" rel="noopener noreferrer" title="ジースターロゥ RAW ESSENTIALS 立体 綿麻 デニム 新品 W28">
-        <img class="card-main-photo" src="photos/m90949666897_1.jpg" alt="ジースターロゥ RAW ESSENTIALS 立体 綿麻 デニム 新品 W28" loading="lazy">
-        <div class="photo-overlay-top">
-          <span class="badge-no">No.30 <small>STD-ITEM</small></span>
-          <span class="badge-status status-new">新品・未使用</span>
-        </div>
-        <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥6,380<small class="price-asof">11月14日時点</small></span>
-        </div>
-      </a>
-      <div class="thumb-strip">
-        <img class="thumb-img active" src="photos/m90949666897_1.jpg" alt="ジースターロゥ RAW ESSENTIALS 立体 綿麻 デニム 新品 W28 (1)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m90949666897_1.jpg')" onclick="switchCardPhoto(this, 'photos/m90949666897_1.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m90949666897_2.jpg" alt="ジースターロゥ RAW ESSENTIALS 立体 綿麻 デニム 新品 W28 (2)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m90949666897_2.jpg')" onclick="switchCardPhoto(this, 'photos/m90949666897_2.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m90949666897_3.jpg" alt="ジースターロゥ RAW ESSENTIALS 立体 綿麻 デニム 新品 W28 (3)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m90949666897_3.jpg')" onclick="switchCardPhoto(this, 'photos/m90949666897_3.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m90949666897_4.jpg" alt="ジースターロゥ RAW ESSENTIALS 立体 綿麻 デニム 新品 W28 (4)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m90949666897_4.jpg')" onclick="switchCardPhoto(this, 'photos/m90949666897_4.jpg')" onerror="this.style.display='none'">
-      </div>
-    </div>
-    
-          <div class="card-body">
-            <h2 class="item-title" title="ジースターロゥ RAW ESSENTIALS 立体 綿麻 デニム 新品 W28"><a class="title-link" href="https://jp.mercari.com/item/m90949666897?afid=8673250720" target="_blank" rel="noopener noreferrer">ジースターロゥ RAW ESSENTIALS 立体 綿麻 デニム 新品 W28</a></h2>
-            <div class="spec-pills">
-              
-              <span class="spec-pill origin-pill">G-Star欧州規格</span>
-              <span class="spec-pill meas-pill">実寸検品済</span>
-            </div>
-          </div>
-          <div class="card-footer">
-            <a class="mercari-btn" href="https://jp.mercari.com/item/m90949666897?afid=8673250720" target="_blank" rel="noopener noreferrer">
-              商品ページを見る（¥6,380） &rarr;
-            </a>
-            <div class="multi-ec-row">
-              <a class="fallback-link" href="item/m90949666897/index.html" title="平置き実寸・4枚写真ページ">実寸詳細</a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AD%E3%82%A5&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">Amazon</a>
-              <a class="rakuten-link" href="https://hb.afl.rakuten.co.jp/hgc/5911c092.7baab367.5911c093.8b9d5488/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2582%25B8%25E3%2583%25BC%25E3%2582%25B9%25E3%2582%25BF%25E3%2583%25BC%25E3%2583%25AD%25E3%2582%25A5%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="noopener noreferrer">楽天市場</a>
-              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=STD-ITEM&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339238012&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">eBay世界</a>
-            </div>
-            
-          </div>
-        </article>
-    
-        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="6480" data-size="w34_40" data-role="station_stopping" data-search="no.31  gs-dstaq g-star欧州規格 ジースターロゥ d-staq スリムデニム 新品 w38/l38 w48cm / 股下96cm">
+        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="6480" data-size="w34_40" data-role="station_stopping" data-search="no.32  gs-dstaq g-star欧州規格 ジースターロゥ d-staq スリムデニム 新品 w38/l38 w48cm / 股下96cm">
           
     <div class="photo-gallery-block">
       <a class="card-photo-link" href="https://jp.mercari.com/item/m53227294040?afid=8673250720" target="_blank" rel="noopener noreferrer" title="ジースターロゥ D-STAQ スリムデニム 新品 W38/L38">
         <img class="card-main-photo" src="photos/m53227294040_1.jpg" alt="ジースターロゥ D-STAQ スリムデニム 新品 W38/L38" loading="lazy">
         <div class="photo-overlay-top">
-          <span class="badge-no">No.31 <small>GS-DSTAQ</small></span>
+          <span class="badge-no">No.32 <small>GS-DSTAQ</small></span>
           <span class="badge-status status-new">新品・未使用</span>
         </div>
         <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥6,480<small class="price-asof">11月14日時点</small></span>
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥6,480<small class="price-asof">11月15日時点</small></span>
         </div>
       </a>
       <div class="thumb-strip">
@@ -1621,41 +1824,41 @@
           </div>
         </article>
     
-        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="6680" data-size="w28_30" data-role="station_stopping" data-search="no.32  112078-l28-w24 nudie欧州規格 ヌーディージーンズ brute knut 濃紺 新品 w24/l28 w33cm / h44cm / 渡25cm / 股上27cm">
+        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="6780" data-size="w32_33" data-role="station_stopping" data-search="no.33  std-item 検品済個体 diesel ディーゼル ストレートデニム ネップ糸 未使用 w33/l32 実寸検品済">
           
     <div class="photo-gallery-block">
-      <a class="card-photo-link" href="https://jp.mercari.com/item/m39955993821?afid=8673250720" target="_blank" rel="noopener noreferrer" title="ヌーディージーンズ BRUTE KNUT 濃紺 新品 W24/L28">
-        <img class="card-main-photo" src="photos/m39955993821_1.jpg" alt="ヌーディージーンズ BRUTE KNUT 濃紺 新品 W24/L28" loading="lazy">
+      <a class="card-photo-link" href="https://jp.mercari.com/item/m79790414733?afid=8673250720" target="_blank" rel="noopener noreferrer" title="DIESEL ディーゼル ストレートデニム ネップ糸 未使用 W33/L32">
+        <img class="card-main-photo" src="photos/m79790414733_1.jpg" alt="DIESEL ディーゼル ストレートデニム ネップ糸 未使用 W33/L32" loading="lazy">
         <div class="photo-overlay-top">
-          <span class="badge-no">No.32 <small>112078-L28-W24</small></span>
+          <span class="badge-no">No.33 <small>STD-ITEM</small></span>
           <span class="badge-status status-new">新品・未使用</span>
         </div>
         <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥6,680<small class="price-asof">11月14日時点</small></span>
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥6,780<small class="price-asof">11月15日時点</small></span>
         </div>
       </a>
       <div class="thumb-strip">
-        <img class="thumb-img active" src="photos/m39955993821_1.jpg" alt="ヌーディージーンズ BRUTE KNUT 濃紺 新品 W24/L28 (1)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m39955993821_1.jpg')" onclick="switchCardPhoto(this, 'photos/m39955993821_1.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m39955993821_2.jpg" alt="ヌーディージーンズ BRUTE KNUT 濃紺 新品 W24/L28 (2)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m39955993821_2.jpg')" onclick="switchCardPhoto(this, 'photos/m39955993821_2.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m39955993821_3.jpg" alt="ヌーディージーンズ BRUTE KNUT 濃紺 新品 W24/L28 (3)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m39955993821_3.jpg')" onclick="switchCardPhoto(this, 'photos/m39955993821_3.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m39955993821_4.jpg" alt="ヌーディージーンズ BRUTE KNUT 濃紺 新品 W24/L28 (4)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m39955993821_4.jpg')" onclick="switchCardPhoto(this, 'photos/m39955993821_4.jpg')" onerror="this.style.display='none'">
+        <img class="thumb-img active" src="photos/m79790414733_1.jpg" alt="DIESEL ディーゼル ストレートデニム ネップ糸 未使用 W33/L32 (1)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m79790414733_1.jpg')" onclick="switchCardPhoto(this, 'photos/m79790414733_1.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m79790414733_2.jpg" alt="DIESEL ディーゼル ストレートデニム ネップ糸 未使用 W33/L32 (2)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m79790414733_2.jpg')" onclick="switchCardPhoto(this, 'photos/m79790414733_2.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m79790414733_3.jpg" alt="DIESEL ディーゼル ストレートデニム ネップ糸 未使用 W33/L32 (3)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m79790414733_3.jpg')" onclick="switchCardPhoto(this, 'photos/m79790414733_3.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m79790414733_4.jpg" alt="DIESEL ディーゼル ストレートデニム ネップ糸 未使用 W33/L32 (4)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m79790414733_4.jpg')" onclick="switchCardPhoto(this, 'photos/m79790414733_4.jpg')" onerror="this.style.display='none'">
       </div>
     </div>
     
           <div class="card-body">
-            <h2 class="item-title" title="ヌーディージーンズ BRUTE KNUT 濃紺 新品 W24/L28"><a class="title-link" href="https://jp.mercari.com/item/m39955993821?afid=8673250720" target="_blank" rel="noopener noreferrer">ヌーディージーンズ BRUTE KNUT 濃紺 新品 W24/L28</a></h2>
+            <h2 class="item-title" title="DIESEL ディーゼル ストレートデニム ネップ糸 未使用 W33/L32"><a class="title-link" href="https://jp.mercari.com/item/m79790414733?afid=8673250720" target="_blank" rel="noopener noreferrer">DIESEL ディーゼル ストレートデニム ネップ糸 未使用 W33/L32</a></h2>
             <div class="spec-pills">
               
-              <span class="spec-pill origin-pill">Nudie欧州規格</span>
-              <span class="spec-pill meas-pill">W33cm / H44cm / 渡25cm / 股上27cm</span>
+              <span class="spec-pill origin-pill">検品済個体</span>
+              <span class="spec-pill meas-pill">実寸検品済</span>
             </div>
           </div>
           <div class="card-footer">
-            <a class="mercari-btn" href="https://jp.mercari.com/item/m39955993821?afid=8673250720" target="_blank" rel="noopener noreferrer">
-              商品ページを見る（¥6,680） &rarr;
+            <a class="mercari-btn" href="https://jp.mercari.com/item/m79790414733?afid=8673250720" target="_blank" rel="noopener noreferrer">
+              商品ページを見る（¥6,780） &rarr;
             </a>
             <div class="multi-ec-row">
-              <a class="fallback-link" href="item/m39955993821/index.html" title="平置き実寸・4枚写真ページ">実寸詳細</a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=Nudie+Jeans+BRUTE+KNUT&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">Amazon</a>
-              <a class="rakuten-link" href="https://hb.afl.rakuten.co.jp/hgc/5911c092.7baab367.5911c093.8b9d5488/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FNudie%2520Jeans%2520BRUTE%2520KNUT%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="noopener noreferrer">楽天市場</a>
-              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=Nudie+Jeans+BRUTE+KNUT+112078-L28-W24&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339238012&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">eBay世界</a>
+              <a class="fallback-link" href="item/m79790414733/index.html" title="平置き実寸・4枚写真ページ">実寸詳細</a>
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=DIESEL&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">Amazon</a>
+              <a class="rakuten-link" href="https://hb.afl.rakuten.co.jp/hgc/5911c092.7baab367.5911c093.8b9d5488/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FDIESEL%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="noopener noreferrer">楽天市場</a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=DIESEL+STD-ITEM&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339238012&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">eBay世界</a>
             </div>
             
           </div>
@@ -1778,41 +1981,41 @@
           </div>
         </article>
     
-        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="7080" data-size="w32_33" data-role="station_stopping" data-search="no.33  std-item 検品済個体 diesel ディーゼル ストレートデニム ネップ糸 未使用 w33/l32 実寸検品済">
+        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="7080" data-size="w34_40" data-role="station_stopping" data-search="no.34  d05385-b479-a810 g-star欧州規格 ジースターロゥ d-staq 3dスリム 黒デニム 新品 w35/l40 w45cm / h56cm / 渡32cm / 股上29cm">
           
     <div class="photo-gallery-block">
-      <a class="card-photo-link" href="https://jp.mercari.com/item/m79790414733?afid=8673250720" target="_blank" rel="noopener noreferrer" title="DIESEL ディーゼル ストレートデニム ネップ糸 未使用 W33/L32">
-        <img class="card-main-photo" src="photos/m79790414733_1.jpg" alt="DIESEL ディーゼル ストレートデニム ネップ糸 未使用 W33/L32" loading="lazy">
+      <a class="card-photo-link" href="https://jp.mercari.com/item/m65047445397?afid=8673250720" target="_blank" rel="noopener noreferrer" title="ジースターロゥ D-STAQ 3Dスリム 黒デニム 新品 W35/L40">
+        <img class="card-main-photo" src="photos/m65047445397_1.jpg" alt="ジースターロゥ D-STAQ 3Dスリム 黒デニム 新品 W35/L40" loading="lazy">
         <div class="photo-overlay-top">
-          <span class="badge-no">No.33 <small>STD-ITEM</small></span>
+          <span class="badge-no">No.34 <small>D05385-B479-A810</small></span>
           <span class="badge-status status-new">新品・未使用</span>
         </div>
         <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥7,080<small class="price-asof">11月14日時点</small></span>
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥7,080<small class="price-asof">11月15日時点</small></span>
         </div>
       </a>
       <div class="thumb-strip">
-        <img class="thumb-img active" src="photos/m79790414733_1.jpg" alt="DIESEL ディーゼル ストレートデニム ネップ糸 未使用 W33/L32 (1)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m79790414733_1.jpg')" onclick="switchCardPhoto(this, 'photos/m79790414733_1.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m79790414733_2.jpg" alt="DIESEL ディーゼル ストレートデニム ネップ糸 未使用 W33/L32 (2)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m79790414733_2.jpg')" onclick="switchCardPhoto(this, 'photos/m79790414733_2.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m79790414733_3.jpg" alt="DIESEL ディーゼル ストレートデニム ネップ糸 未使用 W33/L32 (3)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m79790414733_3.jpg')" onclick="switchCardPhoto(this, 'photos/m79790414733_3.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m79790414733_4.jpg" alt="DIESEL ディーゼル ストレートデニム ネップ糸 未使用 W33/L32 (4)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m79790414733_4.jpg')" onclick="switchCardPhoto(this, 'photos/m79790414733_4.jpg')" onerror="this.style.display='none'">
+        <img class="thumb-img active" src="photos/m65047445397_1.jpg" alt="ジースターロゥ D-STAQ 3Dスリム 黒デニム 新品 W35/L40 (1)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m65047445397_1.jpg')" onclick="switchCardPhoto(this, 'photos/m65047445397_1.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m65047445397_2.jpg" alt="ジースターロゥ D-STAQ 3Dスリム 黒デニム 新品 W35/L40 (2)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m65047445397_2.jpg')" onclick="switchCardPhoto(this, 'photos/m65047445397_2.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m65047445397_3.jpg" alt="ジースターロゥ D-STAQ 3Dスリム 黒デニム 新品 W35/L40 (3)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m65047445397_3.jpg')" onclick="switchCardPhoto(this, 'photos/m65047445397_3.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m65047445397_4.jpg" alt="ジースターロゥ D-STAQ 3Dスリム 黒デニム 新品 W35/L40 (4)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m65047445397_4.jpg')" onclick="switchCardPhoto(this, 'photos/m65047445397_4.jpg')" onerror="this.style.display='none'">
       </div>
     </div>
     
           <div class="card-body">
-            <h2 class="item-title" title="DIESEL ディーゼル ストレートデニム ネップ糸 未使用 W33/L32"><a class="title-link" href="https://jp.mercari.com/item/m79790414733?afid=8673250720" target="_blank" rel="noopener noreferrer">DIESEL ディーゼル ストレートデニム ネップ糸 未使用 W33/L32</a></h2>
+            <h2 class="item-title" title="ジースターロゥ D-STAQ 3Dスリム 黒デニム 新品 W35/L40"><a class="title-link" href="https://jp.mercari.com/item/m65047445397?afid=8673250720" target="_blank" rel="noopener noreferrer">ジースターロゥ D-STAQ 3Dスリム 黒デニム 新品 W35/L40</a></h2>
             <div class="spec-pills">
               
-              <span class="spec-pill origin-pill">検品済個体</span>
-              <span class="spec-pill meas-pill">実寸検品済</span>
+              <span class="spec-pill origin-pill">G-Star欧州規格</span>
+              <span class="spec-pill meas-pill">W45cm / H56cm / 渡32cm / 股上29cm</span>
             </div>
           </div>
           <div class="card-footer">
-            <a class="mercari-btn" href="https://jp.mercari.com/item/m79790414733?afid=8673250720" target="_blank" rel="noopener noreferrer">
+            <a class="mercari-btn" href="https://jp.mercari.com/item/m65047445397?afid=8673250720" target="_blank" rel="noopener noreferrer">
               商品ページを見る（¥7,080） &rarr;
             </a>
             <div class="multi-ec-row">
-              <a class="fallback-link" href="item/m79790414733/index.html" title="平置き実寸・4枚写真ページ">実寸詳細</a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=DIESEL&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">Amazon</a>
-              <a class="rakuten-link" href="https://hb.afl.rakuten.co.jp/hgc/5911c092.7baab367.5911c093.8b9d5488/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FDIESEL%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="noopener noreferrer">楽天市場</a>
-              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=DIESEL+STD-ITEM&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339238012&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">eBay世界</a>
+              <a class="fallback-link" href="item/m65047445397/index.html" title="平置き実寸・4枚写真ページ">実寸詳細</a>
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">Amazon</a>
+              <a class="rakuten-link" href="https://hb.afl.rakuten.co.jp/hgc/5911c092.7baab367.5911c093.8b9d5488/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FG-Star%2520RAW%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="noopener noreferrer">楽天市場</a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=G-Star+RAW+D05385-B479-A810&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339238012&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">eBay世界</a>
             </div>
             
           </div>
@@ -1896,41 +2099,81 @@
           </div>
         </article>
     
-        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="7380" data-size="w34_40" data-role="station_stopping" data-search="no.34  d05385-b479-a810 g-star欧州規格 ジースターロゥ d-staq 3dスリム 黒デニム 新品 w35/l40 w45cm / h56cm / 渡32cm / 股上29cm">
+        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="7280" data-size="w28_30" data-role="station_stopping" data-search="no.35  gs-5620 g-star欧州規格 ジースターロゥ 5620 3dスリム デニム 新品 w29/l34 w38cm / 股下86cm">
           
     <div class="photo-gallery-block">
-      <a class="card-photo-link" href="https://jp.mercari.com/item/m65047445397?afid=8673250720" target="_blank" rel="noopener noreferrer" title="ジースターロゥ D-STAQ 3Dスリム 黒デニム 新品 W35/L40">
-        <img class="card-main-photo" src="photos/m65047445397_1.jpg" alt="ジースターロゥ D-STAQ 3Dスリム 黒デニム 新品 W35/L40" loading="lazy">
+      <a class="card-photo-link" href="https://jp.mercari.com/item/m74733998441?afid=8673250720" target="_blank" rel="noopener noreferrer" title="ジースターロゥ 5620 3Dスリム デニム 新品 W29/L34">
+        <img class="card-main-photo" src="photos/m74733998441_1.jpg" alt="ジースターロゥ 5620 3Dスリム デニム 新品 W29/L34" loading="lazy">
         <div class="photo-overlay-top">
-          <span class="badge-no">No.34 <small>D05385-B479-A810</small></span>
+          <span class="badge-no">No.35 <small>GS-5620</small></span>
           <span class="badge-status status-new">新品・未使用</span>
         </div>
         <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥7,380<small class="price-asof">11月14日時点</small></span>
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥7,280<small class="price-asof">11月15日時点</small></span>
         </div>
       </a>
       <div class="thumb-strip">
-        <img class="thumb-img active" src="photos/m65047445397_1.jpg" alt="ジースターロゥ D-STAQ 3Dスリム 黒デニム 新品 W35/L40 (1)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m65047445397_1.jpg')" onclick="switchCardPhoto(this, 'photos/m65047445397_1.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m65047445397_2.jpg" alt="ジースターロゥ D-STAQ 3Dスリム 黒デニム 新品 W35/L40 (2)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m65047445397_2.jpg')" onclick="switchCardPhoto(this, 'photos/m65047445397_2.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m65047445397_3.jpg" alt="ジースターロゥ D-STAQ 3Dスリム 黒デニム 新品 W35/L40 (3)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m65047445397_3.jpg')" onclick="switchCardPhoto(this, 'photos/m65047445397_3.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m65047445397_4.jpg" alt="ジースターロゥ D-STAQ 3Dスリム 黒デニム 新品 W35/L40 (4)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m65047445397_4.jpg')" onclick="switchCardPhoto(this, 'photos/m65047445397_4.jpg')" onerror="this.style.display='none'">
+        <img class="thumb-img active" src="photos/m74733998441_1.jpg" alt="ジースターロゥ 5620 3Dスリム デニム 新品 W29/L34 (1)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m74733998441_1.jpg')" onclick="switchCardPhoto(this, 'photos/m74733998441_1.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m74733998441_2.jpg" alt="ジースターロゥ 5620 3Dスリム デニム 新品 W29/L34 (2)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m74733998441_2.jpg')" onclick="switchCardPhoto(this, 'photos/m74733998441_2.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m74733998441_3.jpg" alt="ジースターロゥ 5620 3Dスリム デニム 新品 W29/L34 (3)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m74733998441_3.jpg')" onclick="switchCardPhoto(this, 'photos/m74733998441_3.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m74733998441_4.jpg" alt="ジースターロゥ 5620 3Dスリム デニム 新品 W29/L34 (4)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m74733998441_4.jpg')" onclick="switchCardPhoto(this, 'photos/m74733998441_4.jpg')" onerror="this.style.display='none'">
       </div>
     </div>
     
           <div class="card-body">
-            <h2 class="item-title" title="ジースターロゥ D-STAQ 3Dスリム 黒デニム 新品 W35/L40"><a class="title-link" href="https://jp.mercari.com/item/m65047445397?afid=8673250720" target="_blank" rel="noopener noreferrer">ジースターロゥ D-STAQ 3Dスリム 黒デニム 新品 W35/L40</a></h2>
+            <h2 class="item-title" title="ジースターロゥ 5620 3Dスリム デニム 新品 W29/L34"><a class="title-link" href="https://jp.mercari.com/item/m74733998441?afid=8673250720" target="_blank" rel="noopener noreferrer">ジースターロゥ 5620 3Dスリム デニム 新品 W29/L34</a></h2>
             <div class="spec-pills">
               
               <span class="spec-pill origin-pill">G-Star欧州規格</span>
-              <span class="spec-pill meas-pill">W45cm / H56cm / 渡32cm / 股上29cm</span>
+              <span class="spec-pill meas-pill">W38cm / 股下86cm</span>
             </div>
           </div>
           <div class="card-footer">
-            <a class="mercari-btn" href="https://jp.mercari.com/item/m65047445397?afid=8673250720" target="_blank" rel="noopener noreferrer">
-              商品ページを見る（¥7,380） &rarr;
+            <a class="mercari-btn" href="https://jp.mercari.com/item/m74733998441?afid=8673250720" target="_blank" rel="noopener noreferrer">
+              商品ページを見る（¥7,280） &rarr;
             </a>
             <div class="multi-ec-row">
-              <a class="fallback-link" href="item/m65047445397/index.html" title="平置き実寸・4枚写真ページ">実寸詳細</a>
+              <a class="fallback-link" href="item/m74733998441/index.html" title="平置き実寸・4枚写真ページ">実寸詳細</a>
               <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">Amazon</a>
               <a class="rakuten-link" href="https://hb.afl.rakuten.co.jp/hgc/5911c092.7baab367.5911c093.8b9d5488/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FG-Star%2520RAW%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="noopener noreferrer">楽天市場</a>
-              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=G-Star+RAW+D05385-B479-A810&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339238012&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">eBay世界</a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=G-Star+RAW+GS-5620&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339238012&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">eBay世界</a>
+            </div>
+            
+          </div>
+        </article>
+    
+        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="7280" data-size="w28_30" data-role="station_stopping" data-search="no.36  d16850-b767-a942 g-star欧州規格 ジースターロゥ g-bleid 3dスリム デニム 新品 w29/l32 w39cm / h48cm / 渡27cm / 股上25cm">
+          
+    <div class="photo-gallery-block">
+      <a class="card-photo-link" href="https://jp.mercari.com/item/m38440751727?afid=8673250720" target="_blank" rel="noopener noreferrer" title="ジースターロゥ G-BLEID 3Dスリム デニム 新品 W29/L32">
+        <img class="card-main-photo" src="photos/m38440751727_1.jpg" alt="ジースターロゥ G-BLEID 3Dスリム デニム 新品 W29/L32" loading="lazy">
+        <div class="photo-overlay-top">
+          <span class="badge-no">No.36 <small>D16850-B767-A942</small></span>
+          <span class="badge-status status-new">新品・未使用</span>
+        </div>
+        <div class="photo-overlay-bottom">
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥7,280<small class="price-asof">11月15日時点</small></span>
+        </div>
+      </a>
+      <div class="thumb-strip">
+        <img class="thumb-img active" src="photos/m38440751727_1.jpg" alt="ジースターロゥ G-BLEID 3Dスリム デニム 新品 W29/L32 (1)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m38440751727_1.jpg')" onclick="switchCardPhoto(this, 'photos/m38440751727_1.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m38440751727_2.jpg" alt="ジースターロゥ G-BLEID 3Dスリム デニム 新品 W29/L32 (2)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m38440751727_2.jpg')" onclick="switchCardPhoto(this, 'photos/m38440751727_2.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m38440751727_3.jpg" alt="ジースターロゥ G-BLEID 3Dスリム デニム 新品 W29/L32 (3)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m38440751727_3.jpg')" onclick="switchCardPhoto(this, 'photos/m38440751727_3.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m38440751727_4.jpg" alt="ジースターロゥ G-BLEID 3Dスリム デニム 新品 W29/L32 (4)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m38440751727_4.jpg')" onclick="switchCardPhoto(this, 'photos/m38440751727_4.jpg')" onerror="this.style.display='none'">
+      </div>
+    </div>
+    
+          <div class="card-body">
+            <h2 class="item-title" title="ジースターロゥ G-BLEID 3Dスリム デニム 新品 W29/L32"><a class="title-link" href="https://jp.mercari.com/item/m38440751727?afid=8673250720" target="_blank" rel="noopener noreferrer">ジースターロゥ G-BLEID 3Dスリム デニム 新品 W29/L32</a></h2>
+            <div class="spec-pills">
+              
+              <span class="spec-pill origin-pill">G-Star欧州規格</span>
+              <span class="spec-pill meas-pill">W39cm / H48cm / 渡27cm / 股上25cm</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a class="mercari-btn" href="https://jp.mercari.com/item/m38440751727?afid=8673250720" target="_blank" rel="noopener noreferrer">
+              商品ページを見る（¥7,280） &rarr;
+            </a>
+            <div class="multi-ec-row">
+              <a class="fallback-link" href="item/m38440751727/index.html" title="平置き実寸・4枚写真ページ">実寸詳細</a>
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">Amazon</a>
+              <a class="rakuten-link" href="https://hb.afl.rakuten.co.jp/hgc/5911c092.7baab367.5911c093.8b9d5488/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FG-Star%2520RAW%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="noopener noreferrer">楽天市場</a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=G-Star+RAW+D16850-B767-A942&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339238012&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">eBay世界</a>
             </div>
             
           </div>
@@ -2014,86 +2257,6 @@
           </div>
         </article>
     
-        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="7580" data-size="w28_30" data-role="station_stopping" data-search="no.35  gs-5620 g-star欧州規格 ジースターロゥ 5620 3dスリム デニム 新品 w29/l34 w38cm / 股下86cm">
-          
-    <div class="photo-gallery-block">
-      <a class="card-photo-link" href="https://jp.mercari.com/item/m74733998441?afid=8673250720" target="_blank" rel="noopener noreferrer" title="ジースターロゥ 5620 3Dスリム デニム 新品 W29/L34">
-        <img class="card-main-photo" src="photos/m74733998441_1.jpg" alt="ジースターロゥ 5620 3Dスリム デニム 新品 W29/L34" loading="lazy">
-        <div class="photo-overlay-top">
-          <span class="badge-no">No.35 <small>GS-5620</small></span>
-          <span class="badge-status status-new">新品・未使用</span>
-        </div>
-        <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥7,580<small class="price-asof">11月14日時点</small></span>
-        </div>
-      </a>
-      <div class="thumb-strip">
-        <img class="thumb-img active" src="photos/m74733998441_1.jpg" alt="ジースターロゥ 5620 3Dスリム デニム 新品 W29/L34 (1)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m74733998441_1.jpg')" onclick="switchCardPhoto(this, 'photos/m74733998441_1.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m74733998441_2.jpg" alt="ジースターロゥ 5620 3Dスリム デニム 新品 W29/L34 (2)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m74733998441_2.jpg')" onclick="switchCardPhoto(this, 'photos/m74733998441_2.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m74733998441_3.jpg" alt="ジースターロゥ 5620 3Dスリム デニム 新品 W29/L34 (3)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m74733998441_3.jpg')" onclick="switchCardPhoto(this, 'photos/m74733998441_3.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m74733998441_4.jpg" alt="ジースターロゥ 5620 3Dスリム デニム 新品 W29/L34 (4)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m74733998441_4.jpg')" onclick="switchCardPhoto(this, 'photos/m74733998441_4.jpg')" onerror="this.style.display='none'">
-      </div>
-    </div>
-    
-          <div class="card-body">
-            <h2 class="item-title" title="ジースターロゥ 5620 3Dスリム デニム 新品 W29/L34"><a class="title-link" href="https://jp.mercari.com/item/m74733998441?afid=8673250720" target="_blank" rel="noopener noreferrer">ジースターロゥ 5620 3Dスリム デニム 新品 W29/L34</a></h2>
-            <div class="spec-pills">
-              
-              <span class="spec-pill origin-pill">G-Star欧州規格</span>
-              <span class="spec-pill meas-pill">W38cm / 股下86cm</span>
-            </div>
-          </div>
-          <div class="card-footer">
-            <a class="mercari-btn" href="https://jp.mercari.com/item/m74733998441?afid=8673250720" target="_blank" rel="noopener noreferrer">
-              商品ページを見る（¥7,580） &rarr;
-            </a>
-            <div class="multi-ec-row">
-              <a class="fallback-link" href="item/m74733998441/index.html" title="平置き実寸・4枚写真ページ">実寸詳細</a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">Amazon</a>
-              <a class="rakuten-link" href="https://hb.afl.rakuten.co.jp/hgc/5911c092.7baab367.5911c093.8b9d5488/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FG-Star%2520RAW%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="noopener noreferrer">楽天市場</a>
-              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=G-Star+RAW+GS-5620&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339238012&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">eBay世界</a>
-            </div>
-            
-          </div>
-        </article>
-    
-        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="7580" data-size="w28_30" data-role="station_stopping" data-search="no.36  d16850-b767-a942 g-star欧州規格 ジースターロゥ g-bleid 3dスリム デニム 新品 w29/l32 w39cm / h48cm / 渡27cm / 股上25cm">
-          
-    <div class="photo-gallery-block">
-      <a class="card-photo-link" href="https://jp.mercari.com/item/m38440751727?afid=8673250720" target="_blank" rel="noopener noreferrer" title="ジースターロゥ G-BLEID 3Dスリム デニム 新品 W29/L32">
-        <img class="card-main-photo" src="photos/m38440751727_1.jpg" alt="ジースターロゥ G-BLEID 3Dスリム デニム 新品 W29/L32" loading="lazy">
-        <div class="photo-overlay-top">
-          <span class="badge-no">No.36 <small>D16850-B767-A942</small></span>
-          <span class="badge-status status-new">新品・未使用</span>
-        </div>
-        <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥7,580<small class="price-asof">11月14日時点</small></span>
-        </div>
-      </a>
-      <div class="thumb-strip">
-        <img class="thumb-img active" src="photos/m38440751727_1.jpg" alt="ジースターロゥ G-BLEID 3Dスリム デニム 新品 W29/L32 (1)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m38440751727_1.jpg')" onclick="switchCardPhoto(this, 'photos/m38440751727_1.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m38440751727_2.jpg" alt="ジースターロゥ G-BLEID 3Dスリム デニム 新品 W29/L32 (2)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m38440751727_2.jpg')" onclick="switchCardPhoto(this, 'photos/m38440751727_2.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m38440751727_3.jpg" alt="ジースターロゥ G-BLEID 3Dスリム デニム 新品 W29/L32 (3)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m38440751727_3.jpg')" onclick="switchCardPhoto(this, 'photos/m38440751727_3.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m38440751727_4.jpg" alt="ジースターロゥ G-BLEID 3Dスリム デニム 新品 W29/L32 (4)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m38440751727_4.jpg')" onclick="switchCardPhoto(this, 'photos/m38440751727_4.jpg')" onerror="this.style.display='none'">
-      </div>
-    </div>
-    
-          <div class="card-body">
-            <h2 class="item-title" title="ジースターロゥ G-BLEID 3Dスリム デニム 新品 W29/L32"><a class="title-link" href="https://jp.mercari.com/item/m38440751727?afid=8673250720" target="_blank" rel="noopener noreferrer">ジースターロゥ G-BLEID 3Dスリム デニム 新品 W29/L32</a></h2>
-            <div class="spec-pills">
-              
-              <span class="spec-pill origin-pill">G-Star欧州規格</span>
-              <span class="spec-pill meas-pill">W39cm / H48cm / 渡27cm / 股上25cm</span>
-            </div>
-          </div>
-          <div class="card-footer">
-            <a class="mercari-btn" href="https://jp.mercari.com/item/m38440751727?afid=8673250720" target="_blank" rel="noopener noreferrer">
-              商品ページを見る（¥7,580） &rarr;
-            </a>
-            <div class="multi-ec-row">
-              <a class="fallback-link" href="item/m38440751727/index.html" title="平置き実寸・4枚写真ページ">実寸詳細</a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">Amazon</a>
-              <a class="rakuten-link" href="https://hb.afl.rakuten.co.jp/hgc/5911c092.7baab367.5911c093.8b9d5488/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FG-Star%2520RAW%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="noopener noreferrer">楽天市場</a>
-              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=G-Star+RAW+D16850-B767-A942&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339238012&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">eBay世界</a>
-            </div>
-            
-          </div>
-        </article>
-    
         <article class="item-card passed-card" data-hall="passed" data-exclusive="0" data-lane="mens" data-price="7700" data-size="w34_40" data-role="passed_archive" data-search="arc-17 gs-motac g-star欧州規格 g-star motac 3d slim 38/34 デニム 38/34 w38/l34 (平置w50 / 渡36 / 股下85 / 裾18cm) ¥7,700">
           
     <div class="photo-gallery-block">
@@ -2128,6 +2291,46 @@
               <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+Motac+3D&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">Amazon</a>
               <a class="rakuten-link" href="https://hb.afl.rakuten.co.jp/hgc/5911c092.7baab367.5911c093.8b9d5488/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FG-Star%2520Motac%25203D%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="noopener noreferrer">楽天市場</a>
               <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=G-Star+Motac+3D+GS-MOTAC&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339238012&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">eBay世界</a>
+            </div>
+            
+          </div>
+        </article>
+    
+        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="7780" data-size="w32_33" data-role="station_stopping" data-search="no.37  std-item g-star欧州規格 ジースターロゥ scutar 3dスリム パンツ 新品 w33/l34 w43cm / 股下86cm">
+          
+    <div class="photo-gallery-block">
+      <a class="card-photo-link" href="https://jp.mercari.com/item/m67537839915?afid=8673250720" target="_blank" rel="noopener noreferrer" title="ジースターロゥ SCUTAR 3Dスリム パンツ 新品 W33/L34">
+        <img class="card-main-photo" src="photos/m67537839915_1.jpg" alt="ジースターロゥ SCUTAR 3Dスリム パンツ 新品 W33/L34" loading="lazy">
+        <div class="photo-overlay-top">
+          <span class="badge-no">No.37 <small>STD-ITEM</small></span>
+          <span class="badge-status status-new">新品・未使用</span>
+        </div>
+        <div class="photo-overlay-bottom">
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥7,780<small class="price-asof">11月15日時点</small></span>
+        </div>
+      </a>
+      <div class="thumb-strip">
+        <img class="thumb-img active" src="photos/m67537839915_1.jpg" alt="ジースターロゥ SCUTAR 3Dスリム パンツ 新品 W33/L34 (1)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m67537839915_1.jpg')" onclick="switchCardPhoto(this, 'photos/m67537839915_1.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m67537839915_2.jpg" alt="ジースターロゥ SCUTAR 3Dスリム パンツ 新品 W33/L34 (2)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m67537839915_2.jpg')" onclick="switchCardPhoto(this, 'photos/m67537839915_2.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m67537839915_3.jpg" alt="ジースターロゥ SCUTAR 3Dスリム パンツ 新品 W33/L34 (3)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m67537839915_3.jpg')" onclick="switchCardPhoto(this, 'photos/m67537839915_3.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m67537839915_4.jpg" alt="ジースターロゥ SCUTAR 3Dスリム パンツ 新品 W33/L34 (4)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m67537839915_4.jpg')" onclick="switchCardPhoto(this, 'photos/m67537839915_4.jpg')" onerror="this.style.display='none'">
+      </div>
+    </div>
+    
+          <div class="card-body">
+            <h2 class="item-title" title="ジースターロゥ SCUTAR 3Dスリム パンツ 新品 W33/L34"><a class="title-link" href="https://jp.mercari.com/item/m67537839915?afid=8673250720" target="_blank" rel="noopener noreferrer">ジースターロゥ SCUTAR 3Dスリム パンツ 新品 W33/L34</a></h2>
+            <div class="spec-pills">
+              
+              <span class="spec-pill origin-pill">G-Star欧州規格</span>
+              <span class="spec-pill meas-pill">W43cm / 股下86cm</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a class="mercari-btn" href="https://jp.mercari.com/item/m67537839915?afid=8673250720" target="_blank" rel="noopener noreferrer">
+              商品ページを見る（¥7,780） &rarr;
+            </a>
+            <div class="multi-ec-row">
+              <a class="fallback-link" href="item/m67537839915/index.html" title="平置き実寸・4枚写真ページ">実寸詳細</a>
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">Amazon</a>
+              <a class="rakuten-link" href="https://hb.afl.rakuten.co.jp/hgc/5911c092.7baab367.5911c093.8b9d5488/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FG-Star%2520RAW%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="noopener noreferrer">楽天市場</a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=G-Star+RAW+STD-ITEM&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339238012&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">eBay世界</a>
             </div>
             
           </div>
@@ -2284,46 +2487,6 @@
               <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%82%B8%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AD%E3%82%A5+5620+3D&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">Amazon</a>
               <a class="rakuten-link" href="https://hb.afl.rakuten.co.jp/hgc/5911c092.7baab367.5911c093.8b9d5488/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2582%25B8%25E3%2583%25BC%25E3%2582%25B9%25E3%2582%25BF%25E3%2583%25BC%25E3%2583%25AD%25E3%2582%25A5%25205620%25203D%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="noopener noreferrer">楽天市場</a>
               <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=5620+3D+GS-5620&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339238012&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">eBay世界</a>
-            </div>
-            
-          </div>
-        </article>
-    
-        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="8080" data-size="w32_33" data-role="station_stopping" data-search="no.37  std-item g-star欧州規格 ジースターロゥ scutar 3dスリム パンツ 新品 w33/l34 w43cm / 股下86cm">
-          
-    <div class="photo-gallery-block">
-      <a class="card-photo-link" href="https://jp.mercari.com/item/m67537839915?afid=8673250720" target="_blank" rel="noopener noreferrer" title="ジースターロゥ SCUTAR 3Dスリム パンツ 新品 W33/L34">
-        <img class="card-main-photo" src="photos/m67537839915_1.jpg" alt="ジースターロゥ SCUTAR 3Dスリム パンツ 新品 W33/L34" loading="lazy">
-        <div class="photo-overlay-top">
-          <span class="badge-no">No.37 <small>STD-ITEM</small></span>
-          <span class="badge-status status-new">新品・未使用</span>
-        </div>
-        <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥8,080<small class="price-asof">11月14日時点</small></span>
-        </div>
-      </a>
-      <div class="thumb-strip">
-        <img class="thumb-img active" src="photos/m67537839915_1.jpg" alt="ジースターロゥ SCUTAR 3Dスリム パンツ 新品 W33/L34 (1)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m67537839915_1.jpg')" onclick="switchCardPhoto(this, 'photos/m67537839915_1.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m67537839915_2.jpg" alt="ジースターロゥ SCUTAR 3Dスリム パンツ 新品 W33/L34 (2)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m67537839915_2.jpg')" onclick="switchCardPhoto(this, 'photos/m67537839915_2.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m67537839915_3.jpg" alt="ジースターロゥ SCUTAR 3Dスリム パンツ 新品 W33/L34 (3)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m67537839915_3.jpg')" onclick="switchCardPhoto(this, 'photos/m67537839915_3.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m67537839915_4.jpg" alt="ジースターロゥ SCUTAR 3Dスリム パンツ 新品 W33/L34 (4)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m67537839915_4.jpg')" onclick="switchCardPhoto(this, 'photos/m67537839915_4.jpg')" onerror="this.style.display='none'">
-      </div>
-    </div>
-    
-          <div class="card-body">
-            <h2 class="item-title" title="ジースターロゥ SCUTAR 3Dスリム パンツ 新品 W33/L34"><a class="title-link" href="https://jp.mercari.com/item/m67537839915?afid=8673250720" target="_blank" rel="noopener noreferrer">ジースターロゥ SCUTAR 3Dスリム パンツ 新品 W33/L34</a></h2>
-            <div class="spec-pills">
-              
-              <span class="spec-pill origin-pill">G-Star欧州規格</span>
-              <span class="spec-pill meas-pill">W43cm / 股下86cm</span>
-            </div>
-          </div>
-          <div class="card-footer">
-            <a class="mercari-btn" href="https://jp.mercari.com/item/m67537839915?afid=8673250720" target="_blank" rel="noopener noreferrer">
-              商品ページを見る（¥8,080） &rarr;
-            </a>
-            <div class="multi-ec-row">
-              <a class="fallback-link" href="item/m67537839915/index.html" title="平置き実寸・4枚写真ページ">実寸詳細</a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=G-Star+RAW&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">Amazon</a>
-              <a class="rakuten-link" href="https://hb.afl.rakuten.co.jp/hgc/5911c092.7baab367.5911c093.8b9d5488/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FG-Star%2520RAW%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="noopener noreferrer">楽天市場</a>
-              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=G-Star+RAW+STD-ITEM&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339238012&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">eBay世界</a>
             </div>
             
           </div>
@@ -2563,7 +2726,7 @@
           </div>
         </article>
     
-        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="12680" data-size="w34_40" data-role="station_stopping" data-search="no.38  std-item g-star欧州規格 新品 g-star raw air defence 立体 スキニー w40 実寸検品済">
+        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="mens" data-price="11880" data-size="w34_40" data-role="station_stopping" data-search="no.38  std-item g-star欧州規格 新品 g-star raw air defence 立体 スキニー w40 実寸検品済">
           
     <div class="photo-gallery-block">
       <a class="card-photo-link" href="https://jp.mercari.com/item/m40207847647?afid=8673250720" target="_blank" rel="noopener noreferrer" title="新品 G-Star RAW AIR DEFENCE 立体 スキニー W40">
@@ -2573,7 +2736,7 @@
           <span class="badge-status status-new">新品・未使用</span>
         </div>
         <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥12,680<small class="price-asof">11月14日時点</small></span>
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥11,880<small class="price-asof">11月15日時点</small></span>
         </div>
       </a>
       <div class="thumb-strip">
@@ -2591,7 +2754,7 @@
           </div>
           <div class="card-footer">
             <a class="mercari-btn" href="https://jp.mercari.com/item/m40207847647?afid=8673250720" target="_blank" rel="noopener noreferrer">
-              商品ページを見る（¥12,680） &rarr;
+              商品ページを見る（¥11,880） &rarr;
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="item/m40207847647/index.html" title="平置き実寸・4枚写真ページ">実寸詳細</a>
@@ -2974,7 +3137,7 @@
           <span class="badge-status status-active">美品</span>
         </div>
         <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥580<small class="price-asof">11月14日時点</small></span>
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥580<small class="price-asof">11月15日時点</small></span>
         </div>
       </a>
       <div class="thumb-strip">
@@ -3014,7 +3177,7 @@
           <span class="badge-status status-active">美品</span>
         </div>
         <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥880<small class="price-asof">11月14日時点</small></span>
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥880<small class="price-asof">11月15日時点</small></span>
         </div>
       </a>
       <div class="thumb-strip">
@@ -3083,17 +3246,57 @@
           </div>
         </article>
     
-        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="womens" data-price="1150" data-size="womens_all" data-role="station_stopping" data-search="no.03  std-item 検品済個体 監視と密告のアメリカ ジム・レッデン 田中宇 監訳 帯付 成甲書房 実寸検品済">
+        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="womens" data-price="1080" data-size="womens_all" data-role="station_stopping" data-search="no.03  std-item 検品済個体 美品 アーガイル柄 vネック ニットベスト グリーン系 重ね着 レイヤード 秋冬 実寸検品済">
           
     <div class="photo-gallery-block">
-      <a class="card-photo-link" href="https://jp.mercari.com/item/m73937127369?afid=8673250720" target="_blank" rel="noopener noreferrer" title="監視と密告のアメリカ ジム・レッデン 田中宇 監訳 帯付 成甲書房">
-        <img class="card-main-photo" src="photos/m73937127369_1.jpg" alt="監視と密告のアメリカ ジム・レッデン 田中宇 監訳 帯付 成甲書房" loading="lazy">
+      <a class="card-photo-link" href="https://jp.mercari.com/item/m77532967912?afid=8673250720" target="_blank" rel="noopener noreferrer" title="美品 アーガイル柄 Vネック ニットベスト グリーン系 重ね着 レイヤード 秋冬">
+        <img class="card-main-photo" src="photos/m77532967912_1.jpg" alt="美品 アーガイル柄 Vネック ニットベスト グリーン系 重ね着 レイヤード 秋冬" loading="lazy">
         <div class="photo-overlay-top">
           <span class="badge-no">No.03 <small>STD-ITEM</small></span>
           <span class="badge-status status-active">美品</span>
         </div>
         <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥1,150<small class="price-asof">11月14日時点</small></span>
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥1,080<small class="price-asof">11月15日時点</small></span>
+        </div>
+      </a>
+      <div class="thumb-strip">
+        <img class="thumb-img active" src="photos/m77532967912_1.jpg" alt="美品 アーガイル柄 Vネック ニットベスト グリーン系 重ね着 レイヤード 秋冬 (1)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m77532967912_1.jpg')" onclick="switchCardPhoto(this, 'photos/m77532967912_1.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m77532967912_2.jpg" alt="美品 アーガイル柄 Vネック ニットベスト グリーン系 重ね着 レイヤード 秋冬 (2)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m77532967912_2.jpg')" onclick="switchCardPhoto(this, 'photos/m77532967912_2.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m77532967912_3.jpg" alt="美品 アーガイル柄 Vネック ニットベスト グリーン系 重ね着 レイヤード 秋冬 (3)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m77532967912_3.jpg')" onclick="switchCardPhoto(this, 'photos/m77532967912_3.jpg')" onerror="this.style.display='none'">
+      </div>
+    </div>
+    
+          <div class="card-body">
+            <h2 class="item-title" title="美品 アーガイル柄 Vネック ニットベスト グリーン系 重ね着 レイヤード 秋冬"><a class="title-link" href="https://jp.mercari.com/item/m77532967912?afid=8673250720" target="_blank" rel="noopener noreferrer">美品 アーガイル柄 Vネック ニットベスト グリーン系 重ね着 レイヤード 秋冬</a></h2>
+            <div class="spec-pills">
+              
+              <span class="spec-pill origin-pill">検品済個体</span>
+              <span class="spec-pill meas-pill">実寸検品済</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a class="mercari-btn" href="https://jp.mercari.com/item/m77532967912?afid=8673250720" target="_blank" rel="noopener noreferrer">
+              商品ページを見る（¥1,080） &rarr;
+            </a>
+            <div class="multi-ec-row">
+              <a class="fallback-link" href="item/m77532967912/index.html" title="平置き実寸・4枚写真ページ">実寸詳細</a>
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E7%BE%8E%E5%93%81&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">Amazon</a>
+              <a class="rakuten-link" href="https://hb.afl.rakuten.co.jp/hgc/5911c092.7baab367.5911c093.8b9d5488/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%25BE%258E%25E5%2593%2581%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="noopener noreferrer">楽天市場</a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=STD-ITEM&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339238012&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">eBay世界</a>
+            </div>
+            
+          </div>
+        </article>
+    
+        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="womens" data-price="1150" data-size="womens_all" data-role="station_stopping" data-search="no.05  std-item 検品済個体 監視と密告のアメリカ ジム・レッデン 田中宇 監訳 帯付 成甲書房 実寸検品済">
+          
+    <div class="photo-gallery-block">
+      <a class="card-photo-link" href="https://jp.mercari.com/item/m73937127369?afid=8673250720" target="_blank" rel="noopener noreferrer" title="監視と密告のアメリカ ジム・レッデン 田中宇 監訳 帯付 成甲書房">
+        <img class="card-main-photo" src="photos/m73937127369_1.jpg" alt="監視と密告のアメリカ ジム・レッデン 田中宇 監訳 帯付 成甲書房" loading="lazy">
+        <div class="photo-overlay-top">
+          <span class="badge-no">No.05 <small>STD-ITEM</small></span>
+          <span class="badge-status status-active">美品</span>
+        </div>
+        <div class="photo-overlay-bottom">
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥1,150<small class="price-asof">11月15日時点</small></span>
         </div>
       </a>
       <div class="thumb-strip">
@@ -3123,46 +3326,6 @@
           </div>
         </article>
     
-        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="womens" data-price="1180" data-size="womens_all" data-role="station_stopping" data-search="no.04  std-item 検品済個体 美品 アーガイル柄 vネック ニットベスト グリーン系 重ね着 レイヤード 秋冬 実寸検品済">
-          
-    <div class="photo-gallery-block">
-      <a class="card-photo-link" href="https://jp.mercari.com/item/m77532967912?afid=8673250720" target="_blank" rel="noopener noreferrer" title="美品 アーガイル柄 Vネック ニットベスト グリーン系 重ね着 レイヤード 秋冬">
-        <img class="card-main-photo" src="photos/m77532967912_1.jpg" alt="美品 アーガイル柄 Vネック ニットベスト グリーン系 重ね着 レイヤード 秋冬" loading="lazy">
-        <div class="photo-overlay-top">
-          <span class="badge-no">No.04 <small>STD-ITEM</small></span>
-          <span class="badge-status status-active">美品</span>
-        </div>
-        <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥1,180<small class="price-asof">11月14日時点</small></span>
-        </div>
-      </a>
-      <div class="thumb-strip">
-        <img class="thumb-img active" src="photos/m77532967912_1.jpg" alt="美品 アーガイル柄 Vネック ニットベスト グリーン系 重ね着 レイヤード 秋冬 (1)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m77532967912_1.jpg')" onclick="switchCardPhoto(this, 'photos/m77532967912_1.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m77532967912_2.jpg" alt="美品 アーガイル柄 Vネック ニットベスト グリーン系 重ね着 レイヤード 秋冬 (2)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m77532967912_2.jpg')" onclick="switchCardPhoto(this, 'photos/m77532967912_2.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m77532967912_3.jpg" alt="美品 アーガイル柄 Vネック ニットベスト グリーン系 重ね着 レイヤード 秋冬 (3)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m77532967912_3.jpg')" onclick="switchCardPhoto(this, 'photos/m77532967912_3.jpg')" onerror="this.style.display='none'">
-      </div>
-    </div>
-    
-          <div class="card-body">
-            <h2 class="item-title" title="美品 アーガイル柄 Vネック ニットベスト グリーン系 重ね着 レイヤード 秋冬"><a class="title-link" href="https://jp.mercari.com/item/m77532967912?afid=8673250720" target="_blank" rel="noopener noreferrer">美品 アーガイル柄 Vネック ニットベスト グリーン系 重ね着 レイヤード 秋冬</a></h2>
-            <div class="spec-pills">
-              
-              <span class="spec-pill origin-pill">検品済個体</span>
-              <span class="spec-pill meas-pill">実寸検品済</span>
-            </div>
-          </div>
-          <div class="card-footer">
-            <a class="mercari-btn" href="https://jp.mercari.com/item/m77532967912?afid=8673250720" target="_blank" rel="noopener noreferrer">
-              商品ページを見る（¥1,180） &rarr;
-            </a>
-            <div class="multi-ec-row">
-              <a class="fallback-link" href="item/m77532967912/index.html" title="平置き実寸・4枚写真ページ">実寸詳細</a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E7%BE%8E%E5%93%81&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">Amazon</a>
-              <a class="rakuten-link" href="https://hb.afl.rakuten.co.jp/hgc/5911c092.7baab367.5911c093.8b9d5488/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%25BE%258E%25E5%2593%2581%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="noopener noreferrer">楽天市場</a>
-              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=STD-ITEM&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339238012&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">eBay世界</a>
-            </div>
-            
-          </div>
-        </article>
-    
         <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="womens" data-price="1280" data-size="womens_all" data-role="station_stopping" data-search="no.06  06-190305003-01 検品済個体 リブ編み ワイドパンツ イージーパンツ レッド ウエストゴム m 美品 w34cm / h49cm / 渡30cm / 股上28cm">
           
     <div class="photo-gallery-block">
@@ -3173,7 +3336,7 @@
           <span class="badge-status status-active">美品</span>
         </div>
         <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥1,280<small class="price-asof">11月14日時点</small></span>
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥1,280<small class="price-asof">11月15日時点</small></span>
         </div>
       </a>
       <div class="thumb-strip">
@@ -3252,7 +3415,7 @@
           <span class="badge-status status-active">美品</span>
         </div>
         <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥1,680<small class="price-asof">11月14日時点</small></span>
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥1,680<small class="price-asof">11月15日時点</small></span>
         </div>
       </a>
       <div class="thumb-strip">
@@ -3292,7 +3455,7 @@
           <span class="badge-status status-active">美品</span>
         </div>
         <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥1,680<small class="price-asof">11月14日時点</small></span>
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥1,680<small class="price-asof">11月15日時点</small></span>
         </div>
       </a>
       <div class="thumb-strip">
@@ -3332,7 +3495,7 @@
           <span class="badge-status status-active">美品</span>
         </div>
         <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥1,780<small class="price-asof">11月14日時点</small></span>
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥1,780<small class="price-asof">11月15日時点</small></span>
         </div>
       </a>
       <div class="thumb-strip">
@@ -3357,6 +3520,46 @@
               <a class="amazon-link" href="https://www.amazon.co.jp/s?k=DAZY&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">Amazon</a>
               <a class="rakuten-link" href="https://hb.afl.rakuten.co.jp/hgc/5911c092.7baab367.5911c093.8b9d5488/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FDAZY%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="noopener noreferrer">楽天市場</a>
               <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=DAZY+STD-ITEM&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339238012&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">eBay世界</a>
+            </div>
+            
+          </div>
+        </article>
+    
+        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="womens" data-price="1880" data-size="womens_all" data-role="station_stopping" data-search="no.11  std-item 検品済個体 plst プラステ vネック 長袖 ニットセーター レッド mサイズ 美品 肩38cm / 身幅48cm / 着丈61cm / 袖58cm">
+          
+    <div class="photo-gallery-block">
+      <a class="card-photo-link" href="https://jp.mercari.com/item/m54330706700?afid=8673250720" target="_blank" rel="noopener noreferrer" title="PLST プラステ Vネック 長袖 ニットセーター レッド Mサイズ 美品">
+        <img class="card-main-photo" src="photos/m54330706700_1.jpg" alt="PLST プラステ Vネック 長袖 ニットセーター レッド Mサイズ 美品" loading="lazy">
+        <div class="photo-overlay-top">
+          <span class="badge-no">No.11 <small>STD-ITEM</small></span>
+          <span class="badge-status status-active">美品</span>
+        </div>
+        <div class="photo-overlay-bottom">
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥1,880<small class="price-asof">11月15日時点</small></span>
+        </div>
+      </a>
+      <div class="thumb-strip">
+        <img class="thumb-img active" src="photos/m54330706700_1.jpg" alt="PLST プラステ Vネック 長袖 ニットセーター レッド Mサイズ 美品 (1)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m54330706700_1.jpg')" onclick="switchCardPhoto(this, 'photos/m54330706700_1.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m54330706700_2.jpg" alt="PLST プラステ Vネック 長袖 ニットセーター レッド Mサイズ 美品 (2)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m54330706700_2.jpg')" onclick="switchCardPhoto(this, 'photos/m54330706700_2.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m54330706700_3.jpg" alt="PLST プラステ Vネック 長袖 ニットセーター レッド Mサイズ 美品 (3)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m54330706700_3.jpg')" onclick="switchCardPhoto(this, 'photos/m54330706700_3.jpg')" onerror="this.style.display='none'">
+      </div>
+    </div>
+    
+          <div class="card-body">
+            <h2 class="item-title" title="PLST プラステ Vネック 長袖 ニットセーター レッド Mサイズ 美品"><a class="title-link" href="https://jp.mercari.com/item/m54330706700?afid=8673250720" target="_blank" rel="noopener noreferrer">PLST プラステ Vネック 長袖 ニットセーター レッド Mサイズ 美品</a></h2>
+            <div class="spec-pills">
+              
+              <span class="spec-pill origin-pill">検品済個体</span>
+              <span class="spec-pill meas-pill">肩38cm / 身幅48cm / 着丈61cm / 袖58cm</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a class="mercari-btn" href="https://jp.mercari.com/item/m54330706700?afid=8673250720" target="_blank" rel="noopener noreferrer">
+              商品ページを見る（¥1,880） &rarr;
+            </a>
+            <div class="multi-ec-row">
+              <a class="fallback-link" href="item/m54330706700/index.html" title="平置き実寸・4枚写真ページ">実寸詳細</a>
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=PLST&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">Amazon</a>
+              <a class="rakuten-link" href="https://hb.afl.rakuten.co.jp/hgc/5911c092.7baab367.5911c093.8b9d5488/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FPLST%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="noopener noreferrer">楽天市場</a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=PLST+STD-ITEM&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339238012&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">eBay世界</a>
             </div>
             
           </div>
@@ -3401,46 +3604,6 @@
           </div>
         </article>
     
-        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="womens" data-price="2080" data-size="womens_all" data-role="station_stopping" data-search="no.11  std-item 検品済個体 plst プラステ vネック 長袖 ニットセーター レッド mサイズ 美品 肩38cm / 身幅48cm / 着丈61cm / 袖58cm">
-          
-    <div class="photo-gallery-block">
-      <a class="card-photo-link" href="https://jp.mercari.com/item/m54330706700?afid=8673250720" target="_blank" rel="noopener noreferrer" title="PLST プラステ Vネック 長袖 ニットセーター レッド Mサイズ 美品">
-        <img class="card-main-photo" src="photos/m54330706700_1.jpg" alt="PLST プラステ Vネック 長袖 ニットセーター レッド Mサイズ 美品" loading="lazy">
-        <div class="photo-overlay-top">
-          <span class="badge-no">No.11 <small>STD-ITEM</small></span>
-          <span class="badge-status status-active">美品</span>
-        </div>
-        <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥2,080<small class="price-asof">11月14日時点</small></span>
-        </div>
-      </a>
-      <div class="thumb-strip">
-        <img class="thumb-img active" src="photos/m54330706700_1.jpg" alt="PLST プラステ Vネック 長袖 ニットセーター レッド Mサイズ 美品 (1)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m54330706700_1.jpg')" onclick="switchCardPhoto(this, 'photos/m54330706700_1.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m54330706700_2.jpg" alt="PLST プラステ Vネック 長袖 ニットセーター レッド Mサイズ 美品 (2)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m54330706700_2.jpg')" onclick="switchCardPhoto(this, 'photos/m54330706700_2.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m54330706700_3.jpg" alt="PLST プラステ Vネック 長袖 ニットセーター レッド Mサイズ 美品 (3)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m54330706700_3.jpg')" onclick="switchCardPhoto(this, 'photos/m54330706700_3.jpg')" onerror="this.style.display='none'">
-      </div>
-    </div>
-    
-          <div class="card-body">
-            <h2 class="item-title" title="PLST プラステ Vネック 長袖 ニットセーター レッド Mサイズ 美品"><a class="title-link" href="https://jp.mercari.com/item/m54330706700?afid=8673250720" target="_blank" rel="noopener noreferrer">PLST プラステ Vネック 長袖 ニットセーター レッド Mサイズ 美品</a></h2>
-            <div class="spec-pills">
-              
-              <span class="spec-pill origin-pill">検品済個体</span>
-              <span class="spec-pill meas-pill">肩38cm / 身幅48cm / 着丈61cm / 袖58cm</span>
-            </div>
-          </div>
-          <div class="card-footer">
-            <a class="mercari-btn" href="https://jp.mercari.com/item/m54330706700?afid=8673250720" target="_blank" rel="noopener noreferrer">
-              商品ページを見る（¥2,080） &rarr;
-            </a>
-            <div class="multi-ec-row">
-              <a class="fallback-link" href="item/m54330706700/index.html" title="平置き実寸・4枚写真ページ">実寸詳細</a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=PLST&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">Amazon</a>
-              <a class="rakuten-link" href="https://hb.afl.rakuten.co.jp/hgc/5911c092.7baab367.5911c093.8b9d5488/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FPLST%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="noopener noreferrer">楽天市場</a>
-              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=PLST+STD-ITEM&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339238012&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">eBay世界</a>
-            </div>
-            
-          </div>
-        </article>
-    
         <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="womens" data-price="2380" data-size="womens_all" data-role="station_stopping" data-search="no.12  std-item 検品済個体 美品 tommy hilfiger トミー ロングパーカー グレー 秋冬 実寸検品済">
           
     <div class="photo-gallery-block">
@@ -3451,7 +3614,7 @@
           <span class="badge-status status-active">美品</span>
         </div>
         <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥2,380<small class="price-asof">11月14日時点</small></span>
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥2,380<small class="price-asof">11月15日時点</small></span>
         </div>
       </a>
       <div class="thumb-strip">
@@ -3481,7 +3644,7 @@
           </div>
         </article>
     
-        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="womens" data-price="3180" data-size="womens_all" data-role="station_stopping" data-search="no.14  std-item 検品済個体 carven paris カルヴェン ドット刺繍 五分袖 ブラウス ホワイト m 肩38cm / 身幅46cm / 着丈56cm / 袖32cm">
+        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="womens" data-price="2980" data-size="womens_all" data-role="station_stopping" data-search="no.14  std-item 検品済個体 carven paris カルヴェン ドット刺繍 五分袖 ブラウス ホワイト m 肩38cm / 身幅46cm / 着丈56cm / 袖32cm">
           
     <div class="photo-gallery-block">
       <a class="card-photo-link" href="https://jp.mercari.com/item/m53055002751?afid=8673250720" target="_blank" rel="noopener noreferrer" title="CARVEN PARIS カルヴェン ドット刺繍 五分袖 ブラウス ホワイト M">
@@ -3491,7 +3654,7 @@
           <span class="badge-status status-active">美品</span>
         </div>
         <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥3,180<small class="price-asof">11月14日時点</small></span>
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥2,980<small class="price-asof">11月15日時点</small></span>
         </div>
       </a>
       <div class="thumb-strip">
@@ -3509,7 +3672,7 @@
           </div>
           <div class="card-footer">
             <a class="mercari-btn" href="https://jp.mercari.com/item/m53055002751?afid=8673250720" target="_blank" rel="noopener noreferrer">
-              商品ページを見る（¥3,180） &rarr;
+              商品ページを見る（¥2,980） &rarr;
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="item/m53055002751/index.html" title="平置き実寸・4枚写真ページ">実寸詳細</a>
@@ -3560,17 +3723,17 @@
           </div>
         </article>
     
-        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="womens" data-price="4080" data-size="womens_all" data-role="station_stopping" data-search="no.18  09wfo144266 検品済個体 mila owen ミラオーウェン ウール混 ワンピース 新品 グレー f 肩38cm / 身幅46cm / 総丈93cm / 袖55cm">
+        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="womens" data-price="3680" data-size="womens_all" data-role="station_stopping" data-search="no.16  09wfo144266 検品済個体 mila owen ミラオーウェン ウール混 ワンピース 新品 グレー f 肩38cm / 身幅46cm / 総丈93cm / 袖55cm">
           
     <div class="photo-gallery-block">
       <a class="card-photo-link" href="https://jp.mercari.com/item/m82062305362?afid=8673250720" target="_blank" rel="noopener noreferrer" title="Mila Owen ミラオーウェン ウール混 ワンピース 新品 グレー F">
         <img class="card-main-photo" src="photos/m82062305362_1.jpg" alt="Mila Owen ミラオーウェン ウール混 ワンピース 新品 グレー F" loading="lazy">
         <div class="photo-overlay-top">
-          <span class="badge-no">No.18 <small>09WFO144266</small></span>
+          <span class="badge-no">No.16 <small>09WFO144266</small></span>
           <span class="badge-status status-new">新品・未使用</span>
         </div>
         <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥4,080<small class="price-asof">11月14日時点</small></span>
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥3,680<small class="price-asof">11月15日時点</small></span>
         </div>
       </a>
       <div class="thumb-strip">
@@ -3588,13 +3751,53 @@
           </div>
           <div class="card-footer">
             <a class="mercari-btn" href="https://jp.mercari.com/item/m82062305362?afid=8673250720" target="_blank" rel="noopener noreferrer">
-              商品ページを見る（¥4,080） &rarr;
+              商品ページを見る（¥3,680） &rarr;
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="item/m82062305362/index.html" title="平置き実寸・4枚写真ページ">実寸詳細</a>
               <a class="amazon-link" href="https://www.amazon.co.jp/s?k=Mila+Owen&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">Amazon</a>
               <a class="rakuten-link" href="https://hb.afl.rakuten.co.jp/hgc/5911c092.7baab367.5911c093.8b9d5488/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FMila%2520Owen%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="noopener noreferrer">楽天市場</a>
               <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=Mila+Owen+09WFO144266&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339238012&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">eBay世界</a>
+            </div>
+            
+          </div>
+        </article>
+    
+        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="womens" data-price="5180" data-size="womens_all" data-role="station_stopping" data-search="no.21  1213002 / 検品済個体 まとめ売り 5点 eastboy イーストボーイ 9号 m パーカー スカート等 肩39cm / w37cm">
+          
+    <div class="photo-gallery-block">
+      <a class="card-photo-link" href="https://jp.mercari.com/item/m91623556094?afid=8673250720" target="_blank" rel="noopener noreferrer" title="まとめ売り 5点 EASTBOY イーストボーイ 9号 M パーカー スカート等">
+        <img class="card-main-photo" src="photos/m91623556094_1.jpg" alt="まとめ売り 5点 EASTBOY イーストボーイ 9号 M パーカー スカート等" loading="lazy">
+        <div class="photo-overlay-top">
+          <span class="badge-no">No.21 <small>1213002 /</small></span>
+          <span class="badge-status status-active">美品</span>
+        </div>
+        <div class="photo-overlay-bottom">
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥5,180<small class="price-asof">11月15日時点</small></span>
+        </div>
+      </a>
+      <div class="thumb-strip">
+        <img class="thumb-img active" src="photos/m91623556094_1.jpg" alt="まとめ売り 5点 EASTBOY イーストボーイ 9号 M パーカー スカート等 (1)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m91623556094_1.jpg')" onclick="switchCardPhoto(this, 'photos/m91623556094_1.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m91623556094_2.jpg" alt="まとめ売り 5点 EASTBOY イーストボーイ 9号 M パーカー スカート等 (2)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m91623556094_2.jpg')" onclick="switchCardPhoto(this, 'photos/m91623556094_2.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m91623556094_3.jpg" alt="まとめ売り 5点 EASTBOY イーストボーイ 9号 M パーカー スカート等 (3)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m91623556094_3.jpg')" onclick="switchCardPhoto(this, 'photos/m91623556094_3.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m91623556094_4.jpg" alt="まとめ売り 5点 EASTBOY イーストボーイ 9号 M パーカー スカート等 (4)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m91623556094_4.jpg')" onclick="switchCardPhoto(this, 'photos/m91623556094_4.jpg')" onerror="this.style.display='none'">
+      </div>
+    </div>
+    
+          <div class="card-body">
+            <h2 class="item-title" title="まとめ売り 5点 EASTBOY イーストボーイ 9号 M パーカー スカート等"><a class="title-link" href="https://jp.mercari.com/item/m91623556094?afid=8673250720" target="_blank" rel="noopener noreferrer">まとめ売り 5点 EASTBOY イーストボーイ 9号 M パーカー スカート等</a></h2>
+            <div class="spec-pills">
+              
+              <span class="spec-pill origin-pill">検品済個体</span>
+              <span class="spec-pill meas-pill">肩39cm / W37cm</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a class="mercari-btn" href="https://jp.mercari.com/item/m91623556094?afid=8673250720" target="_blank" rel="noopener noreferrer">
+              商品ページを見る（¥5,180） &rarr;
+            </a>
+            <div class="multi-ec-row">
+              <a class="fallback-link" href="item/m91623556094/index.html" title="平置き実寸・4枚写真ページ">実寸詳細</a>
+              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=EASTBOY&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">Amazon</a>
+              <a class="rakuten-link" href="https://hb.afl.rakuten.co.jp/hgc/5911c092.7baab367.5911c093.8b9d5488/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FEASTBOY%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="noopener noreferrer">楽天市場</a>
+              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=EASTBOY+1213002+%2F&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339238012&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">eBay世界</a>
             </div>
             
           </div>
@@ -3634,46 +3837,6 @@
               <a class="amazon-link" href="https://www.amazon.co.jp/s?k=%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%AB+%E3%82%A2%E3%83%B3%E3%82%B5%E3%83%B3%E3%83%96%E3%83%AB+%E5%8D%92%E6%A5%AD%E5%BC%8F&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">Amazon</a>
               <a class="rakuten-link" href="https://hb.afl.rakuten.co.jp/hgc/5911c092.7baab367.5911c093.8b9d5488/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25BC%25E3%2583%259E%25E3%2583%25AB%2520%25E3%2582%25A2%25E3%2583%25B3%25E3%2582%25B5%25E3%2583%25B3%25E3%2583%2596%25E3%2583%25AB%2520%25E5%258D%2592%25E6%25A5%25AD%25E5%25BC%258F%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="noopener noreferrer">楽天市場</a>
               <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=STD-ITEM&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339238012&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">eBay世界</a>
-            </div>
-            
-          </div>
-        </article>
-    
-        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="womens" data-price="5580" data-size="womens_all" data-role="station_stopping" data-search="no.21  1213002 / 検品済個体 まとめ売り 5点 eastboy イーストボーイ 9号 m パーカー スカート等 肩39cm / w37cm">
-          
-    <div class="photo-gallery-block">
-      <a class="card-photo-link" href="https://jp.mercari.com/item/m91623556094?afid=8673250720" target="_blank" rel="noopener noreferrer" title="まとめ売り 5点 EASTBOY イーストボーイ 9号 M パーカー スカート等">
-        <img class="card-main-photo" src="photos/m91623556094_1.jpg" alt="まとめ売り 5点 EASTBOY イーストボーイ 9号 M パーカー スカート等" loading="lazy">
-        <div class="photo-overlay-top">
-          <span class="badge-no">No.21 <small>1213002 /</small></span>
-          <span class="badge-status status-active">美品</span>
-        </div>
-        <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥5,580<small class="price-asof">11月14日時点</small></span>
-        </div>
-      </a>
-      <div class="thumb-strip">
-        <img class="thumb-img active" src="photos/m91623556094_1.jpg" alt="まとめ売り 5点 EASTBOY イーストボーイ 9号 M パーカー スカート等 (1)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m91623556094_1.jpg')" onclick="switchCardPhoto(this, 'photos/m91623556094_1.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m91623556094_2.jpg" alt="まとめ売り 5点 EASTBOY イーストボーイ 9号 M パーカー スカート等 (2)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m91623556094_2.jpg')" onclick="switchCardPhoto(this, 'photos/m91623556094_2.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m91623556094_3.jpg" alt="まとめ売り 5点 EASTBOY イーストボーイ 9号 M パーカー スカート等 (3)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m91623556094_3.jpg')" onclick="switchCardPhoto(this, 'photos/m91623556094_3.jpg')" onerror="this.style.display='none'"><img class="thumb-img " src="photos/m91623556094_4.jpg" alt="まとめ売り 5点 EASTBOY イーストボーイ 9号 M パーカー スカート等 (4)" loading="lazy" onmouseenter="switchCardPhoto(this, 'photos/m91623556094_4.jpg')" onclick="switchCardPhoto(this, 'photos/m91623556094_4.jpg')" onerror="this.style.display='none'">
-      </div>
-    </div>
-    
-          <div class="card-body">
-            <h2 class="item-title" title="まとめ売り 5点 EASTBOY イーストボーイ 9号 M パーカー スカート等"><a class="title-link" href="https://jp.mercari.com/item/m91623556094?afid=8673250720" target="_blank" rel="noopener noreferrer">まとめ売り 5点 EASTBOY イーストボーイ 9号 M パーカー スカート等</a></h2>
-            <div class="spec-pills">
-              
-              <span class="spec-pill origin-pill">検品済個体</span>
-              <span class="spec-pill meas-pill">肩39cm / W37cm</span>
-            </div>
-          </div>
-          <div class="card-footer">
-            <a class="mercari-btn" href="https://jp.mercari.com/item/m91623556094?afid=8673250720" target="_blank" rel="noopener noreferrer">
-              商品ページを見る（¥5,580） &rarr;
-            </a>
-            <div class="multi-ec-row">
-              <a class="fallback-link" href="item/m91623556094/index.html" title="平置き実寸・4枚写真ページ">実寸詳細</a>
-              <a class="amazon-link" href="https://www.amazon.co.jp/s?k=EASTBOY&tag=tsukaeki-22" target="_blank" rel="noopener noreferrer">Amazon</a>
-              <a class="rakuten-link" href="https://hb.afl.rakuten.co.jp/hgc/5911c092.7baab367.5911c093.8b9d5488/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FEASTBOY%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="noopener noreferrer">楽天市場</a>
-              <a class="ebay-link" href="https://www.ebay.com/sch/i.html?_nkw=EASTBOY+1213002+%2F&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339238012&customid=shopping_tsuka_eki&toolid=10001&mkevt=1" target="_blank" rel="noopener noreferrer">eBay世界</a>
             </div>
             
           </div>
@@ -3725,20 +3888,20 @@
               <div class="cat-sub">専門書・文具から、Amazon整備済み品・中古品出品・SIGMA/Canonレンズ・CASIO EDIFICEまで安い順で一覧比較</div>
             </div>
           </div>
-          <span class="cat-count-badge">全19点（¥1,180 &rarr; ¥145,455 安い順）</span>
+          <span class="cat-count-badge">全19点（¥1,080 &rarr; ¥145,455 安い順）</span>
         </div>
         
-        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="books_life" data-price="1180" data-size="womens_all" data-role="station_stopping" data-search="no.05  std-item 検品済個体 vision quest ビジョンクエスト ヨガパンツ フィットネス 黒×紫 実寸検品済">
+        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="books_life" data-price="1080" data-size="womens_all" data-role="station_stopping" data-search="no.04  std-item 検品済個体 vision quest ビジョンクエスト ヨガパンツ フィットネス 黒×紫 実寸検品済">
           
     <div class="photo-gallery-block">
       <a class="card-photo-link" href="https://jp.mercari.com/item/m50201017417?afid=8673250720" target="_blank" rel="noopener noreferrer" title="VISION QUEST ビジョンクエスト ヨガパンツ フィットネス 黒×紫">
         <img class="card-main-photo" src="photos/m50201017417_1.jpg" alt="VISION QUEST ビジョンクエスト ヨガパンツ フィットネス 黒×紫" loading="lazy">
         <div class="photo-overlay-top">
-          <span class="badge-no">No.05 <small>STD-ITEM</small></span>
+          <span class="badge-no">No.04 <small>STD-ITEM</small></span>
           <span class="badge-status status-active">美品</span>
         </div>
         <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥1,180<small class="price-asof">11月14日時点</small></span>
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥1,080<small class="price-asof">11月15日時点</small></span>
         </div>
       </a>
       <div class="thumb-strip">
@@ -3756,7 +3919,7 @@
           </div>
           <div class="card-footer">
             <a class="mercari-btn" href="https://jp.mercari.com/item/m50201017417?afid=8673250720" target="_blank" rel="noopener noreferrer">
-              商品ページを見る（¥1,180） &rarr;
+              商品ページを見る（¥1,080） &rarr;
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="item/m50201017417/index.html" title="平置き実寸・4枚写真ページ">実寸詳細</a>
@@ -3807,7 +3970,7 @@
           </div>
         </article>
     
-        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="books_life" data-price="2080" data-size="womens_all" data-role="station_stopping" data-search="no.10  std-item 日本製 フラットファイル a4 タテ くすみ水色 未使用 30冊 まとめ売り 日本製 実寸検品済">
+        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="books_life" data-price="1880" data-size="womens_all" data-role="station_stopping" data-search="no.10  std-item 日本製 フラットファイル a4 タテ くすみ水色 未使用 30冊 まとめ売り 日本製 実寸検品済">
           
     <div class="photo-gallery-block">
       <a class="card-photo-link" href="https://jp.mercari.com/item/m69007286926?afid=8673250720" target="_blank" rel="noopener noreferrer" title="フラットファイル A4 タテ くすみ水色 未使用 30冊 まとめ売り 日本製">
@@ -3817,7 +3980,7 @@
           <span class="badge-status status-new">新品・未使用</span>
         </div>
         <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥2,080<small class="price-asof">11月14日時点</small></span>
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥1,880<small class="price-asof">11月15日時点</small></span>
         </div>
       </a>
       <div class="thumb-strip">
@@ -3835,7 +3998,7 @@
           </div>
           <div class="card-footer">
             <a class="mercari-btn" href="https://jp.mercari.com/item/m69007286926?afid=8673250720" target="_blank" rel="noopener noreferrer">
-              商品ページを見る（¥2,080） &rarr;
+              商品ページを見る（¥1,880） &rarr;
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="item/m69007286926/index.html" title="平置き実寸・4枚写真ページ">実寸詳細</a>
@@ -3847,7 +4010,7 @@
           </div>
         </article>
     
-        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="books_life" data-price="2780" data-size="womens_all" data-role="station_stopping" data-search="no.13  std-item 検品済個体 「学び」の認知科学事典 佐伯胖 渡部信一 大修館書店 教育心理学 専門書 実寸検品済">
+        <article class="item-card stopping-own-card" data-hall="stopping" data-exclusive="0" data-lane="books_life" data-price="2680" data-size="womens_all" data-role="station_stopping" data-search="no.13  std-item 検品済個体 「学び」の認知科学事典 佐伯胖 渡部信一 大修館書店 教育心理学 専門書 実寸検品済">
           
     <div class="photo-gallery-block">
       <a class="card-photo-link" href="https://jp.mercari.com/item/m47194371891?afid=8673250720" target="_blank" rel="noopener noreferrer" title="「学び」の認知科学事典 佐伯胖 渡部信一 大修館書店 教育心理学 専門書">
@@ -3857,7 +4020,7 @@
           <span class="badge-status status-active">美品</span>
         </div>
         <div class="photo-overlay-bottom">
-          <span class="price-pill active-pill" title="価格は11月14日 21:21時点">¥2,780<small class="price-asof">11月14日時点</small></span>
+          <span class="price-pill active-pill" title="価格は11月15日 21:42時点">¥2,680<small class="price-asof">11月15日時点</small></span>
         </div>
       </a>
       <div class="thumb-strip">
@@ -3875,7 +4038,7 @@
           </div>
           <div class="card-footer">
             <a class="mercari-btn" href="https://jp.mercari.com/item/m47194371891?afid=8673250720" target="_blank" rel="noopener noreferrer">
-              商品ページを見る（¥2,780） &rarr;
+              商品ページを見る（¥2,680） &rarr;
             </a>
             <div class="multi-ec-row">
               <a class="fallback-link" href="item/m47194371891/index.html" title="平置き実寸・4枚写真ページ">実寸詳細</a>
@@ -4474,6 +4637,75 @@
     
     </section>
 
+    <section class="b2b-studio-section" aria-label="制作代行・B2B案内">
+      <div class="b2b-header">
+        <div>
+          <span class="b2b-kicker">ARCHIVE TECH &amp; B2B STUDIO</span>
+          <h2 class="b2b-title">当サイトの価格比較台帳・高精細画像・PDFカタログ制作代行</h2>
+          <p class="b2b-lead">『通過駅』の運用基盤（マルチ市場データ集計・1MB未満最適化画像・商業品質PDF組版・87項目実機QA）を、個人ワーカーとして直接受託制作しています。</p>
+        </div>
+        <span class="b2b-header-badge">サイト内チャット完結・最短2日納品</span>
+      </div>
+
+      <div class="b2b-grid">
+        <article class="b2b-card">
+          <div>
+            <div class="b2b-card-top">
+              <span class="b2b-code">G4 / GAS &amp; Python</span>
+              <span class="b2b-price">¥12,000</span>
+            </div>
+            <h3 class="b2b-card-title">マルチ市場自動集計＆CSV名寄せ・検算台帳構築</h3>
+            <p class="b2b-card-desc">Mac・スマホ対応のスプレッドシート（GAS/関数）自動化と、表記揺れ名寄せ・請求入金突合Excel台帳を構築します。</p>
+          </div>
+          <a class="b2b-card-cta" href="https://coconala.com/services/4507379" target="_blank" rel="noopener noreferrer">ココナラで詳細を見る（#4507379） &rarr;</a>
+        </article>
+
+        <article class="b2b-card">
+          <div>
+            <div class="b2b-card-top">
+              <span class="b2b-code">G2 / PDF &amp; EPUB3</span>
+              <span class="b2b-price">¥11,000</span>
+            </div>
+            <h3 class="b2b-card-title">商業品質PDFカタログ組版＆Kindle KDPリフロー型EPUB3制作</h3>
+            <p class="b2b-card-desc">Word・Markdown原稿から目次リンク付EPUB3と印刷・配布用高解像度PDFを一括組版して納品します。</p>
+          </div>
+          <a class="b2b-card-cta" href="https://coconala.com/services/4503593" target="_blank" rel="noopener noreferrer">ココナラで詳細を見る（#4503593） &rarr;</a>
+        </article>
+
+        <article class="b2b-card">
+          <div>
+            <div class="b2b-card-top">
+              <span class="b2b-code">G6 / DevTools QA</span>
+              <span class="b2b-price">¥10,000</span>
+            </div>
+            <h3 class="b2b-card-title">EC・LPリリース前 スマホ/PC実機87項目打鍵QA＆修正CSS特定</h3>
+            <p class="b2b-card-desc">表示崩れやフォーム不備を87項目で検査し、制作者がコピペで直せる修正用CSS案と注釈画像を納品します。</p>
+          </div>
+          <a class="b2b-card-cta" href="https://coconala.com/services/4507412" target="_blank" rel="noopener noreferrer">ココナラで詳細を見る（#4507412） &rarr;</a>
+        </article>
+
+        <article class="b2b-card">
+          <div>
+            <div class="b2b-card-top">
+              <span class="b2b-code">G3 / PNG &amp; JSON</span>
+              <span class="b2b-price">¥8,000</span>
+            </div>
+            <h3 class="b2b-card-title">1MB未満高画質バナー/リッチメニューPNG＋Canva＋座標JSON設計</h3>
+            <p class="b2b-card-desc">画質劣化なく1MB未満へ最適化したPNG画像、編集可能なCanvaリンク、API実装用タップ座標JSONを一式作成します。</p>
+          </div>
+          <a class="b2b-card-cta" href="https://coconala.com/services/4507373" target="_blank" rel="noopener noreferrer">ココナラで詳細を見る（#4507373） &rarr;</a>
+        </article>
+      </div>
+
+      <div class="b2b-footer-bar">
+        <span>エスクロー決済・法人発注/秘密保持契約対応（Web会議・通話不要）</span>
+        <div class="b2b-footer-links">
+          <a class="b2b-outline-btn gold-accent" href="https://coconala.com/users/6366623" target="_blank" rel="noopener noreferrer">ココナラ全8出品を見る &rarr;</a>
+          <a class="b2b-outline-btn" href="https://www.lancers.jp/profile/nanae_lancer" target="_blank" rel="noopener noreferrer">ランサーズ プロフィール・パッケージ一覧 &rarr;</a>
+        </div>
+      </div>
+    </section>
+
     <details class="editorial-details" id="researchColumns">
       <summary>特定商取引法に基づく表記・マーケット統計・免責事項（クリックで展開）</summary>
       <div class="editorial-body">
@@ -4490,8 +4722,8 @@
           </div>
           <div class="stat-card">
             <div class="stat-label">現在販売中デニム平均</div>
-            <div class="stat-val">¥6,339</div>
-            <div class="stat-sub">過去成約平均より約¥454割安</div>
+            <div class="stat-val">¥6,148</div>
+            <div class="stat-sub">過去成約平均より約¥645割安</div>
           </div>
           <div class="stat-card">
             <div class="stat-label">最高額成約レコード</div>
@@ -4519,7 +4751,7 @@
 
           <h3>サイト運営情報・免責事項</h3>
           <p><strong>1. 目的：</strong>『通過駅』（https://tsuka-eki.com/）は、二次流通・Amazon整備済み品・海外市場の商品および当サイト専売品を、カテゴリーごとに価格の安い順で比較・購入できるセレクトカタログです。</p>
-          <p><strong>2. 価格の表示について：</strong>外部市場の価格は11月14日 21:21時点の値です。最新の価格・在庫はリンク先の各市場でご確認ください。</p>
+          <p><strong>2. 価格の表示について：</strong>外部市場の価格は11月15日 21:42時点の値です。最新の価格・在庫はリンク先の各市場でご確認ください。</p>
           <p><strong>3. プログラム参加表記：</strong>Amazonのアソシエイトとして、通過駅は適格販売により収入を得ています。また、メルカリアンバサダー・楽天アフィリエイト・eBay Partner Networkを利用しています。</p>
         </div>
       </div>
